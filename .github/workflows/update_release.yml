@@ -1,0 +1,92 @@
+name: Update "latest" release
+
+on:
+  workflow_dispatch: # Manually
+  push:
+    paths:
+      - 'lang/**'
+      - 'scripts/**'
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  update-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install 7-Zip
+        run: sudo apt-get update && sudo apt-get install -y p7zip-full
+
+      - name: Create "lang.7z" and "scripts.7z" ("fast" compression)
+        run: |
+          # "lang" - with root folder, "scripts" - without
+          7z a -t7z -mx=1 lang.7z ./lang
+          7z a -t7z -mx=1 scripts.7z ./scripts/*
+
+      - name: Create "lang.zip" and "scripts.zip"
+        run: |
+          zip -r lang.zip ./lang
+          
+          cd scripts
+          zip -r ../scripts.zip *
+          cd ..
+
+      - name: Move "latest" tag to current commit
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git tag -f latest
+          git push -f origin latest
+
+      - name: Delete latest release (but keep tag)
+        uses: actions/github-script@v7
+        with:
+          script: |
+            try {
+              const release = await github.rest.repos.getReleaseByTag({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                tag: "latest"
+              });
+              await github.rest.repos.deleteRelease({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                release_id: release.data.id
+              });
+            } catch (error) {
+              if (error.status !== 404) throw error;
+              // Release may not exist yet, that's fine
+            }
+
+      - name: Create new release for "latest" tag
+        id: create_release
+        uses: actions/github-script@v7
+        with:
+          result-encoding: string
+          script: |
+            const release = await github.rest.repos.createRelease({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              tag_name: "latest",
+              name: "Latest",
+              draft: false,
+              prerelease: false
+            });
+            core.setOutput('upload_url', release.data.upload_url);
+      - name: Upload "lang" archives
+        uses: shogo82148/actions-upload-release-asset@v1
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./lang.*
+
+      - name: Upload "scripts" archives
+        uses: shogo82148/actions-upload-release-asset@v1
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./scripts.*
