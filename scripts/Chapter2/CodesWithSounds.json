@@ -1,0 +1,28 @@
+{
+  "gml_Object_obj_gigaqueen_intro_fight_Create_0": [
+    "snd_boxing_fight"
+  ],
+  "gml_Object_obj_tm_quizzler_Create_0": [
+    "snd_tm_quiz_a",
+    "snd_tm_quiz_b",
+    "snd_tm_quiz_c",
+    "snd_tm_quiz_d"
+  ],
+  "gml_Object_obj_tm_quizzler_old_Create_0": [
+    "snd_tm_quiz_a",
+    "snd_tm_quiz_b",
+    "snd_tm_quiz_c",
+    "snd_tm_quiz_d"
+  ],
+  "gml_Object_o_boxing_wireframe_Draw_0": [
+    "snd_boxing_fight",
+    "snd_boxing_fight_bc",
+    "snd_boxing_round1",
+    "snd_boxing_round1_bc"
+  ],
+  "gml_Object_obj_gigaqueen_intro_round_Draw_0": [
+    "snd_boxing_round1",
+    "snd_boxing_round2",
+    "snd_boxing_round3"
+  ]
+}

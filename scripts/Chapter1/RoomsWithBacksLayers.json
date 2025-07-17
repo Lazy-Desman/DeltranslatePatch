@@ -1,0 +1,185 @@
+{
+  "room_town_north": [
+    {
+      "sprite": "bg_building_cattyhouse",
+      "type": "tile",
+      "x": "495",
+      "y": "0",
+      "depth": "950000",
+      "layer": "Compatibility_Tiles_Depth_950000",
+      "source_x": "0",
+      "source_y": "0",
+      "hmm": "bg_building_cattyhouse (UndertaleSprite)"
+    },
+    {
+      "sprite": "bg_building_flowershop",
+      "type": "tile",
+      "x": "1220",
+      "y": "-38",
+      "depth": "950000",
+      "layer": "Compatibility_Tiles_Depth_950000",
+      "source_x": "0",
+      "source_y": "0",
+      "hmm": "bg_building_flowershop (UndertaleSprite)"
+    }
+  ],
+  "room_town_mid": [
+    {
+      "sprite": "bg_building_icee_sign",
+      "type": "tile",
+      "x": "276",
+      "y": "4",
+      "depth": "5000",
+      "layer": "Compatibility_Tiles_Depth_5000",
+      "source_x": "0",
+      "source_y": "0",
+      "hmm": "bg_building_icee_sign (UndertaleSprite)"
+    },
+    {
+      "sprite": "bg_building_store",
+      "type": "tile",
+      "x": "940",
+      "y": "-50",
+      "depth": "990000",
+      "layer": "Compatibility_Tiles_Depth_990000",
+      "source_x": "0",
+      "source_y": "0",
+      "hmm": "bg_building_store (UndertaleSprite)"
+    },
+    {
+      "sprite": "bg_building_diner",
+      "type": "tile",
+      "x": "500",
+      "y": "-20",
+      "depth": "990000",
+      "layer": "Compatibility_Tiles_Depth_990000",
+      "source_x": "0",
+      "source_y": "0",
+      "hmm": "bg_building_diner (UndertaleSprite)"
+    }
+  ],
+  "room_town_south": [
+    {
+      "sprite": "bg_policebarricade",
+      "type": "tile",
+      "x": "0",
+      "y": "110",
+      "depth": "980000",
+      "layer": "Compatibility_Tiles_Depth_980000",
+      "source_x": "0",
+      "source_y": "0",
+      "hmm": "bg_policebarricade (UndertaleSprite)"
+    },
+    {
+      "sprite": "bg_policebarricade",
+      "type": "tile",
+      "x": "-35",
+      "y": "100",
+      "depth": "980000",
+      "layer": "Compatibility_Tiles_Depth_980000",
+      "source_x": "0",
+      "source_y": "0",
+      "hmm": "bg_policebarricade (UndertaleSprite)"
+    },
+    {
+      "sprite": "bg_building_library",
+      "type": "tile",
+      "x": "960",
+      "y": "0",
+      "depth": "990000",
+      "layer": "Compatibility_Tiles_Depth_990000",
+      "source_x": "0",
+      "source_y": "0",
+      "hmm": "bg_building_library (UndertaleSprite)"
+    },
+    {
+      "sprite": "bg_building_police",
+      "type": "tile",
+      "x": "230",
+      "y": "0",
+      "depth": "990000",
+      "layer": "Compatibility_Tiles_Depth_990000",
+      "source_x": "0",
+      "source_y": "0",
+      "hmm": "bg_building_police (UndertaleSprite)"
+    },
+    {
+      "sprite": "bg_building_hospital",
+      "type": "tile",
+      "x": "504",
+      "y": "-4",
+      "depth": "990000",
+      "layer": "Compatibility_Tiles_Depth_990000",
+      "source_x": "0",
+      "source_y": "0",
+      "hmm": "bg_building_hospital (UndertaleSprite)"
+    }
+  ],
+  "room_town_school": [
+    {
+      "sprite": "bg_building_school",
+      "type": "tile",
+      "x": "209",
+      "y": "-55",
+      "depth": "950000",
+      "layer": "Compatibility_Tiles_Depth_950000",
+      "source_x": "0",
+      "source_y": "0",
+      "hmm": "bg_building_school (UndertaleSprite)"
+    }
+  ],
+  "room_town_church": [
+    {
+      "sprite": "bg_building_townhall_layer2",
+      "type": "tile",
+      "x": "480",
+      "y": "0",
+      "depth": "5000",
+      "layer": "Compatibility_Tiles_Depth_5000",
+      "source_x": "0",
+      "source_y": "0",
+      "hmm": "bg_building_townhall_layer2 (UndertaleSprite)"
+    }
+  ],
+  "room_hospital_room2": [
+    {
+      "sprite": "bg_hospital_room2",
+      "type": "background",
+      "layer": "Compatibility_Background_0_bg_hospital_room2"
+    }
+  ],
+  "room_library": [
+    {
+      "sprite": "bg_library",
+      "type": "background",
+      "layer": "Compatibility_Background_0_bg_library"
+    }
+  ],
+  "room_alphysalley": [
+    {
+      "sprite": "bg_alphysalley",
+      "type": "background",
+      "layer": "Compatibility_Background_0_bg_alphysalley"
+    }
+  ],
+  "room_torielclass": [
+    {
+      "sprite": "bg_torielclass",
+      "type": "background",
+      "layer": "Compatibility_Background_0_bg_torielclass"
+    }
+  ],
+  "room_field_shop1": [
+    {
+      "sprite": "bg_seam_shopfront",
+      "type": "tile",
+      "x": "110",
+      "y": "-20",
+      "depth": "1000000",
+      "layer": "Compatibility_Tiles_Depth_1000000",
+      "source_x": "0",
+      "source_y": "0",
+      "hmm": "bg_seam_shopfront (UndertaleSprite)"
+    }
+  ]
+}

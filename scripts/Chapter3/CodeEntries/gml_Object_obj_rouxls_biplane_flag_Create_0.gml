@@ -1,0 +1,11 @@
+sprite_index = scr_84_get_sprite("spr_rouxls_biplane_flag");
+mask_index = spr_rouxls_biplane_flag;
+scr_bullet_init();
+destroyonhit = 0;
+grazepoints = 3;
+parentid = -1;
+timer = 0;
+image_angle = parentid.image_angle;
+image_xscale = 0;
+visible = true;
+depth = obj_heart.depth - 1;

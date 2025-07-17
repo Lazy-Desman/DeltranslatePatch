@@ -1,0 +1,315 @@
+{
+  "room_town_north": [
+    {
+      "sprite": "bg_building_cattyhouse",
+      "type": "tile",
+      "x": "495",
+      "y": "0",
+      "depth": "950000",
+      "layer": "Compatibility_Tiles_Depth_950000",
+      "source_x": "0",
+      "source_y": "0",
+      "hmm": "bg_building_cattyhouse (UndertaleSprite)"
+    },
+    {
+      "sprite": "bg_building_flowershop",
+      "type": "tile",
+      "x": "1220",
+      "y": "-38",
+      "depth": "950000",
+      "layer": "Compatibility_Tiles_Depth_950000",
+      "source_x": "0",
+      "source_y": "0",
+      "hmm": "bg_building_flowershop (UndertaleSprite)"
+    }
+  ],
+  "room_town_mid": [
+    {
+      "sprite": "bg_building_icee_sign",
+      "type": "tile",
+      "x": "276",
+      "y": "4",
+      "depth": "5000",
+      "layer": "Compatibility_Tiles_Depth_5000",
+      "source_x": "0",
+      "source_y": "0",
+      "hmm": "bg_building_icee_sign (UndertaleSprite)"
+    },
+    {
+      "sprite": "bg_building_store",
+      "type": "tile",
+      "x": "940",
+      "y": "-50",
+      "depth": "990000",
+      "layer": "Compatibility_Tiles_Depth_990000",
+      "source_x": "0",
+      "source_y": "0",
+      "hmm": "bg_building_store (UndertaleSprite)"
+    },
+    {
+      "sprite": "bg_building_diner",
+      "type": "tile",
+      "x": "500",
+      "y": "-20",
+      "depth": "990000",
+      "layer": "Compatibility_Tiles_Depth_990000",
+      "source_x": "0",
+      "source_y": "0",
+      "hmm": "bg_building_diner (UndertaleSprite)"
+    }
+  ],
+  "room_town_south": [
+    {
+      "sprite": "bg_policebarricade",
+      "type": "tile",
+      "x": "0",
+      "y": "110",
+      "depth": "980000",
+      "layer": "Compatibility_Tiles_Depth_980000",
+      "source_x": "0",
+      "source_y": "0",
+      "hmm": "bg_policebarricade (UndertaleSprite)"
+    },
+    {
+      "sprite": "bg_policebarricade",
+      "type": "tile",
+      "x": "-35",
+      "y": "100",
+      "depth": "980000",
+      "layer": "Compatibility_Tiles_Depth_980000",
+      "source_x": "0",
+      "source_y": "0",
+      "hmm": "bg_policebarricade (UndertaleSprite)"
+    },
+    {
+      "sprite": "bg_building_library",
+      "type": "tile",
+      "x": "960",
+      "y": "0",
+      "depth": "990000",
+      "layer": "Compatibility_Tiles_Depth_990000",
+      "source_x": "0",
+      "source_y": "0",
+      "hmm": "bg_building_library (UndertaleSprite)"
+    },
+    {
+      "sprite": "bg_building_police",
+      "type": "tile",
+      "x": "230",
+      "y": "0",
+      "depth": "990000",
+      "layer": "Compatibility_Tiles_Depth_990000",
+      "source_x": "0",
+      "source_y": "0",
+      "hmm": "bg_building_police (UndertaleSprite)"
+    },
+    {
+      "sprite": "bg_building_hospital",
+      "type": "tile",
+      "x": "504",
+      "y": "-4",
+      "depth": "990000",
+      "layer": "Compatibility_Tiles_Depth_990000",
+      "source_x": "0",
+      "source_y": "0",
+      "hmm": "bg_building_hospital (UndertaleSprite)"
+    }
+  ],
+  "room_town_school": [
+    {
+      "sprite": "bg_building_school",
+      "type": "tile",
+      "x": "209",
+      "y": "-55",
+      "depth": "950000",
+      "layer": "Compatibility_Tiles_Depth_950000",
+      "source_x": "0",
+      "source_y": "0",
+      "hmm": "bg_building_school (UndertaleSprite)"
+    }
+  ],
+  "room_town_church": [
+    {
+      "sprite": "bg_building_townhall_layer2",
+      "type": "tile",
+      "x": "480",
+      "y": "0",
+      "depth": "5000",
+      "layer": "Compatibility_Tiles_Depth_5000",
+      "source_x": "0",
+      "source_y": "0",
+      "hmm": "bg_building_townhall_layer2 (UndertaleSprite)"
+    }
+  ],
+  "room_hospital_room2": [
+    {
+      "sprite": "bg_hospital_room2_ch2",
+      "type": "background",
+      "layer": "Compatibility_Background_0_bg_hospital_room2"
+    }
+  ],
+  "room_library": [
+    {
+      "sprite": "bg_library",
+      "type": "background",
+      "layer": "Compatibility_Background_0_bg_library"
+    }
+  ],
+  "room_lw_conbini": [
+    {
+      "sprite": "bg_lw_sans_conbini",
+      "type": "background",
+      "layer": "BACKGROUND_IMAGE"
+    }
+  ],
+  "room_lw_icee_pizza": [
+    {
+      "sprite": "bg_lw_ice_e_pizza",
+      "type": "background",
+      "layer": "BACKGROUND_IMAGE"
+    }
+  ],
+  "room_torielclass": [
+    {
+      "sprite": "bg_torielclass_ch2",
+      "type": "background",
+      "layer": "Compatibility_Background_0_bg_torielclass"
+    }
+  ],
+  "room_dw_castle_restaurant": [
+    {
+      "sprite": "bg_dw_bakery",
+      "type": "background",
+      "layer": "Backgrounds_1"
+    }
+  ],
+  "room_dw_castle_cafe": [
+    {
+      "sprite": "bg_dw_castle_cafe_in",
+      "type": "background",
+      "layer": "BG_Image"
+    }
+  ],
+  "room_dw_ralsei_castle_2f": [
+    {
+      "sprite": "spr_dw_door_lancer",
+      "type": "sprite",
+      "layer": "ASSETS_DOORS",
+      "spr_name": "graphic_12A27BB"
+    }
+  ],
+  "room_dw_city_entrance": [
+    {
+      "sprite": "spr_welcome_sign",
+      "type": "sprite",
+      "layer": "Assets_WelcomeSign",
+      "spr_name": "graphic_66ADFD1"
+    }
+  ],
+  "room_dw_city_traffic_1": [
+    {
+      "sprite": "spr_dw_city_info",
+      "type": "sprite",
+      "layer": "Road_Girders",
+      "spr_name": "graphic_7C1F1CCF"
+    }
+  ],
+  "room_dw_city_mice": [
+    {
+      "sprite": "spr_city_mice_out",
+      "type": "sprite",
+      "layer": "SPRITES_Decor",
+      "spr_name": "graphic_7A83E1B5"
+    },
+    {
+      "sprite": "spr_city_mice_in",
+      "type": "sprite",
+      "layer": "SPRITES_Decor",
+      "spr_name": "graphic_7E07D8A6"
+    },
+    {
+      "sprite": "spr_dw_city_info",
+      "type": "sprite",
+      "layer": "SPRITES_Decor",
+      "spr_name": "graphic_3784A0FB"
+    }
+  ],
+  "room_dw_city_mice2": [
+    {
+      "sprite": "spr_city_mice_out",
+      "type": "sprite",
+      "layer": "SPRITES_Decor",
+      "spr_name": "graphic_539E834B"
+    },
+    {
+      "sprite": "spr_city_mice_in",
+      "type": "sprite",
+      "layer": "SPRITES_Decor",
+      "spr_name": "graphic_215DCEB9"
+    },
+    {
+      "sprite": "spr_dw_city_info",
+      "type": "sprite",
+      "layer": "SPRITES_Decor",
+      "spr_name": "graphic_739D1B98"
+    }
+  ],
+  "room_dw_mansion_entrance": [
+    {
+      "sprite": "spr_mansion_cafe_entrance",
+      "type": "sprite",
+      "layer": "GIVE_DEPTH",
+      "spr_name": "graphic_6EF2C928"
+    }
+  ],
+  "room_dw_mansion_traffic": [
+    {
+      "sprite": "spr_mansion_floor_sign",
+      "type": "sprite",
+      "layer": "ASSETS_Decor",
+      "spr_name": "graphic_18B81AD4"
+    }
+  ],
+  "room_dw_mansion_east_1f_secret": [
+    {
+      "sprite": "spr_mansion_floor_sign",
+      "type": "sprite",
+      "layer": "Assets_1",
+      "spr_name": "graphic_D5F23D6"
+    }
+  ],
+  "room_dw_mansion_east_2f_transformed_new": [
+    {
+      "sprite": "spr_mansion_floor_sign",
+      "type": "sprite",
+      "layer": "SPRITES",
+      "spr_name": "graphic_5419C14D"
+    }
+  ],
+  "room_dw_mansion_east_4f_b": [
+    {
+      "sprite": "spr_mansion_floor_sign",
+      "type": "sprite",
+      "layer": "ASSETS_FloorSigns",
+      "spr_name": "graphic_2428100A"
+    }
+  ],
+  "room_alphysalley": [
+    {
+      "sprite": "bg_alphysalley",
+      "type": "background",
+      "layer": "Compatibility_Background_0_bg_alphysalley"
+    }
+  ],
+  "room_dw_cyber_musical_shop": [
+    {
+      "sprite": "bg_dw_music_ext",
+      "type": "tile",
+      "layer": "GIVE_DEPTH",
+      "spr_name": "graphic_368057",
+      "depth": "97440",
+      "x": "32",
+      "y": "32"
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+    "gml_Object_obj_ch2_keyboardpuzzle_solo_tile_Step_0": [
+        {
+            "old": "var _snd = snd_play(asset_get_index((\"snd_speak_and_spell_\" + myString)))",
+            "new": "var _snd = snd_play(scr_84_get_sound((\"snd_speak_and_spell_\" + myString)))"
+        }
+    ],
+    "gml_Object_obj_overworldc_Draw_0": [
+        {
+            "old": "draw_set_font(fnt_small)",
+            "new": "scr_84_set_draw_font(\"small\")"
+        }
+    ],
+    "gml_GlobalScript_scr_monstersetup": [
+        {
+            "old": "\"K_K\"",
+            "new": "stringsetloc(\"K_K\", \"scr_monstersetup_slash_scr_monstersetup_gml_1166_0\")"
+        }
+    ],
+    "gml_Object_obj_initializer2_Step_0": [
+        {
+            "old": "scr_windowcaption(\"DELTARUNE\")",
+            "new": "scr_windowcaption(stringsetloc(\"DELTARUNE\", \"obj_credits_slash_Step_0_gml_21_0\"))"
+        }
+    ],
+    "gml_Object_PROCESS_DOG_Create_0": [
+        {
+            "old": "window_set_caption(\"DOGTARUNE\")",
+            "new": "window_set_caption(stringsetloc(\"DOGTARUNE\", \"PROCESS_DOG_Create_0_0\"))"
+        }
+    ],
+    "gml_Object_obj_shop1_Draw_0": [
+        {
+            "old": "\"$\" + string_hash_to_newline(string(global.gold))",
+            "new": "stringsetsubloc(\"$~1\", string(global.gold), \"obj_shop1_slash_Draw_0_gml_1_0\")"
+        }
+    ],
+    "gml_Object_obj_shop2_Draw_0": [
+        {
+            "old": "\"$\" + string_hash_to_newline(string(global.gold))",
+            "new": "stringsetsubloc(\"$~1\", string(global.gold), \"obj_shop2_slash_Draw_0_gml_1_0\")"
+        }
+    ],
+    "gml_Object_obj_musical_battle_end_Draw_0": [
+        {
+            "old": "draw_set_font(fnt_mainbig)",
+            "new": "draw_set_font(scr_84_get_font(\"mainbig\"))"
+        }
+    ],
+    "gml_Object_o_boxing_wireframe_Draw_0": [
+        {
+            "old": "draw_set_halign(fa_left)\n        draw_set_color(c_black)",
+            "new": "draw_set_font(scr_84_get_font(\"mainbig\"))\n        draw_set_halign(fa_left)\n        draw_set_color(c_black)"
+        }
+    ],
+    "gml_Object_obj_ch2_keyboardpuzzle_controller_Draw_0": [
+        {
+            "old": "draw_set_font(fnt_mainbig)",
+            "new": "draw_set_font(scr_84_get_font(\"mainbig\"))"
+        }
+    ],
+    "gml_Object_obj_ch2_noellepuzzle_screen_Draw_0": [
+        {
+            "old": "draw_set_font(fnt_mainbig)",
+            "new": "draw_set_font(scr_84_get_font(\"mainbig\"))"
+        }
+    ],
+    "gml_Object_obj_shop_ch2_music_Draw_0": [
+        {
+            "old": "\"$\" + string_hash_to_newline(string(global.gold))",
+            "new": "stringsetsubloc(\"$~1\", string(global.gold), \"obj_shop_ch2_music_Draw_0_gml_1_0\")"
+        }
+    ],
+    "gml_Object_obj_shop_ch2_swatch_Draw_0": [
+        {
+            "old": "\"$\" + string_hash_to_newline(string(global.gold))",
+            "new": "stringsetsubloc(\"$~1\", string(global.gold), \"obj_shop_ch2_swatch_Draw_0_gml_1_0\")"
+        }
+    ],
+    "gml_Object_obj_moneydisplay_Draw_0": [
+        {
+            "old": "\"$\" + string(global.gold)",
+            "new": "stringsetsubloc(\"$~1\", string(global.gold), \"obj_moneydisplay_Draw_0_gml_1_0\")"
+        }
+    ],
+    "gml_Object_obj_spamton_wordbullet_Create_0": [
+        {
+            "old": "bulletletter = \"$\"",
+            "new": "bulletletter = stringsetloc(\"$\", \"obj_spamton_wordbullet_Create_0_gml_1_0\")"
+        }
+    ],
+    "gml_Object_obj_ch2_scene8_Draw_0": [
+        {
+            "old": "(global.lang == \"en\" ? scr_marker(0, 0, bg_library) : scr_marker(0, 0, bg_lang_ja_library))",
+            "new": "scr_84_get_sprite(\"bg_library\")"
+        }
+    ],
+    "gml_Object_obj_fusionmenu_Step_0": [
+        {
+            "old": "stringsetloc(\"      Place                 Return\"",
+            "new": "stringsetloc(\"@    Place        @    Return\""
+        }
+    ],
+    "gml_Object_DEVICE_FAILURE_Step_0": [
+        {
+            "old": "NAMEX[0][0] = 80",
+            "new": "scr_84_set_draw_font(\"main\")\nNAMEX[0][0] = 80 - (string_width(NAME[0][0]) - string_width(\"CONTINUE\"))"
+        }
+    ], 
+    "gml_Object_DEVICE_NAMER_Draw_0": [
+        {
+            "old": "FN_3 == \"GASTER\"",
+            "new": "FN_3 == \"GASTER\" || FN_3 == stringsetloc(\"GASTER\", \"DEVICE_NAMER_slash_Draw_0_gml_00_0\")"
+        }
+    ], 
+    "gml_Object_obj_npc_dojo_Step_0": [
+        {
+            "old": "msgnextsubloc(\"* (You received ~1!)/%\", dojoPrizeName, \"obj_npc_dojo_slash_Step_0_gml_51_0\")",
+            "new": "msgnextsubloc(\"* (You received ~1!)/%\", scr_item_localized_name_acc(dojoPrizeValue, dojoPrizeType, dojoPrizeName), \"obj_npc_dojo_slash_Step_0_gml_51_0\")"
+        }
+    ], 
+    "gml_Object_obj_overworldc_Step_0": [
+        {
+            "old": "stringsetsubloc(\"* You bid a quiet farewell to the ~1.\", global.litemname[global.menucoord[1]], \"obj_overworldc_slash_Step_0_gml_34_0_b\")",
+            "new": "stringsetsubloc(\"* You bid a quiet farewell to the ~1.\", scr_item_localized_name_acc(global.litem[global.menucoord[1]], 4), \"obj_overworldc_slash_Step_0_gml_34_0_b\")"
+        },
+        {
+            "old": "stringsetsubloc(\"* You put the ~1 on the ground and gave it a little pat.\", global.litemname[global.menucoord[1]], \"obj_overworldc_slash_Step_0_gml_34_0\")",
+            "new": "stringsetsubloc(\"* You put the ~1 on the ground and gave it a little pat.\", scr_item_localized_name_acc(global.litem[global.menucoord[1]], 4), \"obj_overworldc_slash_Step_0_gml_34_0\")"
+        },
+        {
+            "old": "stringsetsubloc(\"* You threw the ~1 on the ground like the piece of trash it is.\", global.litemname[global.menucoord[1]], \"obj_overworldc_slash_Step_0_gml_36_0\")",
+            "new": "stringsetsubloc(\"* You threw the ~1 on the ground like the piece of trash it is.\", scr_item_localized_name_acc(global.litem[global.menucoord[1]], 4), \"obj_overworldc_slash_Step_0_gml_36_0\")"
+        },
+        {
+            "old": "stringsetsubloc(\"* You abandoned the ~1.\", global.litemname[global.menucoord[1]], \"obj_overworldc_slash_Step_0_gml_38_0_b\")",
+            "new": "stringsetsubloc(\"* You abandoned the ~1.\", scr_item_localized_name_acc(global.litem[global.menucoord[1]], 4), \"obj_overworldc_slash_Step_0_gml_38_0_b\")"
+        },
+        {
+            "old": "stringsetsubloc(\"* The ~1 was thrown away.\", global.litemname[global.menucoord[1]], \"obj_overworldc_slash_Step_0_gml_38_0\")",
+            "new": "stringsetsubloc(\"* The ~1 was thrown away.\", scr_item_localized_name_acc(global.litem[global.menucoord[1]], 4), \"obj_overworldc_slash_Step_0_gml_38_0\")"
+        }
+    ]
+}
+

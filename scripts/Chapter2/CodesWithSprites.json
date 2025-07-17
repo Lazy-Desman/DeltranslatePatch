@@ -1,0 +1,210 @@
+{
+  "gml_GlobalScript_scr_charbox": [
+    "spr_hpname",
+    "spr_headsusie",
+    "spr_headralsei",
+    "spr_headnoelle",
+    "spr_headkris"
+  ],
+  "gml_RoomCC_room_dw_cyber_intro_connector_0_Create": [
+    "spr_plugboy_cower"
+  ],
+  "gml_RoomCC_room_dw_cyber_intro_connector_1_Create": [
+    "spr_npc_plugboy",
+    "spr_plugboy_cower"
+  ],
+  "gml_Object_obj_face_Draw_0": [
+    "spr_face_rurus_piratehat"
+  ],
+  "gml_Object_obj_town_event_Create_0": [
+    "spr_lw_conbini_open"
+  ],
+  "gml_Object_obj_npc_room_Create_0": [
+    "spr_blockler_b",
+    "spr_dw_mansion_toilet",
+    "spr_npc_plugboy",
+    "spr_npc_plugboy_girl",
+    "spr_npc_plugboy_hat",
+    "spr_npc_plugboy_static",
+    "spr_npc_plugboy_static_outline",
+    "spr_plugboy_cower"
+  ],
+  "gml_Object_obj_npc_room_Other_10": [
+    "spr_blockler_b",
+    "spr_npc_plugboy",
+    "spr_npc_plugboy_bandana",
+    "spr_npc_plugboy_girl",
+    "spr_npc_plugboy_hat",
+    "spr_npc_plugboy_static",
+    "spr_npc_plugboy_static_outline"
+  ],
+  "gml_Object_obj_npc_room_animated_Other_10": [
+    "spr_dw_mansion_room_susie_book_vacuum",
+    "spr_npc_catti_mom_no1"
+  ],
+  "gml_Object_obj_nubertQueenScreen_Draw_0": [
+    "spr_queenscreen"
+  ],
+  "gml_Object_obj_npc_musical_door_Create_0": [
+    "spr_npc_plugboy",
+    "spr_npc_plugboy_bandana",
+    "spr_npc_plugboy_static"
+  ],
+  "gml_Object_obj_queenscreen_Step_0": [
+    "spr_queenscreen"
+  ],
+  "gml_Object_obj_queenscreen_Draw_0": [
+    "spr_queenscreen"
+  ],
+  "gml_Object_obj_queenscreen_dance_Draw_0": [
+    "spr_queenscreen"
+  ],
+  "gml_Object_obj_virospear_Collision_obj_queenscreen": [
+    "spr_queenscreen"
+  ],
+  "gml_Object_obj_virospear_Collision_obj_queenscreen_dance": [
+    "spr_queenscreen"
+  ],
+  "gml_Object_obj_queenmansion_bg_Draw_0": [
+    "spr_queenmansion_bg_middle"
+  ],
+  "gml_Object_obj_attackpress_Draw_0": [
+    "spr_pressfront_b"
+  ],
+  "gml_Object_obj_pacifyspell_Step_0": [
+    "spr_spare_z"
+  ],
+  "gml_Object_obj_dbulletcontroller_Step_0": [
+    "spr_tm_letters"
+  ],
+  "gml_Object_obj_dummyenemy_Step_0": [
+    "spr_btact",
+    "spr_btdefend",
+    "spr_btfight",
+    "spr_btitem",
+    "spr_btspare",
+    "spr_bttech"
+  ],
+  "gml_Object_obj_checkers_enemy_Step_0": [
+    "spr_checkers_milk"
+  ],
+  "gml_GlobalScript_scr_shopmenu": [
+    "spr_headsusie",
+    "spr_headralsei",
+    "spr_headkris"
+  ],
+  "gml_Object_obj_tasque_manager_enemy_Step_0": [
+    "spr_susie_wan_sign"
+  ],
+  "gml_Object_obj_tasque_manager_enemy_Other_24": [
+    "spr_susie_wan_sign"
+  ],
+  "gml_Object_obj_tm_quizzler_Step_1": [
+    "spr_tm_letters"
+  ],
+  "gml_Object_obj_tm_quizzler_old_Step_1": [
+    "spr_tm_letters"
+  ],
+  "gml_Object_obj_tm_quizzap_Draw_0": [
+    "spr_tm_letters"
+  ],
+  "gml_Object_obj_werewire_enemy_Create_0": [
+    "spr_plugboy_spare"
+  ],
+  "gml_Object_obj_werewire_spare2_Create_0": [
+    "spr_plugboy_cower"
+  ],
+  "gml_Object_obj_werewire_spare2_Alarm_0": [
+    "spr_plugboy_spare"
+  ],
+  "gml_Object_obj_musical_controller_Step_0": [
+    "spr_checkers_milk"
+  ],
+  "gml_Object_obj_maus_split_basket_Draw_0": [
+    "spr_maus_intext"
+  ],
+  "gml_Object_o_boxingqueen_Step_0": [
+    "spr_gigaqueen_intro_round2",
+    "spr_gigaqueen_intro_round3"
+  ],
+  "gml_Object_obj_boxing_loss_controller_Draw_0": [
+    "spr_acrade_fightagain"
+  ],
+  "gml_Object_o_boxing_wireframe_Draw_0": [
+    "spr_acrade_fightagain",
+    "spr_hero_hp",
+    "spr_queen_hp",
+    "spr_acrade_draw",
+    "spr_acrade_giveup",
+    "spr_arcade_fight",
+    "spr_arcade_round1",
+    "spr_arcade_time",
+    "spr_arcade_youlose"
+  ],
+  "gml_Object_obj_ch2_scene6_Step_0": [
+    "spr_cutscene_06_highfive",
+    "spr_blockler_b"
+  ],
+  "gml_Object_obj_ch2_scene9_Step_0": [
+    "spr_plugboy_cower",
+    "spr_plugboy_shock"
+  ],
+  "gml_Object_obj_ch2_scene13_Create_0": [
+    "spr_cutscene_13_berdly_statue"
+  ],
+  "gml_Object_obj_ch2_scene13_Step_0": [
+    "spr_cutscene_13_berdly_statue"
+  ],
+  "gml_Object_obj_ch2_scene23b_Step_0": [
+    "spr_plugboy_spare"
+  ],
+  "gml_Object_obj_ch2_scene26_cityscape_Draw_0": [
+    "spr_cutscene_27_tender_cancelled"
+  ],
+  "gml_Object_obj_ch2_scene26_gigaqueen_Step_0": [
+    "spr_plugboy_spare"
+  ],
+  "gml_Object_obj_ch2_room_cyber_maze_fireworks_Step_0": [
+    "spr_queenscreen"
+  ],
+  "gml_Object_obj_ch2_room_city_savepoint_Create_0": [
+    "spr_npc_plugboy",
+    "spr_npc_plugboy_bandana"
+  ],
+  "gml_Object_obj_ch2_castle_tutorial_Create_0": [
+    "bg_dw_castle_music_shop"
+  ],
+  "gml_Object_obj_ch2_town_diner_Create_0": [
+    "spr_npc_catti_mom_no1"
+  ],
+  "gml_Object_obj_ch2_town_north_Create_0": [
+    "spr_flowershop_sign"
+  ],
+  "gml_Object_obj_ch2_room_mansion_3f_Create_0": [
+    "spr_mansion_floor_sign"
+  ],
+  "gml_Object_obj_ch2_room_cyber_shop_Create_0": [
+    "spr_npc_plugboy",
+    "spr_npc_plugboy_bandana"
+  ],
+  "gml_Object_obj_ch2_room_castle_dojo_Create_0": [
+    "bg_dw_dojo_help"
+  ],
+  "gml_Object_obj_visualEffect_pacify_Step_0": [
+    "spr_spare_z"
+  ],
+  "gml_Object_obj_gigaqueen_intro_round_Draw_0": [
+    "spr_gigaqueen_intro_round1",
+    "spr_gigaqueen_intro_round2",
+    "spr_gigaqueen_intro_round3"
+  ],
+  "gml_Object_obj_traffic_switch_Draw_0": [
+    "spr_trafficswitch_symbol"
+  ],
+  "gml_Object_obj_ch2_keyboardpuzzle_tile_Draw_0": [
+    "spr_ch2_keyboard_tile_text"
+  ],
+  "gml_Object_obj_ch2_keyboardpuzzle_solo_tile_Draw_0": [
+    "spr_ch2_keyboard_tile_text"
+  ]
+}

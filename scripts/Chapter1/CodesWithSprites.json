@@ -1,0 +1,28 @@
+{
+  "gml_GlobalScript_scr_charbox": [
+    "spr_headkris",
+    "spr_headralsei",
+    "spr_headsusie",
+    "spr_hpname"
+  ],
+  "gml_GlobalScript_scr_shopmenu": [
+    "spr_headkris",
+    "spr_headralsei",
+    "spr_headsusie"
+  ],
+  "gml_Object_obj_kingcutscene_Step_0": [
+    "spr_kingr_asleep"
+  ],
+  "gml_Object_obj_attackpress_Draw_0": [
+    "spr_pressfront_b"
+  ],
+  "gml_Object_obj_heroparent_Draw_0": [
+    "spr_chartarget"
+  ],
+  "gml_Object_obj_checkers_enemy_Step_0": [
+    "spr_checkers_milk"
+  ],
+  "gml_Object_obj_dmgwriter_Draw_0": [
+    "spr_battlemsg"
+  ]
+}

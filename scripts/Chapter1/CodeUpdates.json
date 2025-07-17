@@ -1,0 +1,157 @@
+{
+    "gml_Object_obj_overworldc_Draw_0": [
+        {
+            "old": "draw_set_font(fnt_small)",
+            "new": "scr_84_set_draw_font(\"small\")"
+        }
+    ],
+    "gml_Object_obj_shop1_Draw_0": [
+        {
+            "old": "\"$\" + string_hash_to_newline(string(global.gold))",
+            "new": "scr_84_get_subst_string(scr_84_get_lang_string(\"gml_Object_obj_shop1_Draw_0\", \"$~1\"), string(global.gold))"
+        },
+        {
+            "old": "string_hash_to_newline(\"$\" + string(buyvalue[i]))",
+            "new": "scr_84_get_subst_string(scr_84_get_lang_string(\"gml_Object_obj_shop1_Draw_0\", \"$~1\"), string(buyvalue[i]))"
+        },
+        {
+            "old": "\"$\" + string_hash_to_newline(string(buyvalue[menuc[1]]) + scr_84_get_lang_string(\"obj_shop1_slash_Draw_0_gml_168_0\"))",
+            "new": "scr_84_get_subst_string(scr_84_get_lang_string(\"obj_shop1_slash_Draw_0_gml_168_0\"), string(buyvalue[menuc[1]]))"
+        },
+        {
+            "old": "\"$\" + string_hash_to_newline(string(buyvalue[menuc[1]]) + scr_84_get_lang_string(\"obj_shop1_slash_Draw_0_gml_168_0\"))",
+            "new": "scr_84_get_subst_string(scr_84_get_lang_string(\"obj_shop1_slash_Draw_0_gml_168_0\"), string(buyvalue[menuc[1]]))"
+        },
+        {
+            "old": "\"$\" + string_hash_to_newline(string(sellvalue) + scr_84_get_lang_string(\"obj_shop1_slash_Draw_0_gml_366_0\"))",
+            "new": "scr_84_get_subst_string(scr_84_get_lang_string(\"obj_shop1_slash_Draw_0_gml_366_0\"), string(sellvalue))"
+        },
+        {
+            "old": "\"$\" + string_hash_to_newline(string(sellvalue) + scr_84_get_lang_string(\"obj_shop1_slash_Draw_0_gml_366_0\"))",
+            "new": "scr_84_get_subst_string(scr_84_get_lang_string(\"obj_shop1_slash_Draw_0_gml_366_0\"), string(sellvalue))"
+        }
+    ],
+    "gml_Object_obj_shop2_Draw_0": [
+        {
+            "old": "\"$\" + string_hash_to_newline(string(global.gold))",
+            "new": "scr_84_get_subst_string(scr_84_get_lang_string(\"gml_Object_obj_shop2_Draw_0\", \"$~1\"), string(global.gold))"
+        },
+        {
+            "old": "string_hash_to_newline(\"$\" + string(buyvalue[i]))",
+            "new": "scr_84_get_subst_string(scr_84_get_lang_string(\"gml_Object_obj_shop2_Draw_0\", \"$~1\"), string(buyvalue[i]))"
+        },
+        {
+            "old": "\"$\" + string_hash_to_newline(string(buyvalue[menuc[1]]) + scr_84_get_lang_string(\"obj_shop2_slash_Draw_0_gml_145_0\"))",
+            "new": "scr_84_get_subst_string(scr_84_get_lang_string(\"obj_shop2_slash_Draw_0_gml_145_0\"), string(buyvalue[menuc[1]]))"
+        },
+        {
+            "old": "\"$\" + string_hash_to_newline(string(buyvalue[menuc[1]]) + scr_84_get_lang_string(\"obj_shop2_slash_Draw_0_gml_145_0\"))",
+            "new": "scr_84_get_subst_string(scr_84_get_lang_string(\"obj_shop2_slash_Draw_0_gml_145_0\"), string(buyvalue[menuc[1]]))"
+        },
+        {
+            "old": "\"$\" + string_hash_to_newline(string(sellvalue) + scr_84_get_lang_string(\"obj_shop2_slash_Draw_0_gml_324_0\"))",
+            "new": "scr_84_get_subst_string(scr_84_get_lang_string(\"obj_shop2_slash_Draw_0_gml_324_0\"), string(sellvalue))"
+        },
+        {
+            "old": "\"$\" + string_hash_to_newline(string(sellvalue) + scr_84_get_lang_string(\"obj_shop2_slash_Draw_0_gml_324_0\"))",
+            "new": "scr_84_get_subst_string(scr_84_get_lang_string(\"obj_shop2_slash_Draw_0_gml_324_0\"), string(sellvalue))"
+        }
+    ],
+    "gml_Object_DEVICE_CONTACT_Step_0": [
+        {
+            "old": "STRINGMAX = 9",
+            "new": "STRINGMAX = 10"
+        },
+        {
+            "old": "FN_3 == \"GASTER\"",
+            "new": "FN_3 == \"GASTER\" || FN_3 == scr_84_get_lang_string(\"special_name_check_00\", \"GASTER\")"
+        },
+        {
+            "old": "FN_2 == \"GASTER\"",
+            "new": "FN_2 == \"GASTER\" || FN_2 == scr_84_get_lang_string(\"special_name_check_00\", \"GASTER\")"
+        }
+    ],
+    "gml_Object_obj_chapter_continue_Create_0": [
+        {
+            "old": "(global.lang == \"en\" ? \"Continue to Chapter 2\" : \"Chapter 2へ進む\")",
+            "new": "scr_84_get_lang_string(\"gml_Object_obj_chapter_continue_Create_0_0\", \"Continue to Chapter 2\")"
+        },
+        {
+            "old": "(global.lang == \"en\" ? \"Keep Playing Chapter 1\" : \"このままChapter 1をプレイ\")",
+            "new": "scr_84_get_lang_string(\"gml_Object_obj_chapter_continue_Create_0_1\", \"Keep Playing Chapter 1\")"
+        }
+    ],
+    "gml_Object_obj_jokerbattleevent_Step_0": [
+        {
+            "old": "snd_play(snd_joker_laugh1)",
+            "new": "snd_play(scr_84_get_sound(\"snd_joker_laugh1\"))"
+        },
+        {
+            "old": "snd_play(snd_joker_laugh0)",
+            "new": "snd_play(scr_84_get_sound(\"snd_joker_laugh0\"))"
+        },
+        {
+            "old": "snd_loop(snd_joker_laugh0)",
+            "new": "snd_loop(scr_84_get_sound(\"snd_joker_laugh0\"))"
+        },
+        {
+            "old": "snd_play(snd_joker_laugh0)",
+            "new": "snd_play(scr_84_get_sound(\"snd_joker_laugh0\"))"
+        }
+    ],
+    "gml_Object_obj_dbulletcontroller_Step_0": [
+        {
+            "old": "snd_play(snd_joker_byebye)",
+            "new": "snd_play(scr_84_get_sound(\"snd_joker_byebye\"))"
+        }
+    ],
+    "gml_Object_obj_joker_teleport_Step_0": [
+        {
+            "old": "snd_play(snd_joker_oh)",
+            "new": "snd_play(scr_84_get_sound(\"snd_joker_oh\"))"
+        }
+    ],
+    "gml_Object_obj_joker_Draw_0": [
+        {
+            "old": "snd_play(snd_joker_laugh0)",
+            "new": "snd_play(scr_84_get_sound(\"snd_joker_laugh0\"))"
+        },
+        {
+            "old": "snd_play(snd_joker_ha1)",
+            "new": "snd_play(scr_84_get_sound(\"snd_joker_ha1\"))"
+        },
+        {
+            "old": "snd_play(snd_joker_ha0)",
+            "new": "snd_play(scr_84_get_sound(\"snd_joker_ha0\"))"
+        }
+    ],
+    "gml_Object_obj_overworldc_Step_0": [
+        {
+            "old": "global.msg[0] = scr_84_get_lang_string(\"obj_overworldc_slash_Step_0_gml_32_0\") + global.litemname[global.menucoord[1]] + \".\"",
+            "new": "global.msg[0] = scr_84_get_subst_string(scr_84_get_lang_string(\"obj_overworldc_slash_Step_0_gml_32_0\"), scr_item_localized_name_acc(global.litem[global.menucoord[1]], 4))"
+        },
+        {
+            "old": "global.msg[0] = scr_84_get_subst_string(scr_84_get_lang_string(\"obj_overworldc_slash_Step_0_gml_33_0\"), global.litemname[global.menucoord[1]])",
+            "new": "global.msg[0] = scr_84_get_subst_string(scr_84_get_lang_string(\"obj_overworldc_slash_Step_0_gml_33_0\"), scr_item_localized_name_acc(global.litem[global.menucoord[1]], 4))"
+        },
+        {
+            "old": "global.msg[0] = scr_84_get_subst_string(scr_84_get_lang_string(\"obj_overworldc_slash_Step_0_gml_35_0\"), global.litemname[global.menucoord[1]])",
+            "new": "global.msg[0] = scr_84_get_subst_string(scr_84_get_lang_string(\"obj_overworldc_slash_Step_0_gml_35_0\"), scr_item_localized_name_acc(global.litem[global.menucoord[1]], 4))"
+        },
+        {
+            "old": "global.msg[0] = scr_84_get_lang_string(\"obj_overworldc_slash_Step_0_gml_36_0\") + global.litemname[global.menucoord[1]] + \".\"",
+            "new": "global.msg[0] = scr_84_get_subst_string(scr_84_get_lang_string(\"obj_overworldc_slash_Step_0_gml_36_0\"), scr_item_localized_name_acc(global.litem[global.menucoord[1]], 4))"
+        },
+        {
+            "old": "global.msg[0] = scr_84_get_subst_string(scr_84_get_lang_string(\"obj_overworldc_slash_Step_0_gml_37_0\"), global.litemname[global.menucoord[1]])",
+            "new": "global.msg[0] = scr_84_get_subst_string(scr_84_get_lang_string(\"obj_overworldc_slash_Step_0_gml_37_0\"), scr_item_localized_name_acc(global.litem[global.menucoord[1]], 4))"
+        }
+    ],
+    "gml_Object_obj_savemenu_Create_0": [
+        {
+            "old": "var name_text = (global.lang == \"ja\" ? \"クリス\" : \"Kris\")",
+            "new": "var name_text = name"
+        }
+    ]
+}
+

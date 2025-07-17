@@ -1,0 +1,35 @@
+{
+    "101899": { "orig_letter": "A", "num": "0" },
+    "101900": { "orig_letter": "P", "num": "1" },
+    "101904": { "orig_letter": "E", "num": "2" },
+    "101903": { "orig_letter": "A", "num": "3" },
+    "101901": { "orig_letter": "P", "num": "4" },
+    "101902": { "orig_letter": "L", "num": "5" },
+    
+
+    "102073": { "orig_letter": "G", "num": "0" },
+    "102072": { "orig_letter": "A", "num": "1" },
+    "102075": { "orig_letter": "2", "num": "2" },
+    "102081": { "orig_letter": "A", "num": "3" },
+    "102067": { "orig_letter": "A", "num": "4" },
+    "102068": { "orig_letter": "R", "num": "5" },
+    "102074": { "orig_letter": "E", "num": "6" },
+    "102076": { "orig_letter": "A", "num": "7" },
+    "102071": { "orig_letter": "E", "num": "8" },
+    "102069": { "orig_letter": "2", "num": "9" },
+    "102070": { "orig_letter": "G", "num": "10" },
+    "102082": { "orig_letter": "A", "num": "11" },
+    "102077": { "orig_letter": "E", "num": "12" },
+    "102078": { "orig_letter": "A", "num": "13" },
+    "102079": { "orig_letter": "L", "num": "14" },
+    "102080": { "orig_letter": "A", "num": "15" },
+    
+    "103988": { "orig_letter": "D", "num": "0" },
+    "103989": { "orig_letter": "E", "num": "1" },
+    "103990": { "orig_letter": "C", "num": "2" },
+    "103991": { "orig_letter": "E", "num": "3" },
+    "103992": { "orig_letter": "M", "num": "4" },
+    "103993": { "orig_letter": "B", "num": "5" },
+    "103994": { "orig_letter": "E", "num": "6" },
+    "103995": { "orig_letter": "R", "num": "7" }
+}

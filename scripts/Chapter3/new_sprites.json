@@ -1,0 +1,17 @@
+{
+    "spr_dw_tv_word_poster": {
+        "width": 76,
+        "height": 108,
+        "origin_x": 0,
+        "origin_y": 0,
+        "frames_num": 1
+    },
+    "spr_board_shop": {
+        "width": 48,
+        "height": 18,
+        "origin_x": 0,
+        "origin_y": 0,
+        "frames_num": 1
+    }
+}
+

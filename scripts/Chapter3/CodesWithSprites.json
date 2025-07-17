@@ -1,0 +1,477 @@
+{
+  "gml_GlobalScript_scr_quiztext": [
+    "spr_quiz_thisbutton",
+    "spr_quiz_images"
+  ],
+  "gml_GlobalScript_scr_chefs": [
+    "spr_tenna_grasp_chef"
+  ],
+  "gml_GlobalScript_scr_quizwipe": [
+    "spr_dw_tv_tvtimeSign_quizwipe"
+  ],
+  "gml_GlobalScript_scr_shopmenu": [
+    "spr_headralsei",
+    "spr_headkris",
+    "spr_headsusie"
+  ],
+  "gml_GlobalScript_scr_set_facing_sprites": [
+    "spr_tenna_hooray",
+    "spr_krisu_dark_cool"
+  ],
+  "gml_Object_obj_mainchara_Create_0": [
+    "spr_krisu_dark_cool"
+  ],
+  "gml_Object_obj_room_tvland_preview_Step_0": [
+    "spr_krisu_dark_cool"
+  ],
+  "gml_Object_obj_ch3_GSB01_Create_0": [
+    "spr_tenna_hooray_armsup"
+  ],
+  "gml_Object_obj_ch3_GSB01_Step_0": [
+    "spr_tenna_hooray_armsup"
+  ],
+  "gml_Object_obj_screen_channel_change_tester_Draw_0": [
+    "spr_dw_susiezilla_bg_empty",
+    "spr_rhythmgame_bg"
+  ],
+  "gml_Object_obj_b3stairs_Step_0": [
+    "spr_tenna_pose_headraised",
+    "spr_tenna_attack"
+  ],
+  "gml_Object_obj_ch3_PTB02_Step_0": [
+    "spr_tenna_hooray_armsup",
+    "spr_tenna_laugh_pose"
+  ],
+  "gml_Object_obj_shutta_photo_tenna_Draw_0": [
+    "spr_tenna_laugh_pose",
+    "spr_tenna_point_up"
+  ],
+  "gml_Object_obj_tenna_smashcutter_Step_2": [
+    "spr_tenna_attack"
+  ],
+  "gml_Object_obj_dw_tv_curtain_tennanpc_Step_0": [
+    "spr_tenna_tie_adjust_a"
+  ],
+  "gml_Object_obj_room_teevie_bonus_zone_Step_0": [
+    "spr_tenna_grasp_anim",
+    "spr_tenna_hooray",
+    "spr_tenna_grasp"
+  ],
+  "gml_Object_obj_gameover_cowboy_Step_0": [
+    "spr_tenna_whisper",
+    "spr_tenna_point_up",
+    "spr_tenna_laugh_pose",
+    "spr_tenna_grasp"
+  ],
+  "gml_Object_obj_ch3_GSC05_susiezilla_tutorial_Draw_0": [
+    "spr_tenna_desperate",
+    "spr_tenna_tie_adjust_a",
+    "spr_tenna_point_at_screen",
+    "spr_tenna_grasp",
+    "spr_tenna_pose",
+    "spr_tenna_point_up_twofingers",
+    "spr_tenna_laugh"
+  ],
+  "gml_Object_obj_lightemup_bg_Draw_0": [
+    "spr_susiezilla_background",
+    "spr_rhythmgame_bg"
+  ],
+  "gml_Object_obj_ch3_BTB03_Step_0": [
+    "spr_tenna_grasp_anim"
+  ],
+  "gml_Object_obj_tenna_enemy_Create_0": [
+    "spr_tenna_point_up",
+    "spr_tenna_sad"
+  ],
+  "gml_Object_obj_tenna_enemy_Step_0": [
+    "spr_tenna_grasp",
+    "spr_tenna_point_up",
+    "spr_tenna_attack"
+  ],
+  "gml_Object_obj_victory_rhythm_Step_0": [
+    "spr_tenna_laugh_pose",
+    "spr_tenna_attack"
+  ],
+  "gml_Object_obj_actor_tenna_Draw_0": [
+    "spr_tenna_pose_podium",
+    "spr_tenna_grasp_anim",
+    "spr_tenna_hooray",
+    "spr_tenna_laugh_pose_alt",
+    "spr_tenna_grasp_zoom",
+    "spr_tenna_point_at_screen",
+    "spr_tenna_hooray_armsup",
+    "spr_tenna_laugh_pose",
+    "spr_tenna_twirl",
+    "spr_tenna_laugh_pose_segmented_body",
+    "spr_tenna_grasp_zoom_static",
+    "spr_tenna_sad",
+    "spr_tenna_frightened",
+    "spr_tenna_attack",
+    "spr_tenna_attack_clapvfx",
+    "spr_tenna_grasp_anim_b",
+    "spr_tenna_point_up",
+    "spr_tenna_point_top",
+    "spr_tenna_pose"
+  ],
+  "gml_Object_obj_ch3_GSB05_Step_0": [
+    "spr_tenna_hooray",
+    "spr_tenna_grasp"
+  ],
+  "gml_Object_obj_rhythmgame_editor_Draw_0": [
+    "spr_sneo_playback"
+  ],
+  "gml_Object_obj_room_inbetween_Create_0": [
+    "spr_dw_inbetween_room_door"
+  ],
+  "gml_Object_obj_intro_ch2_Draw_0": [
+    "IMAGE_LOGO_CENTER_SEPARATE"
+  ],
+  "gml_Object_obj_dw_interstitial_door_Draw_0": [
+    "spr_dw_interstitial_doors_sign_outline",
+    "spr_dw_interstitial_doors_sign",
+    "spr_dw_interstitial_doors"
+  ],
+  "gml_Object_obj_victory_chef_Step_0": [
+    "spr_tenna_attack"
+  ],
+  "gml_Object_obj_dw_tv_mystery_sign_Draw_0": [
+    "spr_dw_tv_tvtimeSign_half",
+    "spr_dw_tv_tvtimeSign_off_gray"
+  ],
+  "gml_Object_obj_chefs_stackbox_Alarm_1": [
+    "spr_tenna_grasp_chef"
+  ],
+  "gml_Object_obj_dw_ch3_teevie_keyboard_tile_Draw_0": [
+    "spr_ch2_keyboard_tile_text"
+  ],
+  "gml_Object_obj_room_green_room_Create_0": [
+    "spr_dw_green_room_door_changing",
+    "spr_dw_green_room_bar_front"
+  ],
+  "gml_Object_obj_gameover_board_Step_0": [
+    "spr_tenna_hooray_armsup",
+    "spr_tenna_sad",
+    "spr_tenna_grasp"
+  ],
+  "gml_Object_obj_zapper_enemy_Step_0": [
+    "spr_tenna_whisper",
+    "spr_tenna_point_up_b"
+  ],
+  "gml_GlobalScript_scr_battle": [
+    "spr_tenna_point_up"
+  ],
+  "gml_Object_obj_zapper_enemy_Draw_0": [
+    "spr_zapper_caption2",
+    "spr_zapper_caption3",
+    "spr_zapper_volume_text"
+  ],
+  "gml_Object_obj_tm_quizzler_Step_1": [
+    "spr_tm_letters"
+  ],
+  "gml_Object_obj_gameover_susiezilla_Step_0": [
+    "spr_tenna_point_at_screen",
+    "spr_tenna_point_up",
+    "spr_tenna_laugh_pose"
+  ],
+  "gml_Object_obj_shadowman_enemy_Step_0": [
+    "spr_tenna_pose_podium",
+    "spr_tenna_point_up_b",
+    "spr_tenna_hooray"
+  ],
+  "gml_Object_obj_tm_quizzler_old_Step_1": [
+    "spr_tm_letters"
+  ],
+  "gml_Object_obj_board_quizwheel_Draw_0": [
+    "spr_ch3_wheel_center"
+  ],
+  "gml_Object_obj_mainchara_board_Draw_0": [
+    "spr_board_sleep"
+  ],
+  "gml_Object_obj_ch3_GSB02_Step_0": [
+    "spr_tenna_point_up",
+    "spr_tenna_laugh"
+  ],
+  "gml_Object_obj_intro_tv_time_Create_0": [
+    "spr_dw_tv_time_intro"
+  ],
+  "gml_Object_obj_intro_tv_time_Step_0": [
+    "spr_dw_tv_time_intro_loop"
+  ],
+  "gml_Object_obj_board_battleintroduction_Step_0": [
+    "spr_tenna_grasp_b",
+    "spr_tenna_grasp_d",
+    "spr_tenna_attack"
+  ],
+  "gml_Object_obj_ch3_closet_Step_0": [
+    "spr_tenna_desperate",
+    "spr_tenna_tie_adjust_a",
+    "spr_tenna_hooray"
+  ],
+  "gml_Object_obj_dw_tv_funometer_Draw_0": [
+    "spr_hopeometer_hope"
+  ],
+  "gml_Object_obj_GSA02_B0_Draw_0": [
+    "spr_board_tvtimelogo"
+  ],
+  "gml_Object_obj_tenna_zoom_jump_Step_0": [
+    "spr_tenna_grasp",
+    "spr_tenna_point_up",
+    "spr_tenna_attack"
+  ],
+  "gml_Object_obj_gameover_chef_Step_0": [
+    "spr_tenna_point_at_screen",
+    "spr_tenna_whisper",
+    "spr_tenna_grasp"
+  ],
+  "gml_Object_obj_ch3_GSB03_Step_0": [
+    "spr_tenna_pose_podium",
+    "spr_tenna_hooray",
+    "spr_tenna_laugh_pose",
+    "spr_tenna_armsup_annoyed",
+    "spr_tenna_attack"
+  ],
+  "gml_Object_obj_room_stage_Step_0": [
+    "spr_tenna_tie_adjust_b",
+    "spr_tenna_pose_headlowered_nose",
+    "spr_tenna_tie_adjust_a",
+    "spr_tenna_hooray",
+    "spr_tenna_twirl"
+  ],
+  "gml_Object_obj_ch3_BTB06_Create_0": [
+    "spr_dw_tv_tvtimeSign"
+  ],
+  "gml_Object_obj_ch3_BTB06_Step_0": [
+    "spr_tenna_pose_headlowered",
+    "spr_tenna_desperate",
+    "spr_tenna_pose_headraised",
+    "spr_tenna_grasp",
+    "spr_tenna_snap"
+  ],
+  "gml_Object_obj_rouxls_annyoing_dog_controller_Create_0": [
+    "spr_recovery_platform_glow"
+  ],
+  "gml_Object_obj_room_ranking_z_hallway_Create_0": [
+    "spr_dw_ranking_door_z"
+  ],
+  "gml_Object_obj_ch3_PTB01_Step_0": [
+    "spr_tenna_pose_headlowered",
+    "spr_tenna_pose_headraised",
+    "spr_tenna_grasp"
+  ],
+  "gml_Object_obj_dw_chef_screen_Draw_0": [
+    "spr_gameshow_screen_chef_logo",
+    "spr_gameshow_screen_chef_food"
+  ],
+  "gml_Object_obj_tenna_zoom_Draw_0": [
+    "spr_tenna_grasp_zoom_static"
+  ],
+  "gml_Object_obj_tenna_shimmyarms_Draw_0": [
+    "spr_tenna_laugh_pose_segmented_body"
+  ],
+  "gml_Object_obj_swordroute_consolestarter_Draw_0": [
+    "spr_board_game_title"
+  ],
+  "gml_Object_obj_ch3_GSC05_Step_0": [
+    "spr_tenna_point_up",
+    "spr_tenna_laugh_pose"
+  ],
+  "gml_Object_obj_dw_tv_funometer_old_Draw_0": [
+    "spr_dw_tv_funometer_hope"
+  ],
+  "gml_Object_obj_ch3_BTB04_Step_0": [
+    "spr_tenna_pose_headlowered",
+    "spr_tenna_pose_headraised",
+    "spr_tenna_grasp"
+  ],
+  "gml_Object_obj_ch3_GSA01G_Step_0": [
+    "spr_tenna_point_at_screen",
+    "spr_tenna_laugh_pose",
+    "spr_tenna_armsup_annoyed",
+    "spr_tenna_sad",
+    "spr_tenna_frightened",
+    "spr_tenna_snap",
+    "spr_tenna_point_up",
+    "spr_tenna_pose"
+  ],
+  "gml_Object_obj_ch3_GSD02_Step_0": [
+    "spr_tenna_grasp_anim",
+    "spr_tenna_grasp"
+  ],
+  "gml_Object_obj_b2lancersalsa_Create_0": [
+    "spr_board_b2_lancerhint"
+  ],
+  "gml_Object_obj_b2lancersalsa_Draw_0": [
+    "spr_board_treasuremarker_lmarkonly"
+  ],
+  "gml_Object_obj_room_susiezilla_empty_Step_0": [
+    "spr_tenna_jumpscare"
+  ],
+  "gml_Object_obj_tm_quizzap_Draw_0": [
+    "spr_tm_letters"
+  ],
+  "gml_Object_obj_susiezilla_gamecontroller_Draw_0": [
+    "spr_susiezilla_background"
+  ],
+  "gml_Object_obj_ch3_GSC07_Create_0": [
+    "spr_gameshow_halloffame_right",
+    "spr_gameshow_halloffame_left"
+  ],
+  "gml_Object_obj_ch3_GSC07_Step_0": [
+    "spr_gameshow_halloffame_left"
+  ],
+  "gml_Object_obj_dw_ranking_t_screens_Draw_0": [
+    "spr_tenna_t_pose"
+  ],
+  "gml_Object_obj_tenna_snap_Step_0": [
+    "spr_tenna_snap"
+  ],
+  "gml_Object_obj_tenna_snap_Draw_0": [
+    "spr_tenna_snap_body",
+    "spr_tenna_snap_body_f2",
+    "spr_tenna_snap"
+  ],
+  "gml_Object_obj_shootout_controller_Create_0": [
+    "spr_shootout_train_new"
+  ],
+  "gml_Object_obj_shootout_window_Draw_0": [
+    "spr_shootout_train_new"
+  ],
+  "gml_Object_obj_room_rhythm_empty_Step_0": [
+    "spr_tenna_pose_podium",
+    "spr_tenna_pose_headlowered_nose"
+  ],
+  "gml_Object_obj_sprite_zoom_example_Step_0": [
+    "spr_tenna_grasp_zoom",
+    "spr_tenna_grasp"
+  ],
+  "gml_Object_obj_face_Draw_0": [
+    "spr_tenna_point_up",
+    "spr_face_rurus_piratehat"
+  ],
+  "gml_Object_obj_ch3_GSA06_Step_0": [
+    "spr_tenna_pose_podium",
+    "spr_tenna_kick"
+  ],
+  "gml_Object_obj_dw_teevie_rhythm_bg_Draw_0": [
+    "spr_dw_teevie_rhythm_bg"
+  ],
+  "gml_Object_obj_town_event_Create_0": [
+    "spr_lw_conbini_open"
+  ],
+  "gml_Object_obj_tenna_board4_enemy_Create_0": [
+    "spr_tenna_pose_podium",
+    "spr_tenna_point_up",
+    "spr_tenna_sad"
+  ],
+  "gml_Object_obj_tenna_board4_enemy_Step_0": [
+    "spr_tenna_pose_podium",
+    "spr_tenna_tie_adjust_b",
+    "spr_tenna_tie_adjust_a",
+    "spr_tenna_point_up",
+    "spr_tenna_attack"
+  ],
+  "gml_Object_obj_b3bintrocutscene_swordroutever_Step_0": [
+    "spr_tenna_armsup_annoyed",
+    "spr_tenna_attack"
+  ],
+  "gml_Object_obj_room_interstitial_Step_0": [
+    "spr_tenna_hooray_armsup"
+  ],
+  "gml_Object_obj_ch3_GSD01_Step_0": [
+    "spr_tenna_pose_podium",
+    "spr_tenna_point_up_b",
+    "spr_tenna_laugh_pose_teeth"
+  ],
+  "gml_Object_obj_attackpress_Draw_0": [
+    "spr_pressfront_b"
+  ],
+  "gml_Object_obj_heroparent_Draw_0": [
+    "spr_chartarget"
+  ],
+  "gml_Object_obj_room_chef_empty_Step_0": [
+    "spr_tenna_pose_podium",
+    "spr_tenna_tie_adjust_a"
+  ],
+  "gml_Object_obj_pacifyspell_Step_0": [
+    "spr_spare_z"
+  ],
+  "gml_Object_obj_dbulletcontroller_Step_0": [
+    "spr_tm_letters"
+  ],
+  "gml_Object_obj_checkers_enemy_Step_0": [
+    "spr_checkers_milk"
+  ],
+  "gml_Object_obj_ch3_GSA04_Step_0": [
+    "spr_tenna_pose_podium",
+    "spr_tenna_whisper_chef",
+    "spr_tenna_attack"
+  ],
+  "gml_Object_obj_b1spring_Draw_0": [
+    "spr_board_treasuremarker_lmarkonly"
+  ],
+  "gml_Object_obj_chefs_customer_Step_0": [
+    "spr_tenna_grasp_chef"
+  ],
+  "gml_Object_obj_chefs_customer_Draw_0": [
+    "spr_tenna_grasp_chef",
+    "spr_chefs_food"
+  ],
+  "gml_Object_obj_ch3_BTB02_Step_0": [
+    "spr_tenna_grasp",
+    "spr_tenna_grasp_anim_b"
+  ],
+  "gml_Object_obj_ch3_GSC04_Create_0": [
+    "spr_dw_interstitial_doors"
+  ],
+  "gml_Object_obj_gameover_band_Step_0": [
+    "spr_tenna_pose_podium",
+    "spr_tenna_point_at_screen",
+    "spr_tenna_whisper",
+    "spr_tenna_point_up",
+    "spr_tenna_grasp"
+  ],
+  "gml_Object_obj_castle_tutorial_Create_0": [
+    "bg_dw_castle_music_shop"
+  ],
+  "gml_Object_obj_town_north_Create_0": [
+    "spr_flowershop_sign"
+  ],
+  "gml_Object_obj_room_castle_dojo_Create_0": [
+    "bg_dw_dojo_help"
+  ],
+  "gml_Object_obj_visualEffect_pacify_Step_0": [
+    "spr_spare_z"
+  ],
+  "gml_Object_obj_board_pickup_Step_0": [
+    "spr_board_inventory_q"
+  ],
+  "gml_Object_obj_susiezilla_singlescreen_kickboxin_tenna_Create_0": [
+    "spr_tenna_desperate",
+    "spr_tenna_kick"
+  ],
+  "gml_Object_obj_susiezilla_singlescreen_kickboxin_tenna_Alarm_0": [
+    "spr_tenna_kick"
+  ],
+  "gml_Object_obj_susiezilla_singlescreen_kickboxin_tenna_Step_0": [
+    "spr_tenna_kick"
+  ],
+  "gml_Object_obj_susiezilla_singlescreen_kickboxin_tenna_Draw_0": [
+    "spr_tenna_desperate"
+  ],
+  "gml_Object_obj_board_inventory_Draw_0": [
+    "spr_board_inventory_q"
+  ],
+  "gml_Object_obj_b3bs_bibliox_Create_0": [
+    "spr_npc_bibliox_up"
+  ],
+  "gml_Object_obj_susiezilla_gamecontroller_Create_0": [
+    "spr_susiezilla_ralsei_tower"
+  ],
+  "gml_Object_obj_susiezilla_statue_Step_0": [
+    "spr_susiezilla_ralsei_tower"
+  ],
+  "gml_Object_obj_susiezilla_statue_Draw_0": [
+    "spr_tenna_point_up",
+    "spr_susiezilla_ralsei_tower"
+  ]
+}

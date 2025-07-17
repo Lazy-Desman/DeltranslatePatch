@@ -1,0 +1,329 @@
+{
+    "gml_Object_obj_shop1_Draw_0": [
+        {
+            "old": "\"$\" + string_hash_to_newline(string(global.gold))",
+            "new": "stringsetsubloc(\"$~1\", string(global.gold), \"obj_shop1_slash_Draw_0_gml_1_0\")"
+        }
+    ],
+    "gml_Object_obj_shop2_Draw_0": [
+        {
+            "old": "\"$\" + string_hash_to_newline(string(global.gold))",
+            "new": "stringsetsubloc(\"$~1\", string(global.gold), \"obj_shop2_slash_Draw_0_gml_1_0\")"
+        }
+    ],
+    "gml_Object_obj_moneydisplay_Draw_0": [
+        {
+            "old": "\"$\" + string(global.gold)",
+            "new": "stringsetsubloc(\"$~1\", string(global.gold), \"obj_moneydisplay_Draw_0_gml_1_0\")"
+        }
+    ],
+    "gml_Object_DEVICE_FAILURE_Step_0": [
+        {
+            "old": "NAMEX[0][0] = 80",
+            "new": "scr_84_set_draw_font(\"main\")\nNAMEX[0][0] = 80 - (string_width(NAME[0][0]) - string_width(\"CONTINUE\"))"
+        }
+    ], 
+    "gml_Object_DEVICE_NAMER_Draw_0": [
+        {
+            "old": "FN_3 == \"GASTER\"",
+            "new": "FN_3 == \"GASTER\" || FN_3 == stringsetloc(\"GASTER\", \"DEVICE_NAMER_slash_Draw_0_gml_00_0\")"
+        }
+    ], 
+    "gml_Object_obj_npc_dojo_Step_0": [
+        {
+            "old": "msgnextsubloc(\"* (You received ~1!)/%\", dojoPrizeName, \"obj_npc_dojo_slash_Step_0_gml_51_0\")",
+            "new": "msgnextsubloc(\"* (You received ~1!)/%\", scr_item_localized_name_acc(dojoPrizeValue, dojoPrizeType, dojoPrizeName), \"obj_npc_dojo_slash_Step_0_gml_51_0\")"
+        }
+    ], 
+    "gml_Object_obj_overworldc_Step_0": [
+        {
+            "old": "stringsetsubloc(\"* You bid a quiet farewell to the ~1.\", global.litemname[global.menucoord[1]], \"obj_overworldc_slash_Step_0_gml_34_0_b\")",
+            "new": "stringsetsubloc(\"* You bid a quiet farewell to the ~1.\", scr_item_localized_name_acc(global.litem[global.menucoord[1]], 4), \"obj_overworldc_slash_Step_0_gml_34_0_b\")"
+        },
+        {
+            "old": "stringsetsubloc(\"* You put the ~1 on the ground and gave it a little pat.\", global.litemname[global.menucoord[1]], \"obj_overworldc_slash_Step_0_gml_34_0\")",
+            "new": "stringsetsubloc(\"* You put the ~1 on the ground and gave it a little pat.\", scr_item_localized_name_acc(global.litem[global.menucoord[1]], 4), \"obj_overworldc_slash_Step_0_gml_34_0\")"
+        },
+        {
+            "old": "stringsetsubloc(\"* You threw the ~1 on the ground like the piece of trash it is.\", global.litemname[global.menucoord[1]], \"obj_overworldc_slash_Step_0_gml_36_0\")",
+            "new": "stringsetsubloc(\"* You threw the ~1 on the ground like the piece of trash it is.\", scr_item_localized_name_acc(global.litem[global.menucoord[1]], 4), \"obj_overworldc_slash_Step_0_gml_36_0\")"
+        },
+        {
+            "old": "stringsetsubloc(\"* You abandoned the ~1.\", global.litemname[global.menucoord[1]], \"obj_overworldc_slash_Step_0_gml_38_0_b\")",
+            "new": "stringsetsubloc(\"* You abandoned the ~1.\", scr_item_localized_name_acc(global.litem[global.menucoord[1]], 4), \"obj_overworldc_slash_Step_0_gml_38_0_b\")"
+        },
+        {
+            "old": "stringsetsubloc(\"* The ~1 was thrown away.\", global.litemname[global.menucoord[1]], \"obj_overworldc_slash_Step_0_gml_38_0\")",
+            "new": "stringsetsubloc(\"* The ~1 was thrown away.\", scr_item_localized_name_acc(global.litem[global.menucoord[1]], 4), \"obj_overworldc_slash_Step_0_gml_38_0\")"
+        }
+    ],
+    "gml_Object_obj_room_ranking_hub_Create_0": [
+        {
+            "old": "(board_flag, true)",
+            "new": "(board_flag)"
+        },
+        {
+            "old": "_ranking = \"S\"",
+            "new": "_ranking = stringsetloc(\"S\", \"scr_get_rank_letter_slash_scr_get_rank_letter_gml_5_1\")"
+        }
+    ],
+    "gml_Object_obj_dbulletcontroller_Step_0": [
+        {
+            "old": "scr_enemyblcon(x - 60, global.monstery[myself] + 70, 12)",
+            "new": "scr_enemyblcon(x - 60, global.monstery[myself] + 70, 12.5)"
+        },
+        {
+            "old": "scr_enemyblcon(x - 5, global.monstery[myself] + 70, 12.3)",
+            "new": "scr_enemyblcon(x + 5, global.monstery[myself] + 70, 12.5)"
+        },
+        {
+            "old": "scr_enemyblcon(x - 5, global.monstery[myself] + 70, 12.3)",
+            "new": "scr_enemyblcon(x + 15, global.monstery[myself] + 70, 12.5)"
+        }
+    ],
+    "gml_Object_obj_ch3_GSA06_Step_0": [
+        {
+            "old": "var round_sprite = (global.lang == \"ja\") ? 3055 : 3603;",
+            "new": "var round_sprite = scr_84_get_sprite(\"spr_funnytext_rounds\");"
+        },
+        {
+            "old": "scr_funnytext_init(0, 0, -14, 1817, 0, 0);",
+            "new": "scr_funnytext_init(0, 0, -14, scr_84_get_sprite(\"spr_funnytext_stop\"), 0, 0);"
+        },
+        {
+            "old": "scr_funnytext_init(4, 0, -16, 3055, 0, 0);",
+            "new": "scr_funnytext_init(4, 0, -16, scr_84_get_sprite(\"spr_funnytext_round\"), 0, 0);"
+        },
+        {
+            "old": "scr_funnytext_init(2, 0, -14, 4462, 0, 0);",
+            "new": "scr_funnytext_init(2, 0, -14, scr_84_get_sprite(\"spr_funnytext_round_1\"), 0, 0);"
+        }
+    ],
+    "gml_Object_obj_ch3_GSA01G_Step_0": [
+        {
+            "old": "var tv_time_sprite = (global.lang == \"ja\") ? 4244 : 2843;",
+            "new": "var tv_time_sprite = scr_84_get_sprite(\"spr_funnytext_tv_time\");"
+        }
+    ],
+    "gml_Object_obj_ch3_GSA04_Step_0": [
+        {
+            "old": "scr_funnytext_init(1, 0, -14, 1272, 0, 0);",
+            "new": "scr_funnytext_init(1, 0, -14, scr_84_get_sprite(\"spr_funnytext_big\"), 0, 0);"
+        }
+    ],
+    "gml_Object_obj_ch3_GSC05_Step_0": [
+        {
+            "old": "scr_funnytext_init(3, 0, -10, 883, 0, 0);",
+            "new": "scr_funnytext_init(3, 0, -10, scr_84_get_sprite(\"spr_funnytext_special\"), 0, 0);"
+        }
+    ],
+    "gml_Object_obj_ch3_GSA02_Step_0": [
+        {
+            "old": "var star_text = (global.lang == \"ja\") ? 4816 : 1724;",
+            "new": "var star_text = scr_84_get_sprite(\"spr_funnytext_star\");"
+        }
+    ],
+    "gml_Object_obj_ch3_GSB03_Step_0": [
+        {
+            "old": "scr_funnytext_init(1, -10, 0, 1223, 0, 0);",
+            "new": "scr_funnytext_init(1, -10, 0, scr_84_get_sprite(\"spr_funnytext_breaking_news\"), 0, 0);"
+        },
+        {
+            "old": "scr_funnytext_init(3, -10, -14, 4485, 0, 0);",
+            "new": "scr_funnytext_init(3, -10, -14, scr_84_get_sprite(\"spr_funnytext_bonus_round\"), 0, 0);"
+        }
+    ],
+    "gml_Object_obj_npc_sign_Other_10": [
+        {
+            "old": "scr_funnytext_init(0, 0, 0, 923, 0, 0);",
+            "new": "scr_funnytext_init(0, 0, 0, scr_84_get_sprite(\"spr_funnytext_free\"), 0, 0);"
+        },
+        {
+            "old": "scr_funnytext_init(1, 0, 0, 464, 1, 0);",
+            "new": "scr_funnytext_init(1, 0, 0, scr_84_get_sprite(\"spr_funnytext_resumes\"), 1, 0);"
+        }
+    ],
+    "gml_Object_obj_ch3_GSC07_Step_0": [
+        {
+            "old": "scr_funnytext_init(1, 0, 0, 2914, 0, 0);",
+            "new": "scr_funnytext_init(1, 0, 0, scr_84_get_sprite(\"spr_funnytext_game_over\"), 0, 0);"
+        },
+        {
+            "old": "scr_funnytext_init(2, 0, -14, 4657, 0, 0);",
+            "new": "scr_funnytext_init(2, 0, -14, scr_84_get_sprite(\"spr_funnytext_game\"), 0, 0);"
+        },
+        {
+            "old": "scr_funnytext_init(3, 0, -14, 130, 0, 0);",
+            "new": "scr_funnytext_init(3, 0, -14, scr_84_get_sprite(\"spr_funnytext_over_small\"), 0, 0);"
+        }
+    ],
+    "gml_Object_obj_ch3_GSB01_Step_0": [
+        {
+            "old": "scr_funnytext_init(0, 0, -14, 2843, 0, 0);",
+            "new": "scr_funnytext_init(0, 0, -14, scr_84_get_sprite(\"spr_funnytext_tv_time\"), 0, 0);"
+        }
+    ],
+    "gml_Object_obj_gameover_minigame_Draw_0": [
+        {
+            "old": "minigametext.mystring = \"GAME CLEAR!\";",
+            "new": "minigametext.mystring = stringsetloc(\"GAME CLEAR!\", \"obj_gameover_minigame_slash_Draw_0_gml_0_0\");"
+        }
+    ],
+    "gml_Object_obj_shootout_controller_Draw_64": [
+        {
+            "old": "\"SCORE: \"",
+            "new": "stringsetloc(\"SCORE: \", \"obj_shootout_controller_slash_Draw_64_gml_0_0\")"
+        },
+        {
+            "old": "\"TIME LEFT: \"",
+            "new": "stringsetloc(\"TIME LEFT: \", \"obj_shootout_controller_slash_Draw_64_gml_1_0\")"
+        }
+    ],
+    "gml_Object_obj_board_event_lawnmower_Draw_0": [
+        {
+            "old": "\"SCORE: \"",
+            "new": "stringsetloc(\"SCORE: \", \"obj_board_event_lawnmower_slash_Draw_0_gml_0_0\")"
+        },
+        {
+            "old": "\"TIME: \"",
+            "new": "stringsetloc(\"TIME: \", \"obj_board_event_lawnmower_slash_Draw_0_gml_1_0\")"
+        }
+    ],
+    "gml_Object_obj_quizsequence_Create_0": [
+        {
+            "old": "suname = \"ASS\";",
+            "new": "suname = stringsetloc(\"ASS\", \"obj_ch3_GSA02_slash_Step_0_gml_388_0\");"
+        }
+    ],
+    "gml_Object_obj_rhythmgame_Other_12": [
+        {
+            "old": "draw_set_font(scr_84_get_font(\"main\"))",
+            "new": "draw_set_font(scr_84_get_font(\"main_mono\"))"
+        },
+        {
+            "old": "string_length(current_lyric)",
+            "new": "string_length(string_replace_all(current_lyric, \"-\", \"\"))"
+        }
+    ],
+    "gml_Object_obj_dw_ch3_teevie_quiz_controller_Create_0": [
+        {
+            "old": "var _char = (j == 0) ? \"A\" : \"B\";",
+            "new": "var _char = (j == 0) ? stringsetloc(\"A\", \"obj_dw_ch3_teevie_quiz_screen_slash_Draw_0_gml_1_0\") : stringsetloc(\"B\", \"obj_dw_ch3_teevie_quiz_screen_slash_Draw_0_gml_2_0\");"
+        },
+        {
+            "old": "var _button_index = (arg1 == \"A\") ? 0 : 1;",
+            "new": "var _button_index = (arg1 == stringsetloc(\"A\", \"obj_dw_ch3_teevie_quiz_screen_slash_Draw_0_gml_1_0\")) ? 0 : 1;"
+        }
+    ],
+    "gml_Object_obj_quizroom_Step_0": [
+        {
+            "old": "su_pomark.mystring = \"ASS\";",
+            "new": "su_pomark.mystring = stringsetloc(\"ASS\", \"obj_ch3_GSA02_slash_Step_0_gml_388_0\");"
+        },
+        {
+            "old": "ra_pomark.mystring = \"RAL\";",
+            "new": "ra_pomark.mystring = stringsetloc(\"RAL\", \"obj_ch3_GSA02_slash_Step_0_gml_313_0\");"
+        }
+    ],
+    "gml_Object_obj_b1lancer_Draw_0": [
+        {
+            "old": "draw_sprite_ext(spr_board_lancercactus_help, lang",
+            "new": "draw_sprite_ext(scr_84_get_sprite(\"spr_board_lancercactus_help\"), 0"
+        }
+    ],
+    "gml_Object_obj_dw_ch3_b3bs_officesign_Create_0": [
+        {
+            "old": "if (global.lang == \"ja\")",
+            "new": "if (false)"
+        }
+    ],
+    "gml_Object_obj_chefs_customer_Step_0": [
+        {
+            "old": "var specialnote = scr_marker_ext(4, 476, 4864, 2, 2);",
+            "new": "var specialnote = scr_marker_ext(4, 476, scr_84_get_sprite(\"spr_ch3_chef_specialguestText\"), 2, 2);"
+        },
+        {
+            "old": "if (global.lang == \"ja\")",
+            "new": "if (false)"
+        }
+    ],
+    "gml_Object_obj_board_event_sphinx_tenna_Step_0": [
+        {
+            "old": "4841",
+            "new": "scr_84_get_sprite(\"spr_board_inventory_q\")"
+        },
+        {
+            "old": "4841",
+            "new": "scr_84_get_sprite(\"spr_board_inventory_q\")"
+        }
+    ],
+    "gml_Object_obj_board_b3topdoor_Step_0": [
+        {
+            "old": "4841",
+            "new": "scr_84_get_sprite(\"spr_board_inventory_q\")"
+        },
+        {
+            "old": "4841",
+            "new": "scr_84_get_sprite(\"spr_board_inventory_q\")"
+        }
+    ],
+    "gml_Object_obj_dw_ranking_door_Create_0": [
+        {
+            "old": "var sprite_name = asset_get_index(\"spr_dw_ranking_door_\" + arg0);",
+            "new": "var sprite_name = scr_84_get_sprite(\"spr_dw_ranking_door_\" + arg0);"
+        }
+    ],
+    "gml_Object_obj_dw_teevie_tv_screens_treasure_Step_0": [
+        {
+            "old": "screen.set_screen_sprite(4931);",
+            "new": "screen.set_screen_sprite(scr_84_get_sprite(\"spr_dw_teevie_tv_shows\"));"
+        }
+    ],
+    "gml_Object_obj_dw_teevie_tvtest_Draw_0": [
+        {
+            "old": "screensprite[i][j] = 4931;",
+            "new": "screensprite[i][j] = scr_84_get_sprite(\"spr_dw_teevie_tv_shows\");"
+        }
+    ],
+    "gml_GlobalScript_scr_teevie_screen": [
+        {
+            "old": "_screensprite = 4931",
+            "new": "_screensprite = scr_84_get_sprite(\"spr_dw_teevie_tv_shows\");"
+        }
+    ],
+    "gml_Object_obj_dw_teevie_tv_screens_Step_0": [
+        {
+            "old": "screen.set_screen_sprite(4931);",
+            "new": "screen.set_screen_sprite(scr_84_get_sprite(\"spr_dw_teevie_tv_shows\"));"
+        }
+    ],
+    "gml_Object_obj_actor_tenna_Draw_0": [
+        {
+            "old": "rosetennasprite = 3002;",
+            "new": "rosetennasprite = scr_84_get_sprite(\"spr_tenna_nose_blossom\");"
+        }
+    ],
+    "gml_Object_obj_quizroom_Create_0": [
+        {
+            "old": "tenna_podium = board4 ? 3839 : 4186;",
+            "new": "tenna_podium = board4 ? scr_84_get_sprite(\"spr_tenna_pose_podium_evil\") : scr_84_get_sprite(\"spr_tenna_pose_podium\");"
+        }
+    ],
+    "gml_Object_obj_dw_ranking_t_screens_Draw_0": [
+        {
+            "old": "scr_84_get_font(\"8bit\")",
+            "new": "draw_set_font(scr_84_get_font(\"main\"))"
+        }
+    ],
+    "gml_Object_obj_screen_channel_change_Create_0": [
+        {
+            "old": "screen_surf = 0",
+            "new": "screen_surf = -1"
+        },
+        {
+            "old": "old_screen_surf = 0",
+            "new": "old_screen_surf = -1"
+        }
+    ]
+}
+
