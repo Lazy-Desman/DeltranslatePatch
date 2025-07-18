@@ -140,6 +140,18 @@
             "old": "stringsetsubloc(\"* The ~1 was thrown away.\", global.litemname[global.menucoord[1]], \"obj_overworldc_slash_Step_0_gml_38_0\")",
             "new": "stringsetsubloc(\"* The ~1 was thrown away.\", scr_item_localized_name_acc(global.litem[global.menucoord[1]], 4), \"obj_overworldc_slash_Step_0_gml_38_0\")"
         }
+    ],
+    "gml_Object_obj_initializer2_Create_0": [
+        {
+            "old": "scr_84_init_localization()",
+            "new": "window_set_caption(scr_84_get_lang_string(\"scr_windowcaption_slash_scr_windowcaption_gml_1_0\"))"
+        }
+    ],
+    "gml_Object_obj_initializer2_Other_72": [
+        {
+            "old": "scr_84_init_localization()",
+            "new": "scr_init_localization()"
+        }
     ]
 }
 

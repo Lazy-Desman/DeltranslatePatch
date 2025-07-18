@@ -152,6 +152,18 @@
             "old": "var name_text = (global.lang == \"ja\" ? \"クリス\" : \"Kris\")",
             "new": "var name_text = name"
         }
+    ],
+    "gml_Object_obj_initializer2_Create_0": [
+        {
+            "old": "scr_84_init_localization()",
+            "new": "window_set_caption(scr_84_get_lang_string(\"scr_windowcaption_slash_scr_windowcaption_gml_1_0\"))"
+        }
+    ],
+    "gml_Object_obj_initializer2_Other_72": [
+        {
+            "old": "scr_84_init_localization()",
+            "new": "scr_init_localization()"
+        }
     ]
 }
 
