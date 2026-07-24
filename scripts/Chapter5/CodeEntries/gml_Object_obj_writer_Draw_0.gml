@@ -852,8 +852,10 @@ for (n = 1; n < pos; n += 1)
             else
             {
                 var floweryvoiceclip = scr_floweryvoiceclip(nextchar2);
-                global.writersnd[0] = floweryvoiceclip;
-                global.voiceclip = floweryvoiceclip;
+                if (!(is_undefined(floweryvoiceclip) || floweryvoiceclip == -1)) {
+                    global.writersnd[0] = floweryvoiceclip;
+                    global.voiceclip = floweryvoiceclip;
+                }
             }
             
             if (global.voiceclipmode == 0)

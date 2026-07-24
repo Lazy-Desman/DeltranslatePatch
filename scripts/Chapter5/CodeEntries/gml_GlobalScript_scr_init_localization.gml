@@ -70,6 +70,7 @@ function scr_init_localization()
             var letter = letters[i];
             var voice = variable_struct_get(additional_voicelines, letter);
             add_sound(voice);
+            global.songs_list[array_length(global.songs_list)] = voice;
         }
         
         global.lang_map = ds_map_create();
