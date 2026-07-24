@@ -37,19 +37,19 @@ COL_B = c_lime;
 COL_PLUS = merge_color(c_lime, c_white, 0.5);
 input_enabled = true;
 prevemptyname = scr_84_get_lang_string("DEVICE_MENU_slash_Step_0_gml_105_0", "[EMPTY]"); // [EMPTY]
+BGSINER = 0;
+BGMAGNITUDE = 6;
+ANIM_SINER = 0;
+ANIM_SINER_B = 0;
+TRUE_ANIM_SINER = 0;
 
 if (TYPE == 1)
 {
-    BGSINER = 0;
-    BGMAGNITUDE = 6;
     COL_A = merge_color(c_ltgray, c_navy, 0.2);
     COL_B = c_white;
     COL_PLUS = merge_color(c_yellow, c_white, 0.5);
     BGMADE = 1;
     BG_ALPHA = 0;
-    ANIM_SINER = 0;
-    ANIM_SINER_B = 0;
-    TRUE_ANIM_SINER = 0;
 }
 
 MENU_NO = 0;
