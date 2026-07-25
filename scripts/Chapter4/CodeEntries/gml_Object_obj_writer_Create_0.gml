@@ -18,6 +18,8 @@ shake = 0;
 special = 0;
 skippable = 1;
 automash_timer = 0;
+max_string_width = 0;
+max_string_width_face = 0;
 
 if (global.flag[6] == 1)
     skippable = 0;

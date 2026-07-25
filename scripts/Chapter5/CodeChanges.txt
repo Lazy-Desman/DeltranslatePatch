@@ -1362,12 +1362,12 @@ function scr_update_full_choice_scale()
 
             case 1:
                 choicetextxscale[i] = max(1, round(3 - floor(max(0, max_len - 4) / 4)));
-                choicetextyscale[i] = 76 / string_height(choicetext[i]);
+                choicetextyscale[i] = 1.81;
                 break;
 
             default:
                 choicetextxscale[i] = max(1, round(3 - floor(max(0, max_len - 4) / 4)));
-                choicetextyscale[i] = round(62 / string_height(choicetext[i]));
+                choicetextyscale[i] = 1;
                 break;
         }
     }
