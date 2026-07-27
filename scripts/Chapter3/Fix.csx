@@ -102,13 +102,14 @@ var scriptsWithTennaSpriteCall = new List<string>()
   "gml_Object_obj_victory_rhythm_Step_0"
 };
 
+var sprites = new List<string>();
 var sprites_ids = new Dictionary<string, string>();
 
 if (File.Exists(scriptFolder + "sprites.json"))
 {
     using StreamReader r = new StreamReader(scriptFolder + "sprites.json");
     string json = r.ReadToEnd();
-    var sprites = System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, List<string>>>(json)["sprites"];
+    sprites = System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, List<string>>>(json)["sprites"];
     foreach (var spr in sprites)
     {
         sprites_ids[Data.Sprites.IndexOf(Data.Sprites.ByName(spr)).ToString()] = spr;
@@ -125,13 +126,16 @@ await Task.Run(() =>
         GetOrig(codeName);
         
         var text = Decompile(codeName);
-        Regex rx = new Regex(@"c_tenna_sprite\((\d*?)\)");
+        Regex rx = new Regex(@"c_tenna_sprite\((.*?)\)");
         text = rx.Replace(text, new MatchEvaluator((match) => {
             var id = match.Groups[1].Value;
             if (sprites_ids.ContainsKey(id)) {
                 return "c_tenna_sprite(scr_84_get_sprite(\"" + sprites_ids[id] + "\"));";
-            } else
+            } else if (sprites.Contains(id)) {
+                return "c_tenna_sprite(scr_84_get_sprite(\"" + id + "\"));";
+            } else {
                 return match.Groups[0].Value;
+            }
         }));
         ReplaceGML(codeName, text);
 
