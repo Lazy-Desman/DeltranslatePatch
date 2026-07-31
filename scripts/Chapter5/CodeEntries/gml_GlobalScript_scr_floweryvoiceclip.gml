@@ -1,6 +1,6 @@
 function scr_floweryvoiceclip(arg0)
 {
-    if (!variable_global_exists("flowery_txtsnd") || global.translated_songs_flowery != global.translated_songs) {
+    if (!variable_global_exists("flowery_txtsnd")) {
         scr_floweryvoiceclip_init();
     }
     

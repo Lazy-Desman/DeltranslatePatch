@@ -11,7 +11,7 @@ function init_global_vars() //gml_Script_init_global_vars
         "spr_tenna_point_up_twofingers",
         "spr_tenna_point_up",
         "spr_krisu_dark_cool",
-        "spr_board_game_title_copyright"
+        "spr_board_game_title_copyright", "spr_rhythmgame_popularity"
     ];
 
     global.sounds_list = ["AUDIO_INTRONOISE", "ch2_credits", "snd_joker_laugh0", "snd_its_tv_time", "snd_smashreveal"];

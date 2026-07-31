@@ -848,6 +848,12 @@ for (n = 1; n < pos; n += 1)
                 
                 global.voiceclip = voice_clip;
                 global.writersnd[0] = voice_clip;
+
+                if (global.voiceclipmode == 0)
+                {
+                    nextchar = "S";
+                    nextchar2 = "0";
+                }
             }
             else
             {
@@ -855,14 +861,15 @@ for (n = 1; n < pos; n += 1)
                 if (!(is_undefined(floweryvoiceclip) || floweryvoiceclip == -1)) {
                     global.writersnd[0] = floweryvoiceclip;
                     global.voiceclip = floweryvoiceclip;
+                    if (global.voiceclipmode == 0)
+                    {
+                        nextchar = "S";
+                        nextchar2 = "0";
+                    }
                 }
+
             }
             
-            if (global.voiceclipmode == 0)
-            {
-                nextchar = "S";
-                nextchar2 = "0";
-            }
         }
         
         if (nextchar == "S")

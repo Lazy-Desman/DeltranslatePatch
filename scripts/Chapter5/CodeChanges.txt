@@ -1535,14 +1535,14 @@ var ltr_copy = 1;
                 _body_y += 24;
             }
 
-            if ((ltr_copy + until_next_space) >= 17 && date3con == 1 && global.lang != "ja")
+            if ((ltr_copy + until_next_space) >= 19 && date3con == 1 && global.lang != "ja")
             {
                 _body_x = camx + 220;
                 _body_y += 24;
                 ltr_copy = 0;
             }
 
-            if ((ltr_copy + until_next_space) >= 17 && date3con == 2 && global.lang != "ja")
+            if ((ltr_copy + until_next_space) >= 19 && date3con == 2 && global.lang != "ja")
             {
                 _body_x = camx + 230;
                 _body_y += 24;
@@ -1552,9 +1552,16 @@ var ltr_copy = 1;
             ltr_copy++;
 %%%
 
-=== gml_Object_obj_dw_garden_exit_Step_0
----#
-    global.interact = 1;
+=== gml_Object_obj_lang_settings_Step_0
+---
+    global.special_mode = !global.special_mode
 +++
-
+    global.special_mode = !global.special_mode
+    scr_floweryvoiceclip_init()
+%%%
+---
+    global.translated_songs = !global.translated_songs
++++
+    global.translated_songs = !global.translated_songs
+    scr_floweryvoiceclip_init()
 %%%
