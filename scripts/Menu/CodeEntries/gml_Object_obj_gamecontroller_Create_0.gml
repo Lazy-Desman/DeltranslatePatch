@@ -1,4 +1,4 @@
-dtv = 503
+dtv = 504
 
 if (instance_number(obj_gamecontroller) > 1)
 {
