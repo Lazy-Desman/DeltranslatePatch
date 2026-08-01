@@ -3,30 +3,49 @@ function add_sprite(argument0, argument1) //gml_Script_add_sprite
     if (argument1 == undefined)
         argument1 = 1
     var spr_name = argument0
+	var spr_name_alt = scr_letter_fix(spr_name)
     var orig_sprite = asset_get_index(spr_name)
-    var filename = get_lang_folder_path() + "chapter" + string(global.chapter) + "/sprites/" + spr_name + ".png"
-    if (!file_exists(filename)) {
+    var filename = get_lang_folder_path() + "chapter" + string(global.chapter) + "/sprites/" + spr_name_alt + ".png"
+    if (!scr_file_exists(filename)) {
+        filename = get_lang_folder_path() + "chapter" + string(global.chapter) + "/sprites/" + spr_name + ".png"
+    }
+    if (!scr_file_exists(filename)) {
+        filename = get_lang_folder_path() + "shared/sprites/" + spr_name_alt + ".png"
+    }
+    if (!scr_file_exists(filename)) {
         filename = get_lang_folder_path() + "shared/sprites/" + spr_name + ".png"
     }
-    if file_exists(filename)
+    if scr_file_exists(filename)
     {
         var sprite = _create_sprite(filename, orig_sprite, spr_name, argument1)
         array_push(global.loaded_sprites, sprite)
 
-        var sp_filename = get_lang_folder_path() + "chapter" + string(global.chapter) + "/sprites/sp_" + spr_name + ".png"
-        if (!file_exists(sp_filename)) {
+        var sp_filename = get_lang_folder_path() + "chapter" + string(global.chapter) + "/sprites/sp_" + spr_name_alt + ".png"
+        if (!scr_file_exists(sp_filename)) {
+            sp_filename = get_lang_folder_path() + "chapter" + string(global.chapter) + "/sprites/sp_" + spr_name + ".png"
+        }
+        if (!scr_file_exists(sp_filename)) {
+            sp_filename = get_lang_folder_path() + "shared/sprites/sp_" + spr_name_alt + ".png"
+        }
+        if (!scr_file_exists(sp_filename)) {
             sp_filename = get_lang_folder_path() + "shared/sprites/sp_" + spr_name + ".png"
         }
-        if file_exists(sp_filename) {
+        if scr_file_exists(sp_filename) {
             var sp_sprite = _create_sprite(sp_filename, orig_sprite, "sp_" + spr_name, argument1)
             ds_map_add(global.chemg_sprite_map, "sp_" + spr_name, sp_sprite)
         }
 
-        var spm_filename = get_lang_folder_path() + "chapter" + string(global.chapter) + "/sprites/spm_" + spr_name + ".png"
-        if (!file_exists(spm_filename)) {
+        var spm_filename = get_lang_folder_path() + "chapter" + string(global.chapter) + "/sprites/spm_" + spr_name_alt + ".png"
+        if (!scr_file_exists(spm_filename)) {
+            spm_filename = get_lang_folder_path() + "chapter" + string(global.chapter) + "/sprites/spm_" + spr_name + ".png"
+        }
+        if (!scr_file_exists(spm_filename)) {
+            spm_filename = get_lang_folder_path() + "shared/sprites/spm_" + spr_name_alt + ".png"
+        }
+        if (!scr_file_exists(spm_filename)) {
             spm_filename = get_lang_folder_path() + "shared/sprites/spm_" + spr_name + ".png"
         }
-        if file_exists(spm_filename) {
+        if scr_file_exists(spm_filename) {
             var spm_sprite = _create_sprite(spm_filename, orig_sprite, "spm_" + spr_name, argument1)
             ds_map_add(global.chemg_sprite_map, "spm_" + spr_name, spm_sprite)
         }

@@ -7,8 +7,11 @@ text_list = [new scr_video_caption(stringsetloc("It's now time for our feature p
 text_index = 0;
 house_index = 2;
 var file_name = "tennaIntroF1_compressed_28";
-if (file_exists(get_lang_folder_path() + "chapter3/vid/" + file_name + ".mp4"))
+var lwc_file_name = string_lower(file_name); // console runners are case-sensitive
+if (scr_file_exists(get_lang_folder_path() + "chapter3/vid/" + file_name + ".mp4"))
     video_open(get_lang_folder_path() + "chapter3/vid/" + file_name + ".mp4");
+else if (scr_file_exists(get_lang_folder_path() + "chapter3/vid/" + lwc_file_name + ".mp4"))
+    video_open(get_lang_folder_path() + "chapter3/vid/" + lwc_file_name + ".mp4");
 else 
     video_open("vid/" + file_name + ".mp4");
 
@@ -22,7 +25,7 @@ if (os_type == os_android)
 var lang_path = get_lang_folder_path() + "chapter3/vid/" + file_name + ".mp4";
 var path = orig_path;
 
-if (file_exists(lang_path) && global.translated_songs)
+if (scr_file_exists(lang_path) && global.translated_songs)
     path = lang_path;
 
 if (!global.is_console)

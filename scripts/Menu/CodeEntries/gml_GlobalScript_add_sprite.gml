@@ -3,10 +3,13 @@ function add_sprite(argument0, argument1) //gml_Script_add_sprite
     if (argument1 == undefined)
         argument1 = 1
     var spr_name = argument0
+	var spr_name_alt = scr_letter_fix(spr_name)
     var orig_sprite = asset_get_index(spr_name)
     var frame_num = 0
-    var filename = get_lang_folder_path() + "sprites/" + spr_name + ".png"
-    if file_exists(filename)
+    var filename = get_lang_folder_path() + "sprites/" + spr_name_alt + ".png"
+	if !scr_file_exists(filename)
+		filename = get_lang_folder_path() + "sprites/" + spr_name + ".png"
+    if scr_file_exists(filename)
     {
         if (orig_sprite != -1)
             frame_num = sprite_get_number(orig_sprite)
@@ -59,8 +62,10 @@ function add_sprite(argument0, argument1) //gml_Script_add_sprite
 
         array_push(global.loaded_sprites, sprite)
 
-        var sp_filename = get_lang_folder_path() + "sprites/sp_" + spr_name + ".png"
-        if file_exists(sp_filename) {
+        var sp_filename = get_lang_folder_path() + "sprites/sp_" + spr_name_alt + ".png"
+		if !scr_file_exists(sp_filename)
+			sp_filename = get_lang_folder_path() + "sprites/sp_" + spr_name + ".png"
+        if scr_file_exists(sp_filename) {
             if (sprites_settings != -1) {
                 sprite_settings = variable_struct_get(sprites_settings, "sp_" + spr_name)
             }
@@ -97,8 +102,10 @@ function add_sprite(argument0, argument1) //gml_Script_add_sprite
             ds_map_add(global.chemg_sprite_map, ("sp_" + spr_name), sp_sprite)
         }
 
-        var spm_filename = get_lang_folder_path() + "sprites/spm_" + spr_name + ".png"
-        if file_exists(spm_filename) {
+        var spm_filename = get_lang_folder_path() + "sprites/spm_" + spr_name_alt + ".png"
+		if !scr_file_exists(spm_filename)
+			spm_filename = get_lang_folder_path() + "sprites/spm_" + spr_name + ".png"
+        if scr_file_exists(spm_filename) {
             if (sprites_settings != -1) {
                 sprite_settings = variable_struct_get(sprites_settings, "spm_" + spr_name)
             }

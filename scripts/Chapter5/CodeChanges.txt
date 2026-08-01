@@ -1413,7 +1413,7 @@ function scr_update_full_choice_scale()
 ---
     video_open("vid/" + video_file + ".mp4")
 +++
-    if (file_exists(get_lang_folder_path() + "chapter5/vid/" + video_file + ".mp4"))
+    if (scr_file_exists(get_lang_folder_path() + "chapter5/vid/" + video_file + ".mp4"))
         video_open(get_lang_folder_path() + "chapter5/vid/" + video_file + ".mp4")
     else 
         video_open("vid/" + video_file + ".mp4")

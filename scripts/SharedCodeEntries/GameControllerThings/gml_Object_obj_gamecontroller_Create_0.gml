@@ -10,6 +10,7 @@ global.lang = "en"
 global.orig_en = false
 
 global.is_console = scr_is_switch_os() || os_type == os_ps4 || os_type == os_ps5;
+scr_file_exists_init(global.lang_folder, undefined);
 var launch_data = scr_init_launch_parameters();
 global.launcher = launch_data.is_launcher;
 is_connecting_controller = 3;
@@ -28,18 +29,27 @@ enable_loading = function()
 };
 
 init_global_vars();
-ossafe_ini_open("true_config.ini");
 global.translator_mode = 0;
 speed_mode = 0;
-global.special_mode = ini_read_real("LANG", "special_mode", 0);
-global.translated_songs = ini_read_real("LANG", "translated_songs", 1);
-ossafe_ini_close();
+global.special_mode = 0
+global.translated_songs = 1
+if (!global.is_console)
+{
+	ossafe_ini_open("true_config.ini")
+	global.special_mode = ini_read_real("LANG", "special_mode", global.special_mode)
+	global.translated_songs = ini_read_real("LANG", "translated_songs", global.translated_songs)
+	ossafe_ini_close()
+}
+else
+{
+	ld_load_state = 0
+}
 global.lang_sprites = ds_map_create();
 global.lang_sounds = ds_map_create();
 global.lang_fonts = ds_map_create();
 global.lang_settings = {};
 
-if (file_exists(global.lang_folder + "settings.json"))
+if (scr_file_exists(global.lang_folder + "settings.json"))
 {
     var settings = scr_load_json(global.lang_folder + "settings.json");
     var lang_code = variable_struct_get(settings, "lang_code");
@@ -65,7 +75,7 @@ if (get_lang_setting("translator_mode", 0))
     
     new_translations_filename = "new_translations_ch" + string(global.chapter) + ".json";
     
-    if (file_exists(new_translations_filename)) {
+    if (scr_file_exists(new_translations_filename)) {
         global.new_translations = scr_84_load_map_json(new_translations_filename);
     }
     else {
@@ -103,7 +113,7 @@ file_find_close();
 scr_init_localization();
 update_on_room_end = false;
 
-if (file_exists(working_directory + "lang/lang_en.json")) {
+if (scr_file_exists(working_directory + "lang/lang_en.json")) {
     orig_filename = working_directory + "lang/lang_en.json"
     global.orig_map = scr_84_load_map_json(orig_filename)
 }

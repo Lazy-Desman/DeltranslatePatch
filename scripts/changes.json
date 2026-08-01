@@ -1,4 +1,7 @@
 {
+    "5.2.1": {
+        "description": "- Different changes for Switch compatibility."
+    },
     "5.2.0": {
         "description": "- Update for Deltarune v23."
     },
