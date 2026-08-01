@@ -89,3 +89,20 @@ else if keyboard_check_released(ord("U"))
     if get_lang_setting("translator_mode", 0)
         global.translator_mode = true
 }
+
+// track how ossafe has loaded the player's slot on consoles
+if (global.is_console)
+{
+	if (ld_load_state == 0 && global.savedata_async_load)
+	{
+		ld_load_state = 1
+	}
+	else if (ld_load_state == 1 && !global.savedata_async_load)
+	{
+		ld_load_state = 2
+		ossafe_ini_open("true_config.ini")
+		global.special_mode = ini_read_real("LANG", "special_mode", global.special_mode)
+		global.translated_songs = ini_read_real("LANG", "translated_songs", global.translated_songs)
+		ossafe_ini_close()
+	}
+}

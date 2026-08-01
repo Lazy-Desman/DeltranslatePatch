@@ -18,11 +18,11 @@ function snd_init(argument0) //gml_Script_snd_init
     }
     if (global.translated_songs || flag) {
         var lang_path = get_lang_folder_path() + "chapter" + string(global.chapter) + "/sounds/"
-        if file_exists(lang_path + argument0) {
+        if scr_file_exists(lang_path + argument0) {
             initsongvar = lang_path + argument0
         }
 
-        if (global.special_mode && file_exists(lang_path + "sp_" + argument0)) {
+        if (global.special_mode && scr_file_exists(lang_path + "sp_" + argument0)) {
             initsongvar = lang_path + "sp_" + argument0
         }
     }

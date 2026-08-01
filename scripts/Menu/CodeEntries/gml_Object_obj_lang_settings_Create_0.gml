@@ -1,6 +1,8 @@
 instance_deactivate_all(true)
 instance_activate_object(obj_input)
 instance_activate_object(obj_gamecontroller)
+instance_activate_object(obj_init_pc)
+instance_activate_object(obj_init_console)
 
 option = 0
 

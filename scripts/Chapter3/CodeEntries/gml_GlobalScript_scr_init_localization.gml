@@ -63,7 +63,7 @@ function scr_init_localization()
         global.tvlandfont = font_add_sprite_ext(scr_84_get_sprite("spr_tvlandfont"), get_chapter_lang_setting("tvlangfont_string", "ABCDEFGHIJKLMNOPQRSTUVWXYZ.?!:…abcdefghijklmnopqrstuvwxyz1234567890"), 0, 1);
         
         for (var i = 0; i < array_length(sound_symbols); i++)
-            add_sound("snd_speak_and_spell_" + sound_symbols[i], 1);
+            add_sound("snd_speak_and_spell_" + scr_letter_fix(sound_symbols[i]), 1);
         
         for (var i = 0; i < array_length(global.sounds_list); i++)
             add_sound(global.sounds_list[i]);

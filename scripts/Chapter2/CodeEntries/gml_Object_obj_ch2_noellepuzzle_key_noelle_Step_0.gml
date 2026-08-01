@@ -46,7 +46,7 @@ if (checkPress)
         
         if (myString != " ")
         {
-            var _snd = snd_play(scr_84_get_sound("snd_speak_and_spell_" + myString));
+            var _snd = snd_play(scr_84_get_sound("snd_speak_and_spell_" + scr_letter_fix(myString)));
             var _volume = (buttonIndex == 7) ? 1 : max(1 - (buttonIndex / 4), 0);
             audio_sound_gain(_snd, _volume, 0);
         }

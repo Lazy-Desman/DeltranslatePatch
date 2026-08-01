@@ -2,7 +2,7 @@
 ---
 var _snd = snd_play(asset_get_index("snd_speak_and_spell_" + myString))
 +++
-var _snd = snd_play(scr_84_get_sound("snd_speak_and_spell_" + myString))
+var _snd = snd_play(scr_84_get_sound("snd_speak_and_spell_" + scr_letter_fix(myString)))
 %%%
 
 

@@ -28,7 +28,7 @@ if checkPress
         else if (myString == "!")
             snd_play(snd_speak_and_spell_Exclamation)
         else
-            snd_play(scr_84_get_sound("snd_speak_and_spell_" + myString))
+            snd_play(scr_84_get_sound("snd_speak_and_spell_" + scr_letter_fix(myString)))
         obj_ch2_keyboardpuzzle_controller.addString = myString
         obj_ch2_keyboardpuzzle_controller.lastPressedTile = id
         with (obj_ch2_keyboardpuzzle_controller)

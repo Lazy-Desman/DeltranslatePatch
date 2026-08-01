@@ -27,16 +27,27 @@ if (os_type == os_android && !directory_exists(get_lang_folder_path())) {
     zip_unzip(global.savepath + "lang.zip", global.savepath);
 }
 
+scr_file_exists_init(global.lang_folder, undefined);
+
 if (!variable_global_exists("gamepad_type"))
     global.gamepad_type = "N/A";
 
 if (variable_global_exists("lang_map"))
     return;
 
-ossafe_ini_open("true_config.ini")
-global.special_mode = ini_read_real("LANG", "special_mode", 0)
-global.translated_songs = ini_read_real("LANG", "translated_songs", 1)
-ossafe_ini_close()
+global.special_mode = 0
+global.translated_songs = 1
+if (!global.is_console)
+{
+	ossafe_ini_open("true_config.ini")
+	global.special_mode = ini_read_real("LANG", "special_mode", global.special_mode)
+	global.translated_songs = ini_read_real("LANG", "translated_songs", global.translated_songs)
+	ossafe_ini_close()
+}
+else
+{
+	ld_load_state = 0
+}
 global.lang_sprites = ds_map_create()
 global.lang_sounds = ds_map_create()
 global.font_map = ds_map_create()
@@ -105,7 +116,7 @@ is_version_greater = function(ver1, ver2) {
 update_lang_version = function(lang) {
     var version = string_to_version("0.0.0")
     var changes_file = get_lang_folder_path() + "changes.json"
-    if (file_exists(changes_file)) {
+    if (scr_file_exists(changes_file)) {
         var changes = scr_load_json(changes_file)
         var versions = variable_struct_get_names(changes)
 
@@ -123,7 +134,7 @@ update_lang_version = function(lang) {
 }
 
 update_language = function() {
-    if (file_exists(get_lang_folder_path() + "settings.json")) {
+    if (scr_file_exists(get_lang_folder_path() + "settings.json")) {
         var settings = scr_load_json(get_lang_folder_path() + "settings.json")
 
         var lang_code = variable_struct_get(settings, "lang_code")

@@ -22,7 +22,7 @@ press_button = function()
     is_pressed = true;
     char_y_offset = 4;
     tile_index = 1;
-    snd_play(scr_84_get_sound("snd_speak_and_spell_" + char_string));
+    snd_play(scr_84_get_sound("snd_speak_and_spell_" + scr_letter_fix(char_string)));
 };
 
 reset_button = function()

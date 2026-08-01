@@ -47,7 +47,7 @@ function scr_init_localization()
             add_sprite(global.sprites_list[i]);
         
         for (var i = 0; i < string_length(get_chapter_lang_setting("boob", "boob")); i++)
-            add_sprite("spr_blockler_" + string_char_at(get_chapter_lang_setting("boob", "boob"), i + 1), 4);
+            add_sprite("spr_blockler_" + scr_letter_fix(string_char_at(get_chapter_lang_setting("boob", "boob"), i + 1)), 4);
         
         var sndm = global.chemg_sound_map;
         
