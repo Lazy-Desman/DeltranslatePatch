@@ -1,4 +1,7 @@
 {
+    "5.2.2": {
+        "description": "- urther Switch compatibility.\n'monospace_fonts' option now can take an\narray of fonts to be monospaced."
+    },
     "5.2.1": {
         "description": "- Different changes for Switch compatibility."
     },
