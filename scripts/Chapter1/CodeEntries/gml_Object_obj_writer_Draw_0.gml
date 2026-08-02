@@ -78,7 +78,7 @@ if (formatted == 0)
     if (is_array(monospace_fonts)) {
         var flag = false
         for (var iii = 0; iii < array_length(monospace_fonts); iii++) {
-            if (scr_84_get_font(monospace_fonts[i]) == myfont) {
+            if (scr_84_get_font(monospace_fonts[iii]) == myfont) {
                 flag = true
                 break
             }
