@@ -6,7 +6,7 @@ function scr_lang_load() //gml_Script_scr_lang_load
 
     var json = "{}"
     if (scr_file_exists(orig_filename)) {
-        var file_buffer = buffer_load(orig_filename);
+        var file_buffer = scr_buffer_load(orig_filename);
         json = buffer_read(file_buffer, buffer_string);
         buffer_delete(file_buffer);
     }

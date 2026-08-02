@@ -4,7 +4,7 @@ function scr_load_json(arg0)
     
     if (scr_file_exists(filename))
     {
-        var file_buffer = buffer_load(filename);
+        var file_buffer = scr_buffer_load(filename);
         
         if (buffer_get_size(file_buffer) == 0)
         {

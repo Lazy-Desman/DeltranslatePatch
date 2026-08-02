@@ -754,7 +754,19 @@ for (n = 1; n < pos; n += 1)
             }
         }
         
-        if (!get_lang_setting("monospace_fonts", false))
+        monospace_fonts = get_lang_setting("monospace_fonts", false)
+        if (is_array(monospace_fonts)) {
+            var flag = false
+            for (var iii = 0; iii < array_length(monospace_fonts); iii++) {
+                if (scr_84_get_font(monospace_fonts[i]) == myfont) {
+                    flag = true
+                    break
+                }
+            }
+            monospace_fonts = flag
+        }
+
+        if (!monospace_fonts)
         {
             if (mychar == " " || mychar == "*")
             {
@@ -782,7 +794,7 @@ for (n = 1; n < pos; n += 1)
             wx += hspace;
         }
         
-        if (myfont == scr_84_get_font("comicsans") && get_lang_setting("monospace_fonts", false))
+        if (myfont == scr_84_get_font("comicsans") && monospace_fonts)
         {
             if (myfont == 8)
             {

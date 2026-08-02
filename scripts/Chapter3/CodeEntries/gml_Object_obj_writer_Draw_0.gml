@@ -846,7 +846,7 @@ for (n = 1; n < pos; n += 1)
             }
         }
 
-        if (!get_lang_setting("monospace_fonts", false))
+        if (!monospace_fonts)
         {
             if (mychar == " " || mychar == "*" || mychar == "\t")
             {
@@ -874,7 +874,7 @@ for (n = 1; n < pos; n += 1)
             wx += hspace;
         }
         
-        if (myfont == scr_84_get_font("comicsans") && get_lang_setting("monospace_fonts", false))
+        if (myfont == scr_84_get_font("comicsans") && monospace_fonts)
         {
             if (mychar == "w")
                 wx += 2;

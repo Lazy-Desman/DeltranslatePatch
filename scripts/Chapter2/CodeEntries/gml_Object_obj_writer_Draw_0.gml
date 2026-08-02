@@ -89,6 +89,18 @@ draw_set_color(mycolor);
 
 if (formatted == 0)
 {
+    monospace_fonts = get_lang_setting("monospace_fonts", false)
+    if (is_array(monospace_fonts)) {
+        var flag = false
+        for (var iii = 0; iii < array_length(monospace_fonts); iii++) {
+            if (scr_84_get_font(monospace_fonts[i]) == myfont) {
+                flag = true
+                break
+            }
+        }
+        monospace_fonts = flag
+    }
+    limit_by_width = !monospace_fonts;
     draw_set_font(myfont);
     length = string_length(mystring);
     charpos = 0;
@@ -365,7 +377,7 @@ if (formatted == 0)
             if (thischar == "*")
                 aster = 1;
             
-            if (thischar == " " || thischar == "*" || thischar == "\t" || get_lang_setting("monospace_fonts", false))
+            if (thischar == " " || thischar == "*" || thischar == "\t" || monospace_fonts)
                 cur_string_width += hspace;
             else
                 cur_string_width += string_width(thischar) * textscale;
@@ -1061,7 +1073,7 @@ for (n = 1; n < pos; n += 1)
             }
         }
 
-        if (!get_lang_setting("monospace_fonts", false))
+        if (!monospace_fonts)
         {
             if (mychar == " " || mychar == "*" || mychar == "\t")
             {
@@ -1089,7 +1101,7 @@ for (n = 1; n < pos; n += 1)
             wx += hspace;
         }
         
-        if (myfont == scr_84_get_font("comicsans") && get_lang_setting("monospace_fonts", false))
+        if (myfont == scr_84_get_font("comicsans") && monospace_fonts)
         {
             if (mychar == "w")
                 wx += 2;

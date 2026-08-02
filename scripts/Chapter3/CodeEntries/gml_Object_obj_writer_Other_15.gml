@@ -1,5 +1,17 @@
 if (formatted == 0)
 {
+    monospace_fonts = get_lang_setting("monospace_fonts", false)
+    if (is_array(monospace_fonts)) {
+        var flag = false
+        for (var iii = 0; iii < array_length(monospace_fonts); iii++) {
+            if (scr_84_get_font(monospace_fonts[i]) == myfont) {
+                flag = true
+                break
+            }
+        }
+        monospace_fonts = flag
+    }
+    limit_by_width = !monospace_fonts;
     draw_set_font(myfont);
     length = string_length(mystring);
     charpos = 0;
@@ -346,7 +358,7 @@ if (formatted == 0)
             if (thischar == "*")
                 aster = 1;
             
-            if (thischar == " " || thischar == "*" || thischar == "\t" || get_lang_setting("monospace_fonts", false))
+            if (thischar == " " || thischar == "*" || thischar == "\t" || monospace_fonts)
                 cur_string_width += hspace;
             else
                 cur_string_width += string_width(thischar) * textscale;

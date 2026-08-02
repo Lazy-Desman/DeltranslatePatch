@@ -57,3 +57,30 @@ function scr_letter_fix(test_asset_name) {
 	}
 	return uniname;
 }
+
+// ok, this is a wild one,
+// Deltarune's LTS runner is using game_restart(),
+// game_restart() keeps Switch savedata mounted,
+// all functions that load videos, sprites, fonts, etc,
+// have been swapped to use the ROM path first, but not buffer_load() !
+function scr_buffer_load(test_file_name) {
+	if (!global.is_console) {
+		return buffer_load(test_file_name);
+	}
+	
+	if (!variable_global_exists("buffer_cache_map")) {
+		global.buffer_cache_map = ds_map_create();
+	}
+	
+	var test_buf = -1;
+	var test_base64 = ds_map_find_value(global.buffer_cache_map, test_file_name);
+	if (is_string(test_base64)) {
+		test_buf = buffer_base64_decode(test_base64);
+	} else {
+		test_buf = buffer_load(test_file_name);
+		ds_map_add(global.buffer_cache_map, test_file_name, buffer_base64_encode(test_buf, 0, buffer_get_size(test_buf)));
+	}
+	
+	buffer_seek(test_buf, buffer_seek_start, 0);
+	return test_buf;
+}

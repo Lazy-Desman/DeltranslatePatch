@@ -2,6 +2,11 @@ if (keyboard_check_released(ord("R"))) {
     room_restart()
 }
 
+// it may become active again, see obj_time paused check...
+if (instance_exists(DEVICE_MENU)) {
+	instance_deactivate_object(DEVICE_MENU)
+}
+
 if (down_p()) {
     option = (option + 1) % (options_count + 1)
     audio_play_sound(snd_menumove, 50, 0)
@@ -48,7 +53,7 @@ if (option < options_count) {
     }
 }
 
-if ((option == options_count && button1_p()) || keyboard_check_pressed(vk_shift)) {
+if ((option == options_count && button1_p()) || button2_p() || keyboard_check_pressed(vk_shift)) {
     audio_play_sound(snd_menumove, 50, 0)
     instance_activate_object(DEVICE_MENU)
     with (DEVICE_MENU) {
@@ -61,6 +66,8 @@ if ((option == options_count && button1_p()) || keyboard_check_pressed(vk_shift)
                     PLACE[i] = scr_roomname(room_index);
                 }
             }
+			ossafe_ini_close();
+			ossafe_savedata_save(); // ?????????
         }
     }
 
