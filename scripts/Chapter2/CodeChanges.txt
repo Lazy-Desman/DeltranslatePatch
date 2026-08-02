@@ -529,3 +529,11 @@ version_text = global.version;
 prevemptyname = stringsetloc("[EMPTY]", "DEVICE_MENU_slash_Step_0_gml_105_0");
 %%%
 
+
+=== gml_Object_obj_gigaqueen_intro_fight_Create_0
+---
+xoffset[5] = 0
++++
+xoffset[5] = sprite_get_number(sprite_index)
+%%%
+
