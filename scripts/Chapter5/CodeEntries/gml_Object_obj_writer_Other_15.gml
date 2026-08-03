@@ -206,7 +206,7 @@ if (formatted == 0)
             if (thischar == "*")
                 aster = 1;
             
-            if (thischar == " " || thischar == "*" || thischar == "\t" || get_lang_setting("monospace_fonts", false))
+            if (thischar == " " || thischar == "*" || thischar == "\t" || monospace_fonts)
                 cur_string_width += hspace;
             else
                 cur_string_width += string_width(thischar) * textscale;
