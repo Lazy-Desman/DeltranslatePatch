@@ -12,6 +12,8 @@ if (up_p()) {
     audio_play_sound(snd_menumove, 50, 0)
 }
 
+var back_pressed = button2_p()
+
 if (option < options_count) {
     if (options[option] == "language") {
         if (button1_p()) {
@@ -48,7 +50,11 @@ if (option < options_count) {
     }
 } //else
 
-if ((option == options_count && button1_p()) || button2_p()) {
-    audio_play_sound(snd_menumove, 50, 0)
+if ((option == options_count && button1_p()) || back_pressed) {
+    if (back_pressed) {
+        audio_play_sound(snd_swing, 50, 0)
+    } else {
+        audio_play_sound(snd_menumove, 50, 0)
+    }
     room_restart()
 }
