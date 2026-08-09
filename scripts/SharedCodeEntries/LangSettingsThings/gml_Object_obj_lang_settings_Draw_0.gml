@@ -1,6 +1,6 @@
 // Говна из ВУМШСУ_ЬУТГ
 
-if (SUBTYPE == 0) {
+if (SUBTYPE == 0 && DOORDRAWN == 1) {
     draw_sprite_ext(spr_giantdarkdoor, 1, 43, 48, 2, 2, 0, COL_A, (0.03 + (sin(BG_SINER / 20)) * 0.04))
     draw_sprite_ext(spr_giantdarkdoor, 1, 47, 48, 2, 2, 0, COL_A, (0.03 + (sin(BG_SINER / 20)) * 0.04))
     draw_sprite_ext(spr_giantdarkdoor, 1, 43, 52, 2, 2, 0, COL_A, (0.03 + (sin(BG_SINER / 20)) * 0.04))
