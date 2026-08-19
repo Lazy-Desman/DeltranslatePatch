@@ -1,3 +1,6 @@
+/* Original script: https://github.com/BookerRues9/Deltaquick-porting-tools/blob/ee94a43cbcd5ef0079605f0f67333922d673beca/scripts/tools.csx
+ * Changes: commented out unnecessary stuff */
+
 ///This loads all the extensions needed for the project, just because
 
 /// Function list so far:
@@ -39,7 +42,7 @@ void injectExtensions()
 		new UndertaleExtensionFile()
 		{
 			Filename = Data.Strings.MakeString("GameChange.ext"),
-			InitScript = Data.Strings.MakeString("init_files_dir"),
+			InitScript = Data.Strings.MakeString("init_external_files_dir"),
 			CleanupScript = Data.Strings.MakeString(""),
 			Kind = UndertaleExtensionKind.Generic,
 			Functions = new UndertalePointerList<UndertaleExtensionFunction>()

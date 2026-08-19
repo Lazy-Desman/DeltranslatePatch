@@ -1,4 +1,5 @@
 [
     "Menu/Fix.csx",
-    "android/tools.csx"
+    "android/tools.csx",
+    "android/TouchControlsEnabler.csx"
 ]

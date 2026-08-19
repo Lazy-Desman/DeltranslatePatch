@@ -3,6 +3,7 @@ name: Update "latest" release
 on:
   workflow_dispatch: # Manually
   push:
+    branches: [main]
     paths:
       - 'scripts/**'
 
