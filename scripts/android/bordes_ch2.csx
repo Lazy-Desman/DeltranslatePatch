@@ -56,4 +56,4 @@ AssignBorderBackground("border_dw_cyber", textures["border_dw_cyber.png"], 2, 2,
 AssignBorderBackground("border_dw_mansion", textures["border_dw_mansion.png"], 2, 2, 1920, 1080);
 AssignBorderBackground("border_dw_city", textures["border_dw_city.png"], 2, 2, 1920, 1080);
 
-ScriptMessage("Texturas de bordes del Capítulo 2 importadas correctamente :3");
+ScriptMessage("- Border textures and images imported correctly");

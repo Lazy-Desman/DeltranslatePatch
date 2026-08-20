@@ -1,5 +1,9 @@
 [
-    "Chapter5/Fix.csx",
-    "android/tools.csx",
-    "android/FIX_AUDIO.csx"
+    "tools",
+    "FIX_AUDIO",
+    "TouchControlsEnabler",
+    "borders_ch5",
+    "ImportGraphics",
+    "Chapter5/Fix",
+    "ghosting_fix"
 ]

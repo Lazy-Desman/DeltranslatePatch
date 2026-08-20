@@ -72,4 +72,4 @@ AssignBorderBackground("border_dw_castle_right_gold", textures["border_dw_castle
 AssignBorderBackground("border_lw_town_night", textures["border_lw_town_night.png"], 2, 2, 1920, 1080, 0, 0, 1920, 1080, 1920, 1080);
 AssignBorderBackground("border_dw_garden_cliff", textures["border_dw_garden_cliff.png"], 2, 2, 1920, 1350, 0, 0, 1920, 1350, 1920, 1350);
 
-ScriptMessage("Texturas de bordes del Capítulo 5 importadas correctamente :3");
+ScriptMessage("- Border textures and images imported correctly");

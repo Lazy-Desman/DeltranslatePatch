@@ -60,4 +60,4 @@ AssignBorderBackground("border_dw_church_c", textures["border_dw_church_c.png"],
 AssignBorderBackground("border_dw_church_a", textures["border_dw_church_a.png"], 2, 2, 1920, 1080, 0, 0, 1920, 1080);
 AssignBorderBackground("border_dw_church_b", textures["border_dw_church_b.png"], 2, 2, 1920, 1080, 0, 0, 1920, 1080);
 
-ScriptMessage("Texturas de bordes del Capítulo 4 importadas correctamente :3");
+ScriptMessage("- Border textures and images imported correctly");

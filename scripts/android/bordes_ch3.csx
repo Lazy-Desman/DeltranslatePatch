@@ -66,4 +66,4 @@ AssignBorderBackground("border_dw_castletown", textures["border_dw_castletown.pn
 AssignBorderBackground("border_dw_blue", textures["border_dw_blue.png"], 2, 2, 1920, 1080);
 AssignBorderBackground("border_dw_green_sloppy", textures["border_dw_green_sloppy.png"], 2, 2, 1920, 1080);
 
-ScriptMessage("Texturas de bordes del Capítulo 3 importadas correctamente :3");
+ScriptMessage("- Border textures and images imported correctly");

@@ -53,4 +53,4 @@ AssignBorderBackground("bg_border_line_1080", textures["bg_border_line_1080.png"
 AssignBorderBackground("border_dark", textures["border_dark.png"], 2, 2, 1920, 1080);
 AssignBorderBackground("border_light", textures["border_light.png"], 2, 2, 1920, 1080);
 
-ScriptMessage("Texturas de bordes e imágenes importadas correctamente :3");
+ScriptMessage("- Border textures and images imported correctly!");
