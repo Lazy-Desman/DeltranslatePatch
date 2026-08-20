@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Linq;
 using UndertaleModLib.Util;
 
-//EnsureDataLoaded();
+EnsureDataLoaded();
 
 string displayName = Data.GeneralInfo?.DisplayName?.Content.ToLower();
 

@@ -14,7 +14,7 @@ using System.Threading;
 
 async Task regroupSfx()
 {
-    //EnsureDataLoaded();
+    EnsureDataLoaded();
 
     string GetFolder(string path)
     {
@@ -50,7 +50,7 @@ async Task regroupSfx()
 
     //await StopProgressBarUpdater();
     //HideProgressBar();
-    ScriptMessage("- sounds regrouped succesfully.");
+    ScriptMessage("- Sounds regrouped succesfully.");
 
     //DisableAllSyncBindings();
 
