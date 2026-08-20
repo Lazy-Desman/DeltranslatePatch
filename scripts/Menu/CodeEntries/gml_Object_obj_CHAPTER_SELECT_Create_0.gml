@@ -1,6 +1,4 @@
 global.debug = 0;
-if (os_type == os_android)
-    scr_init_touch_controls();
 
 global.is_console = scr_is_switch_os() || os_type == os_ps4 || os_type == os_ps5;
 
@@ -431,7 +429,10 @@ launch_game = function(arg0)
 
 quit = function()
 {
-    game_end();
+    if (os_type == os_android)
+        game_end_ext();
+    else
+        game_end();
 };
 
 toggle_language = function()
