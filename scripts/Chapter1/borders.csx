@@ -5,13 +5,13 @@ using UndertaleModLib.Util;
 
 EnsureDataLoaded();
 
-if (Data?.GeneralInfo?.DisplayName?.Content.ToLower() != "deltarune chapter 2")
+if (Data?.GeneralInfo?.DisplayName?.Content.ToLower() != "deltarune chapter 1")
 {
-    ScriptError("Error : Not a Deltarune CH2 data.win file");
+    ScriptError("Error : Not a Deltarune CH1 data.win file");
     return;
 }
 
-string bordersPath = Path.Combine(Path.GetDirectoryName(ScriptPath), "Borders/chapter2");
+string bordersPath = Path.Combine(Path.GetDirectoryName(ScriptPath), "../Borders");
 
 Dictionary<string, UndertaleEmbeddedTexture> textures = new();
 if (!Directory.Exists(bordersPath))
@@ -21,7 +21,7 @@ if (!Directory.Exists(bordersPath))
 
 int lastTextPage = Data.EmbeddedTextures.Count - 1;
 int lastTextPageItem = Data.TexturePageItems.Count - 1;
-
+// shared borders (no chapter exclusive borders for chapter 1)
 foreach (var path in Directory.EnumerateFiles(bordersPath))
 {
     UndertaleEmbeddedTexture newtex = new UndertaleEmbeddedTexture();
@@ -49,11 +49,8 @@ Action<string, UndertaleEmbeddedTexture, ushort, ushort, ushort, ushort> AssignB
     bg.Textures[0].Texture = tpag;
 };
 
-AssignBorderBackground("border_line_1080", textures["border_line_1080.png"], 2, 2, 1920, 1080);
-AssignBorderBackground("border_lw_town", textures["border_lw_town.png"], 2, 2, 1920, 1080);
-AssignBorderBackground("border_dw_castletown", textures["border_dw_castletown.png"], 2, 2, 1920, 1080);
-AssignBorderBackground("border_dw_cyber", textures["border_dw_cyber.png"], 2, 2, 1920, 1080);
-AssignBorderBackground("border_dw_mansion", textures["border_dw_mansion.png"], 2, 2, 1920, 1080);
-AssignBorderBackground("border_dw_city", textures["border_dw_city.png"], 2, 2, 1920, 1080);
+AssignBorderBackground("bg_border_line_1080", textures["border_line_1080.png"], 2, 2, 1920, 1080);
+AssignBorderBackground("border_dark", textures["border_dw_castletown.png"], 2, 2, 1920, 1080);
+AssignBorderBackground("border_light", textures["border_lw_town.png"], 2, 2, 1920, 1080);
 
-ScriptMessage("- Border textures and images imported correctly");
+ScriptMessage("- Border textures and images imported correctly!");

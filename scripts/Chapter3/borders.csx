@@ -11,7 +11,7 @@ if (Data?.GeneralInfo?.DisplayName?.Content.ToLower() != "deltarune chapter 3")
     return;
 }
 
-string bordersPath = Path.Combine(Path.GetDirectoryName(ScriptPath), "Borders/chapter3");
+string bordersPath = Path.Combine(Path.GetDirectoryName(ScriptPath), "../Borders/chapter3");
 
 Dictionary<string, UndertaleEmbeddedTexture> textures = new();
 if (!Directory.Exists(bordersPath))
@@ -21,7 +21,16 @@ if (!Directory.Exists(bordersPath))
 
 int lastTextPage = Data.EmbeddedTextures.Count - 1;
 int lastTextPageItem = Data.TexturePageItems.Count - 1;
-
+// shared borders
+foreach (var path in Directory.EnumerateFiles(Path.Join(bordersPath, "..")))
+{
+    UndertaleEmbeddedTexture newtex = new UndertaleEmbeddedTexture();
+    newtex.Name = new UndertaleString($"Texture {++lastTextPage}");
+    newtex.TextureData.Image = GMImage.FromPng(File.ReadAllBytes(path));
+    Data.EmbeddedTextures.Add(newtex);
+    textures.Add(Path.GetFileName(path), newtex);
+}
+// chapter exclusive borders
 foreach (var path in Directory.EnumerateFiles(bordersPath))
 {
     UndertaleEmbeddedTexture newtex = new UndertaleEmbeddedTexture();
