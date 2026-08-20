@@ -192,3 +192,5 @@ void QueueGMLFile(string path)
 {
     importGroup.QueueReplace(Path.GetFileNameWithoutExtension(path), File.ReadAllText(path));
 }
+
+ScriptMessage("- Touch controls successfully added!");

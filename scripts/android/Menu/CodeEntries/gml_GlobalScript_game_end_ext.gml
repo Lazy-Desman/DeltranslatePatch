@@ -7,7 +7,7 @@ function game_end_ext()
         if (variable_global_exists("bgm") && global.bgm != -4)
             global.bgm = -4;
         
-        room_goto(PLACE_CHAPTER_SELECT_2x);
+        room_goto(0);
         game_end();
     }
     else

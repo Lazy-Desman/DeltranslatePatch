@@ -21,4 +21,4 @@ foreach (var room in Data.Rooms)
     }
 }
 
-ScriptMessage($"- Ghosting fix applied to #{roomCount}. ROOMs");
+ScriptMessage($"- Ghosting fix applied to {roomCount} ROOMs");

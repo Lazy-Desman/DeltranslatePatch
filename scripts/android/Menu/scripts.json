@@ -1,5 +1,8 @@
 [
-    "Menu/Fix.csx",
-    "android/tools.csx",
-    "android/TouchControlsEnabler.csx"
+    "tools",
+    "FIX_AUDIO",
+    "TouchControlsEnabler",
+    "ImportGraphics",
+    "Menu/Fix",
+    "ghosting_fix"
 ]

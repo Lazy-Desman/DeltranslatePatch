@@ -1,4 +1,5 @@
 global.debug = 0;
+
 global.is_console = scr_is_switch_os() || os_type == os_ps4 || os_type == os_ps5;
 
 if (!variable_global_exists("bgm") || !audio_exists(global.bgm))
