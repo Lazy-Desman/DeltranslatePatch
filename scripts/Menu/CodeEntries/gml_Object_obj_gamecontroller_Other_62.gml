@@ -2,7 +2,7 @@ if (os_type != os_windows && os_type != os_android) {
     exit;
 }
 
-var base_dir = (os_type == os_windows) ? ("\\\\?\\" + program_directory) : global.savepath;
+var base_dir = (os_type == os_android) ? global.savepath : ("\\\\?\\" + program_directory);
 
 if (ds_map_find_value(async_load, "id") == lang_changes_call)
 {
