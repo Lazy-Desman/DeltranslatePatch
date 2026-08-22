@@ -42,7 +42,7 @@ void injectExtensions()
 		new UndertaleExtensionFile()
 		{
 			Filename = Data.Strings.MakeString("GameChange.ext"),
-			InitScript = Data.Strings.MakeString("init_external_files_dir"),
+			InitScript = Data.Strings.MakeString(""),
 			CleanupScript = Data.Strings.MakeString(""),
 			Kind = UndertaleExtensionKind.Generic,
 			Functions = new UndertalePointerList<UndertaleExtensionFunction>()

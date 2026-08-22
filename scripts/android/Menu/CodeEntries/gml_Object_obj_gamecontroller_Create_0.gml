@@ -9,10 +9,11 @@ if (instance_number(obj_gamecontroller) > 1)
     exit;
 }
 
-instance_create(0, 0, obj_mobilecontrols);
-
 if (os_type == os_android)
+{
+    instance_create(0, 0, obj_mobilecontrols);
     global.lang_folder = global.savepath + "lang/";
+}
 else
     global.lang_folder = working_directory + "lang/";
 
