@@ -48,7 +48,11 @@ Link to your social media (if needed).
 
 `monospace_fonts`
 Set true if you want dialogues looks like in original with monospaced symbols. Highly unrecommended for languages with w i d e characters.
-It also change limitations from 33 and 26 (for faces) symbols per line to 33\*8 = 264 and 26\*8 = 208 pixels per line, so more symbols should fit in one line.
+It also change limitations from 33 and 26 (for faces) symbols per line to 33\*8 = 264 and 26\*8 = 208 pixels per line, so more symbols should fit in one line. If you only want SOME of the fonts to be monospace, you can do so by defining an array like this:
+```
+"monospace_fonts": [ "8bit", "comicsans", "main", "mainbig", "small", "tinynoelle" ],
+```
+In this example, `fnt_dotumche` and `fnt_legend` will not be monospace.
 
 ![Monospace and non-monospace image](https://imgur.com/m7Pwi2c.png)
 

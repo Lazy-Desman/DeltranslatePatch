@@ -796,3 +796,5 @@ if (markerCode == null)
         });
     }
 }
+
+ScriptMessage("- Deltranslate patch successfully added!");

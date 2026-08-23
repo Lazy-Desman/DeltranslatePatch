@@ -13,6 +13,8 @@ if (os_type == os_android)
 {
     instance_create(0, 0, obj_mobilecontrols);
     global.lang_folder = global.savepath + "lang/";
+    if (!directory_exists(global.lang_folder) && file_exists(global.savepath + "lang.zip"))
+        zip_unzip(global.savepath + "lang.zip", global.savepath);
 }
 else
     global.lang_folder = working_directory + "lang/";
