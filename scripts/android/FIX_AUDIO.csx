@@ -143,5 +143,5 @@ async Task regroupSfx()
 }
 // We start here.
 //if (!ScriptQuestion("reagrupar archivos sfx")) return;
-regroupSfx();
+await regroupSfx();
 //ScriptMessage("Hecho");

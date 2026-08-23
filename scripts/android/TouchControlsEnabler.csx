@@ -163,15 +163,22 @@ if (obj_gamecontroller is not null)
     importGroup.QueueAppend(Data.Code.ByName("gml_Object_obj_gamecontroller_Create_0"), 
                             "if (os_type == os_android) instance_create(0, 0, obj_mobilecontrols);");
     importGroup.Import();
+    ScriptMessage("- Touch controls successfully added!");
     return;
 }
-
+/* if gml_Object_obj_gamecontroller_Create_0 is overridden, then
+```
+if (os_type == os_android)
+    instance_create(0, 0, obj_mobilecontrols);
+```
+should be added to the end of it, since this needs to run befor Fix.csx*/
 var obj_time = Data.GameObjects.ByName("obj_time");
 if (obj_time is not null)
 {
     importGroup.QueueAppend(Data.Code.ByName("gml_Object_obj_time_Create_0"),
                             "if (os_type == os_android) instance_create(0, 0, obj_mobilecontrols);");
     importGroup.Import();
+    ScriptMessage("- Touch controls successfully added!");
     return;
 }
 

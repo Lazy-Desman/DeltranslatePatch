@@ -1,0 +1,8 @@
+=== gml_Object_obj_mobilecontrols_Draw_64
+---
+draw_set_font(settings_font)
++++
+draw_sprite_ext(spr_f1_button, keyboard_check(vk_f1), (f1x * ratio), (f1y * ratioVertical), (button_scale * 0.5 * ratio), (button_scale * 0.5 * ratioVertical), 0, c_white, controls_opacity);
+draw_sprite_ext(spr_activar_mando, 0, (241 * ratio), (275 * ratioVertical), (2 * ratio), (2 * ratioVertical), 0, c_white, text_black_fade);
+draw_set_font(settings_font)
+%%%

@@ -1,0 +1,7 @@
+=== gml_Object_obj_mobilecontrols_Draw_64
+---
+draw_set_font(settings_font)
++++
+draw_sprite_ext(spr_activar_mando, 0, (241 * ratio), (275 * ratioVertical), (2 * ratio), (2 * ratioVertical), 0, c_white, text_black_fade);
+draw_set_font(settings_font)
+%%%

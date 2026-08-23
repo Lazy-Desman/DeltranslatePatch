@@ -117,3 +117,6 @@ if (scr_file_exists(working_directory + "lang/lang_en.json")) {
     orig_filename = working_directory + "lang/lang_en.json"
     global.orig_map = scr_84_load_map_json(orig_filename)
 }
+
+if (os_type == os_android)
+    instance_create(0, 0, obj_mobilecontrols);
