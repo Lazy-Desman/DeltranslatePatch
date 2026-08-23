@@ -1,5 +1,7 @@
 /* Original script: https://github.com/UnderminersTeam/UndertaleModTool/blob/6f5db1947e288a7c59603388371d59e17e71c3aa/UndertaleModTool/Scripts/UTDR%20Scripts/TouchControlsEnabler.csx
- * Changes: commented out unnecessary stuff */
+ * Changes:
+    - commented out unnecessary stuff
+    - only create instance of obj_mobilecontrols if os_type == os_android */
 // Made by GitMuslim, Some fixes by NC-devC
 
 using System;
@@ -159,7 +161,7 @@ var obj_gamecontroller = Data.GameObjects.ByName("obj_gamecontroller");
 if (obj_gamecontroller is not null)
 {
     importGroup.QueueAppend(Data.Code.ByName("gml_Object_obj_gamecontroller_Create_0"), 
-                            "instance_create(0, 0, obj_mobilecontrols);");
+                            "if (os_type == os_android) instance_create(0, 0, obj_mobilecontrols);");
     importGroup.Import();
     return;
 }
@@ -168,7 +170,7 @@ var obj_time = Data.GameObjects.ByName("obj_time");
 if (obj_time is not null)
 {
     importGroup.QueueAppend(Data.Code.ByName("gml_Object_obj_time_Create_0"),
-                            "instance_create(0, 0, obj_mobilecontrols);");
+                            "if (os_type == os_android) instance_create(0, 0, obj_mobilecontrols);");
     importGroup.Import();
     return;
 }

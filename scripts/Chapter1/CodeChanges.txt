@@ -276,6 +276,40 @@ scr_84_init_localization()
 window_set_caption(scr_84_get_lang_string("scr_windowcaption_slash_scr_windowcaption_gml_1_0"))
 %%%
 
+---
+global.is_console = scr_is_switch_os() || (os_type == os_ps4 || os_type == os_ps5);
++++
+if (os_type == os_android)
+    global.savepath = init_external_dir();
+else
+    global.savepath = game_save_id;
+
+global.is_console = scr_is_switch_os() || (os_type == os_ps4 || os_type == os_ps5);
+%%%
+
+---
+global.screen_border_id = "Dynamic";
++++
+if (!variable_global_exists("screen_border_id"))
+    global.screen_border_id = "None";
+
+if (ossafe_file_exists("keyconfig_0.ini"))
+{
+    ossafe_ini_open("keyconfig_0.ini");
+    var _raw_val = ini_read_string("BORDER", "TYPE", "None");
+    ossafe_ini_close();
+    if (!borders_added())
+        _raw_val = "None";
+    global.screen_border_id = string_replace_all(_raw_val, "\"", "");
+}
+%%%
+
+=== gml_Object_obj_initializer2_Step_0
+---
+if (audio_group_is_loaded(1))
++++
+if (os_type == os_android || audio_group_is_loaded(1))
+%%%
 
 
 === gml_Object_obj_initializer2_Other_72
@@ -409,4 +443,32 @@ scr_init_localization()
 
         var maxwcol = max(wcol0, wcol1, wcol2);
         colorname_xoff = 126 - floor(maxwcol);
+%%%
+
+=== gml_GlobalScript_scr_84_load_ini
+---
+function scr_84_load_ini()
+{
++++
+function scr_84_load_ini()
+{
+    if (borders_added())
+    {
+        if (ossafe_file_exists("keyconfig_0.ini"))
+        {
+            ossafe_ini_open("keyconfig_0.ini");
+            var raw_type = ini_read_string("BORDER", "TYPE", "None");
+            global.screen_border_id = string_replace_all(raw_type, "\"", "");
+            ossafe_ini_close();
+            var _disable_border = global.screen_border_id == "None" || global.screen_border_id == "なし";
+            scr_enable_screen_border(!_disable_border);
+        }
+    }
+%%%
+
+=== gml_GlobalScript_scr_draw_screen_border
+---
+    if (border_id == "Dynamic" || border_id == "ダイナミック")
++++
+    if (border_id == "Dynamic" || border_id == "ダイナミック" || border_id == "Wide" || border_id == "ワイド")
 %%%
