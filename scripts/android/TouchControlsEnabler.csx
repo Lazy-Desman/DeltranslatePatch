@@ -1,7 +1,8 @@
 /* Original script: https://github.com/UnderminersTeam/UndertaleModTool/blob/6f5db1947e288a7c59603388371d59e17e71c3aa/UndertaleModTool/Scripts/UTDR%20Scripts/TouchControlsEnabler.csx
  * Changes:
     - commented out unnecessary stuff
-    - only create instance of obj_mobilecontrols if os_type == os_android */
+    - only create instance of obj_mobilecontrols if os_type == os_android
+    - added spr_activar_mando and f1_button */
 // Made by GitMuslim, Some fixes by NC-devC
 
 using System;
@@ -79,8 +80,11 @@ UndertaleTexturePageItem pg_analog_scale = AddNewTexturePageItem(61, 94, 79, 12)
 UndertaleTexturePageItem pg_analog_type = AddNewTexturePageItem(61, 108, 72, 12);
 UndertaleTexturePageItem pg_reset_config = AddNewTexturePageItem(61, 122, 79, 12);
 UndertaleTexturePageItem pg_controls_opacity = AddNewTexturePageItem(61, 136, 107, 13);
+UndertaleTexturePageItem pg_activar_mando = AddNewTexturePageItem(61, 150, 73, 12);
 UndertaleTexturePageItem pg_arrow_leftright = AddNewTexturePageItem(142, 83, 41, 9);
 UndertaleTexturePageItem pg_black = AddNewTexturePageItem(189, 0, 640, 480);
+UndertaleTexturePageItem pg_f1_button = AddNewTexturePageItem(150, 150, 19, 24);
+UndertaleTexturePageItem pg_f1_button_p = AddNewTexturePageItem(170, 150, 19, 24);
 
 void AddNewUndertaleSprite(string spriteName, ushort width, ushort height, UndertaleTexturePageItem[] spriteTextures)
 {
@@ -110,8 +114,10 @@ AddNewUndertaleSprite("spr_analog_scale", 79, 12, new UndertaleTexturePageItem[]
 AddNewUndertaleSprite("spr_analog_type", 72, 12, new UndertaleTexturePageItem[] {pg_analog_type});
 AddNewUndertaleSprite("spr_reset_config", 79, 12, new UndertaleTexturePageItem[] {pg_reset_config});
 AddNewUndertaleSprite("spr_controls_opacity", 107, 13, new UndertaleTexturePageItem[] {pg_controls_opacity});
+AddNewUndertaleSprite("spr_activar_mando", 73, 12, new UndertaleTexturePageItem[] {pg_activar_mando});
 AddNewUndertaleSprite("spr_arrow_leftright", 41, 9, new UndertaleTexturePageItem[] {pg_arrow_leftright});
 AddNewUndertaleSprite("spr_black", 640, 480, new UndertaleTexturePageItem[] {pg_black});
+AddNewUndertaleSprite("spr_f1_button", 19, 24, new UndertaleTexturePageItem[] {pg_f1_button, pg_f1_button_p});
 
 string currentFont = "";
 var fntMain = Data.Fonts.Any(o => o.Name.Content.ToLower() == "fnt_main");

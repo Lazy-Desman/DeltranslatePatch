@@ -1,8 +1,8 @@
 [
     "tools",
     "FIX_AUDIO",
-    "TouchControlsEnabler",
     "ImportGraphics",
+    "TouchControlsEnabler",
     "Chapter4/Fix",
     "ghosting_fix"
 ]

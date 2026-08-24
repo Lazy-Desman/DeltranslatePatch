@@ -304,13 +304,6 @@ if (ossafe_file_exists("keyconfig_0.ini"))
 }
 %%%
 
-=== gml_Object_obj_initializer2_Step_0
----
-if (audio_group_is_loaded(1))
-+++
-if (os_type == os_android || audio_group_is_loaded(1))
-%%%
-
 
 === gml_Object_obj_initializer2_Other_72
 ---

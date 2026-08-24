@@ -1,7 +1,6 @@
 [
     "tools",
     "TouchControlsEnabler",
-    "ImportGraphics",
     "Menu/Fix",
     "ghosting_fix"
 ]

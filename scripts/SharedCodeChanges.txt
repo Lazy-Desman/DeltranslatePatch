@@ -49,8 +49,18 @@ if ((global.is_console || borders_added()) && global.submenu == 36)
 %%%
 
 ---
-enum e__VW
+onebuffer -= 1;
+twobuffer -= 1;
+threebuffer -= 1;
+upbuffer -= 1;
+downbuffer -= 1;
 +++
+onebuffer -= 1;
+twobuffer -= 1;
+threebuffer -= 1;
+upbuffer -= 1;
+downbuffer -= 1;
+
 if (global.menuno == 5 && global.submenu == 36)
 {
     var _hubo_cambio = false;
@@ -74,8 +84,6 @@ if (global.menuno == 5 && global.submenu == 36)
         ossafe_savedata_save();
     }
 }
-
-enum e__VW
 %%%
 
 
@@ -85,6 +93,15 @@ if (os_type == os_windows || os_type == os_linux || os_type == os_macosx)
 +++
 if (os_type == os_windows || os_type == os_linux || os_type == os_macosx || os_type == os_android)
 %%%
+
+
+=== gml_Object_obj_initializer2_Step_0
+---
+if (audio_group_is_loaded(1))
++++
+if (os_type == os_android || audio_group_is_loaded(1))
+%%%
+
 
 === gml_Object_obj_time_Draw_64
 ---

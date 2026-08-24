@@ -159,14 +159,15 @@ menu_sprite = scr_84_get_sprite("spr_darkmenudesc");
 autorun_text = stringsetloc("Auto-Run", "obj_darkcontroller_slash_Draw_0_gml_94_0");
 back_text = stringsetloc("Back", "obj_darkcontroller_slash_Draw_0_gml_96_0");
 gamepad_controls = [gp_face1, gp_face2, gp_face3, gp_face4, gp_shoulderl, gp_shoulderlb, gp_shoulderr, gp_shoulderrb, gp_select, gp_start, gp_stickl, gp_stickr, gp_padu, gp_padd, gp_padl, gp_padr];
-border_options = ["Dynamic", "Simple", "None"];
+border_options = ["Dynamic", "Simple", "None", "Wide"];
 border_options_tr = [
     stringsetloc("Dynamic", "obj_darkcontroller_slash_Create_0_gml_153_0"), 
     stringsetloc("Simple", "obj_darkcontroller_slash_Create_0_gml_153_1"), 
-    stringsetloc("None", "obj_darkcontroller_slash_Create_0_gml_153_2")
+    stringsetloc("None", "obj_darkcontroller_slash_Create_0_gml_153_2"),
+    stringsetloc("Wide", "obj_darkcontroller_slash_Create_0_gml_153_3")
 ];
-var border_options_en = ["Dynamic", "Simple", "None"];
-var border_options_ja = ["ダイナミック", "シンプル", "なし"];
+var border_options_en = ["Dynamic", "Simple", "None", "Wide"];
+var border_options_ja = ["ダイナミック", "シンプル", "なし", "ワイド"];
 
 if (global.lang == "ja")
 {
