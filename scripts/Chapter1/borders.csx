@@ -54,8 +54,8 @@ AssignBorderBackground("border_dark", textures["border_dw_castletown.png"], 2, 2
 AssignBorderBackground("border_light", textures["border_lw_town.png"], 2, 2, 1920, 1080);
 
 // make a marker that signals that this script was ran
-string markerFuncName = "borders_added";
-string markerCodeName = "gml_GlobalScript_" + markerFuncName;
+var markerFuncName = "borders_added";
+var markerCodeName = "gml_GlobalScript_" + markerFuncName;
 var markerCode = Data.Code.ByName(markerCodeName);
 
 if (markerCode == null)

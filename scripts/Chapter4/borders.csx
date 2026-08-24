@@ -69,4 +69,34 @@ AssignBorderBackground("border_dw_church_c", textures["border_dw_church_c.png"],
 AssignBorderBackground("border_dw_church_a", textures["border_dw_church_a.png"], 2, 2, 1920, 1080, 0, 0, 1920, 1080);
 AssignBorderBackground("border_dw_church_b", textures["border_dw_church_b.png"], 2, 2, 1920, 1080, 0, 0, 1920, 1080);
 
+var markerFuncName = "borders_added";
+var markerCodeName = "gml_GlobalScript_" + markerFuncName;
+var markerCode = Data.Code.ByName(markerCodeName);
+
+if (markerCode == null)
+{
+    CodeImportGroup importGroup = new CodeImportGroup(Data);
+    importGroup.QueueReplace(markerCodeName, "return true;");
+    importGroup.Import();
+
+    markerCode = Data.Code.ByName(markerCodeName);
+
+    if (Data.Scripts.ByName(markerFuncName) == null)
+    {
+        Data.Scripts.Add(new UndertaleScript
+        {
+            Name = Data.Strings.MakeString(markerFuncName),
+            Code = markerCode
+        });
+    }
+
+    if (Data.Functions?.ByName(markerFuncName) == null && Data.Functions is not null)
+    {
+        Data.Functions.Add(new UndertaleFunction
+        {
+            Name = Data.Strings.MakeString(markerFuncName)
+        });
+    }
+}
+
 ScriptMessage("- Border textures and images imported correctly");

@@ -99,7 +99,7 @@ if (global.menuno == 5)
         draw_text(_xPos, yy + 220, string_hash_to_newline(stringsetloc("Simplify VFX", "obj_darkcontroller_slash_Draw_0_gml_92_0")));
         draw_text(_selectXPos, yy + 220, string_hash_to_newline(flashoff));
         
-        if (global.is_console || os_type == os_android)
+        if (global.is_console || borders_added())
         {
             draw_text(_xPos, yy + 255, string_hash_to_newline(autorun_text));
             draw_text(_selectXPos, yy + 255, string_hash_to_newline(runoff));

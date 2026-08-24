@@ -23,5 +23,5 @@ draw_sprite_ext(asset_get_index("spr_dw_c_button") != -1 && global.darkzone ? sp
 draw_sprite_ext(asset_get_index("spr_dw_joybase") != -1 && global.darkzone ? spr_dw_joybase : spr_joybase, joystick_type, (analog_posx * ratio), (analog_posy * ratioVertical), (analog_scale * ratio), (analog_scale * ratioVertical), 0, c_white, controls_opacity)
 draw_sprite_ext(asset_get_index("spr_dw_joystick") != -1 && global.darkzone ? spr_dw_joystick : spr_joystick, joystick_type, (analog_center_x * ratio), (analog_center_y * ratioVertical), (analog_scale * ratio), (analog_scale * ratioVertical), 0, c_white, controls_opacity)
 draw_sprite_ext(asset_get_index("spr_dw_settings") != -1 && global.darkzone ? spr_dw_settings : spr_settings, keyboard_check(92 /* ord("\") */), (settingsx * ratio), (settingsy * ratioVertical), (button_scale/* * 0.5*/ * ratio), (button_scale/* * 0.5*/ * ratioVertical), 0, c_white, controls_opacity)
-if (variable_global_exists("chapter") && global.chapter <= 2)
+if (variable_global_exists("chapter") && global.chapter == 2)
     draw_sprite_ext(asset_get_index("spr_dw_f1_button") != -1 && global.darkzone ? spr_dw_f1_button : spr_f1_button, keyboard_check(vk_f1), (f1x * ratio), (f1y * ratioVertical), (button_scale/* * 0.5*/ * ratio), (button_scale/* * 0.5*/ * ratioVertical), 0, c_white, controls_opacity);

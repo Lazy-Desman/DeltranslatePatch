@@ -537,3 +537,9 @@ xoffset[5] = 0
 xoffset[5] = sprite_get_number(sprite_index)
 %%%
 
+=== gml_Object_obj_border_controller_Step_0
+---
+if (border_id == "Dynamic" || border_id == "ダイナミック")
++++
+if (border_id == "Dynamic" || border_id == "ダイナミック" || border_id == "Wide" || border_id == "ワイド")
+%%%

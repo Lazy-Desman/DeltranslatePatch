@@ -1,10 +1,11 @@
-=== gml_Object_obj_mobilecontrols_Draw_64
+=== gml_Object_DEVICE_MENU_Create_0
 ---
-draw_set_font(settings_font)
+if (global.is_console)
+    global.chapter_return = -1;
 +++
-draw_sprite_ext(spr_dw_f1_button, keyboard_check(vk_f1), (f1x * ratio), (f1y * ratioVertical), (button_scale * 0.5 * ratio), (button_scale * 0.5 * ratioVertical), 0, c_white, controls_opacity);
-draw_set_font(settings_font)
+global.chapter_return = -1;
 %%%
+
 
 === gml_Object_obj_battleLayerHighlight_Create_0
 ---

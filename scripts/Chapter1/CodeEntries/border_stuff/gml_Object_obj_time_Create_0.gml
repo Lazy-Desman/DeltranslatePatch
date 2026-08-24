@@ -1,4 +1,4 @@
-global.disable_border = !borders_added();
+global.disable_border = !global.is_console && !borders_added();
 quit_timer = 0;
 keyboard_active = 1;
 axis_value = 0.4;
@@ -16,6 +16,8 @@ pausing = false;
 screenshot = -1;
 if (borders_added())
     _border_image = bg_border_line_1080;
+accel_timer = 0;
+frame_counter = 0;
 
 if (instance_number(obj_time) > 1)
 {
@@ -69,21 +71,20 @@ else
         global.input_held[i] = 0;
         global.input_released[i] = 0;
     }
+    
     if (borders_added())
     {
         application_surface_enable(true);
         application_surface_draw_enable(false);
         global.screen_border_active = true;
-    
-        if (!variable_global_exists("screen_border_id"))
-            global.screen_border_id = "None";
     }
     
     if (os_type == os_android)
     {
-        if (game_get_speed(gamespeed_fps) != 30)
+        if (game_get_speed(gamespeed_fps) > 30)
             game_set_speed(30, gamespeed_fps);
         
         display_set_timing_method(0);
+        display_set_sleep_margin(10);
     }
 }

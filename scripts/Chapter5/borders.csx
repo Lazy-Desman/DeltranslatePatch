@@ -81,4 +81,34 @@ AssignBorderBackground("border_dw_castle_right_gold", textures["border_dw_castle
 AssignBorderBackground("border_lw_town_night", textures["border_lw_town_night.png"], 2, 2, 1920, 1080, 0, 0, 1920, 1080, 1920, 1080);
 AssignBorderBackground("border_dw_garden_cliff", textures["border_dw_garden_cliff.png"], 2, 2, 1920, 1350, 0, 0, 1920, 1350, 1920, 1350);
 
+var markerFuncName = "borders_added";
+var markerCodeName = "gml_GlobalScript_" + markerFuncName;
+var markerCode = Data.Code.ByName(markerCodeName);
+
+if (markerCode == null)
+{
+    CodeImportGroup importGroup = new CodeImportGroup(Data);
+    importGroup.QueueReplace(markerCodeName, "return true;");
+    importGroup.Import();
+
+    markerCode = Data.Code.ByName(markerCodeName);
+
+    if (Data.Scripts.ByName(markerFuncName) == null)
+    {
+        Data.Scripts.Add(new UndertaleScript
+        {
+            Name = Data.Strings.MakeString(markerFuncName),
+            Code = markerCode
+        });
+    }
+
+    if (Data.Functions?.ByName(markerFuncName) == null && Data.Functions is not null)
+    {
+        Data.Functions.Add(new UndertaleFunction
+        {
+            Name = Data.Strings.MakeString(markerFuncName)
+        });
+    }
+}
+
 ScriptMessage("- Border textures and images imported correctly");
