@@ -1415,6 +1415,8 @@ function scr_update_full_choice_scale()
 +++
     if (scr_file_exists(get_lang_folder_path() + "chapter5/vid/" + video_file + ".mp4"))
         video_open(get_lang_folder_path() + "chapter5/vid/" + video_file + ".mp4")
+    else if (os_type == os_android)
+        video_open(global.savepath + "chapter5/vid/" + video_file + ".mp4");
     else 
         video_open("vid/" + video_file + ".mp4")
 %%%

@@ -12,6 +12,8 @@ if (scr_file_exists(get_lang_folder_path() + "chapter3/vid/" + file_name + ".mp4
     video_open(get_lang_folder_path() + "chapter3/vid/" + file_name + ".mp4");
 else if (scr_file_exists(get_lang_folder_path() + "chapter3/vid/" + lwc_file_name + ".mp4"))
     video_open(get_lang_folder_path() + "chapter3/vid/" + lwc_file_name + ".mp4");
+else if (os_type == os_android)
+    video_open(global.savepath + "chapter3_windows/vid/" + file_name + ".mp4");
 else 
     video_open("vid/" + file_name + ".mp4");
 

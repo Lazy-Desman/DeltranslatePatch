@@ -569,3 +569,42 @@ if (os_type == os_android && room == room_dw_cyber_maze_virokun)
     instance_destroy();
 if (room == room_dw_mansion_east_2f_transformed_new)
 %%%
+
+
+=== gml_Object_obj_musicalslide_Create_0
+---
+scr_slidebeatbullet(3, fpb * 0.25, 32)
++++
+scr_slidebeatbullet(3, fpb * 0.25, 32);
+wassoundTimeStep = 0;
+failsafe = 0
+%%%
+
+
+=== gml_Object_obj_musicalslide_Step_2
+---
+    wassoundTimeStep = soundTimeStep;
+    
+    if (snd_is_playing(global.currentsong[1])) {
+        soundTimeStep = audio_sound_get_track_position(global.currentsong[1]);
+    } else {
+        soundTimeStep += (1/30);
+    }
+    
+    if (snd_is_playing(global.currentsong[1]) && wassoundTimeStep == soundTimeStep)
+    {
+        failsafe++;
+        
+        if (failsafe >= 3)
+        {
+            soundTimeStep += (1/30);
+            audio_sound_set_track_position(global.currentsong[1], soundTimeStep);
+        }
+    }
++++
+    
+    if (snd_is_playing(global.currentsong[1]))
+        soundTimeStep = audio_sound_get_track_position(global.currentsong[1]);
+    else
+        soundTimeStep += bpf;
+%%%

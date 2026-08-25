@@ -75,7 +75,7 @@ Sprites and sounds are also affected by this setting if you copy them with "sp_"
 `enable_translated_voices_switch`
 If true, adds button "Translated Voices: " in language config menu that allows players to switch between translated songs (if you have ones) and original ones.
 
-![](https://imgur.com/UIZGKpK.png)
+![Translated voices image](https://imgur.com/UIZGKpK.png)
 
 This setting includes following files (they all lie in en folder):
 
@@ -386,3 +386,8 @@ So, how it works. The game downloads `files_url` + `changes.json` file from serv
 ![Language update notification image](https://imgur.com/Yb7bKhx.gif)
 
 If user press `G`, files stated in greater versions are downloaded from `files_url` + `files_path`. New `changes.json` and `settings.json` are downloaded too.
+
+
+
+## Installer
+Further information about creating your own installer for the mod and your translation can be found here: [DeltaSetup](https://github.com/Lazy-Desman/DeltaSetup)
