@@ -46,7 +46,7 @@ if (scr_is_switch_os() && wh == 720)
 else
     texture_set_interpolation(false);
 
-if (window_get_fullscreen() && global.screen_border_active && border_alpha >= 0 && global.screen_border_id != "None")
+if (window_get_fullscreen() && global.screen_border_active && global.screen_border_id != "None")
 {
     var border_id = global.screen_border_id;
     draw_enable_alphablend(false);
@@ -56,33 +56,59 @@ if (window_get_fullscreen() && global.screen_border_active && border_alpha >= 0 
         scr_draw_background_ps4(_border_image, 0, 0);
         global.disable_border = obj_time.border_alpha != 1;
     }
-    else if (border_id == "Simple" || border_id == "シンプル")
-    {
-        scr_draw_background_ps4(border_line_1080, 0, 0);
-        global.disable_border = obj_time.border_alpha != 1;
-    }
     
     draw_set_alpha(1);
     draw_enable_alphablend(true);
     
-    if (border_alpha < 1)
+    if (_border_image != _border_image_temp)
     {
-        draw_set_alpha(1 - border_alpha);
-        draw_set_color(c_black);
+        draw_set_alpha(_border_image_temp_alpha);
+        scr_draw_background_ps4(_border_image_temp, 0, 0);
+        _border_image_temp_alpha += _border_image_temp_alpha_amount;
+        
+        if (_border_image_temp_alpha > 1)
+        {
+            _border_image_temp_alpha = 0;
+            _border_image = _border_image_temp;
+        }
+        
+        draw_set_alpha(1);
+    }
+    
+    if (custom_effect >= 0)
+    {
+        if (custom_effect_con == 0 && custom_effect_alpha < custom_effect_alpha_target)
+            custom_effect_alpha += custom_effect_fade_speed;
+        
+        if (custom_effect_con == 1)
+        {
+            custom_effect_alpha -= custom_effect_fade_speed;
+            
+            if (custom_effect_alpha <= 0)
+            {
+                custom_effect = -1;
+                custom_effect_con = 0;
+            }
+        }
+        
+        draw_set_alpha(custom_effect_alpha);
+        draw_set_color(custom_effect_color);
         ossafe_fill_rectangle(0, 0, ww - 1, wh - 1);
         draw_set_alpha(1);
         draw_set_color(c_white);
     }
-}
-else
-{
-    var room_id = room;
     
-    if (instance_exists(obj_savepoint))
-        global.disable_border = false;
+    draw_set_alpha(overlay_alpha);
+    draw_set_color(overlay_color);
+    ossafe_fill_rectangle(0, 0, ww - 1, wh - 1);
+    draw_set_alpha(1);
+    draw_set_color(c_white);
     
-    if (room_id == PLACE_CONTACT || room_id == 886 || room_id == room_gameover || room_id == PLACE_DOG || room_id == ROOM_INITIALIZE || room_id == room_title_placeholder || room_id == room_intro_ch2)
-        global.disable_border = true;
+    if (border_id == "Simple" || border_id == "シンプル")
+    {
+        scr_draw_background_ps4(border_line_1080, 0, 0);
+        global.disable_border = obj_time.border_alpha != 1;
+    }
 }
 
 draw_enable_alphablend(false);

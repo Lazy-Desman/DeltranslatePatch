@@ -8,27 +8,28 @@ text_index = 0;
 house_index = 2;
 var file_name = "tennaIntroF1_compressed_28";
 var lwc_file_name = string_lower(file_name); // console runners are case-sensitive
-if (scr_file_exists(get_lang_folder_path() + "chapter3/vid/" + file_name + ".mp4"))
-    video_open(get_lang_folder_path() + "chapter3/vid/" + file_name + ".mp4");
-else if (scr_file_exists(get_lang_folder_path() + "chapter3/vid/" + lwc_file_name + ".mp4"))
-    video_open(get_lang_folder_path() + "chapter3/vid/" + lwc_file_name + ".mp4");
-else if (os_type == os_android)
-    video_open(global.savepath + "chapter3_windows/vid/" + file_name + ".mp4");
-else 
-    video_open("vid/" + file_name + ".mp4");
 
-video_enable_loop(false);
-video_set_volume(global.flag[17]);
-var orig_path = "vid/" + file_name + ".mp4";
+var lang_path = "";
+if (os_type == os_android)
+    lang_path = global.savepath + "lang/chapter3/vid/" + file_name + ".mp4";
+else if (scr_file_exists(get_lang_folder_path() + "chapter3/vid/" + file_name + ".mp4"))
+    lang_path = get_lang_folder_path() + "chapter3/vid/" + file_name + ".mp4";
+else
+    lang_path = get_lang_folder_path() + "chapter3/vid/" + lwc_file_name + ".mp4";
 
+var orig_path = "";
 if (os_type == os_android)
     orig_path = global.savepath + "chapter3_windows/vid/" + file_name + ".mp4";
+else
+    orig_path = "vid/" + file_name + ".mp4";
 
-var lang_path = get_lang_folder_path() + "chapter3/vid/" + file_name + ".mp4";
 var path = orig_path;
-
 if (scr_file_exists(lang_path) && global.translated_songs)
     path = lang_path;
+
+video_open(path);
+video_enable_loop(false);
+video_set_volume(global.flag[17]);
 
 if (!global.is_console)
     video_set_volume(clamp(0.3 * global.flag[17], 0, 0.3));
