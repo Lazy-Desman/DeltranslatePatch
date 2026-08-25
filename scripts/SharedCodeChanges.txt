@@ -59,14 +59,14 @@ if (os_type == os_windows || os_type == os_linux || os_type == os_macosx || os_t
 
 === gml_Object_obj_initializer2_Create_0
 ---
-global.is_console = scr_is_switch_os() || (os_type == os_ps4 || os_type == os_ps5);
+global.is_console = 
 +++
 if (os_type == os_android)
     global.savepath = init_external_dir();
 else
     global.savepath = game_save_id;
 
-global.is_console = scr_is_switch_os() || (os_type == os_ps4 || os_type == os_ps5);
+global.is_console = 
 %%%
 
 ---

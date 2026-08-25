@@ -1,4 +1,4 @@
-global.disable_border = !borders_added();
+global.disable_border = !global.is_console && !borders_added();
 quit_timer = 0;
 keyboard_active = 1;
 gamepad_active = 1;
@@ -84,7 +84,7 @@ else
         global.input_released[i] = 0;
     }
 
-    if (borders_added())
+    if (global.is_console || borders_added())
     {
         application_surface_enable(true);
         application_surface_draw_enable(false);

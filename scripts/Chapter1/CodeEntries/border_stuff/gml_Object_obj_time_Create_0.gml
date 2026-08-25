@@ -72,7 +72,7 @@ else
         global.input_released[i] = 0;
     }
     
-    if (borders_added())
+    if (global.is_console || borders_added())
     {
         application_surface_enable(true);
         application_surface_draw_enable(false);
