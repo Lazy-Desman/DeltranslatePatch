@@ -1573,3 +1573,27 @@ var ltr_copy = 1;
     global.translated_songs = !global.translated_songs
     scr_floweryvoiceclip_init()
 %%%
+
+
+=== gml_Object_obj_dw_garden_floradinnencounter_Create_0
+---
+if (global.console)
++++
+if (global.console || borders_added())
+%%%
+
+
+=== gml_Object_obj_dw_pink_encounter_Step_0
+---
+if (global.console)
++++
+if (global.console || borders_added())
+%%%
+
+
+=== gml_Object_obj_flowery_towery_pillars_Draw_0
+---
+if (global.console)
++++
+if (global.console || borders_added())
+%%%

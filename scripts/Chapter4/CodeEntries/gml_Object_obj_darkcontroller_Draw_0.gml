@@ -1,3 +1,6 @@
+if (!variable_global_exists("disable_border"))
+    global.disable_border = false;
+
 xx = camerax();
 yy = cameray();
 tpoff = (tp - tpy) + yy;

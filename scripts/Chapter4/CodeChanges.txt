@@ -1965,10 +1965,9 @@ choice_text[1] = stringsetsubloc("Keep Playing Chapter ~1", chapter, "obj_chapte
 %%%
 
 
-
-
-
-
-
-
-
+=== gml_Object_obj_border_controller_Create_0
+---
+if (border_id == "Dynamic" || border_id == "ダイナミック")
++++
+if (border_id == "Dynamic" || border_id == "ダイナミック" || border_id == "Wide" || border_id == "ワイド")
+%%%
