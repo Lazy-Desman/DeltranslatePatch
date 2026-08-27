@@ -2,7 +2,8 @@
  * Changes:
     - commented out unnecessary stuff
     - only create instance of obj_mobilecontrols if os_type == os_android
-    - added spr_activar_mando and f1_button */
+    - added spr_activar_mando and f1_button
+    - added a dummy function that will check if we are in castle town right now */
 // Made by GitMuslim, Some fixes by NC-devC
 
 using System;
@@ -147,6 +148,36 @@ UndertaleModLib.Compiler.CodeImportGroup importGroup = new(Data)
 {
     MainThreadAction = MainThreadAction
 };
+
+var markerFuncName = "is_in_castle_town";
+var markerCodeName = "gml_GlobalScript_" + markerFuncName;
+var markerCode = Data.Code.ByName(markerCodeName);
+
+if (markerCode == null)
+{
+    CodeImportGroup importGroup = new CodeImportGroup(Data);
+    importGroup.QueueReplace(markerCodeName, "return false;");  // dummy code that get's replaced in each individual chapter
+    importGroup.Import();
+
+    markerCode = Data.Code.ByName(markerCodeName);
+
+    if (Data.Scripts.ByName(markerFuncName) == null)
+    {
+        Data.Scripts.Add(new UndertaleScript
+        {
+            Name = Data.Strings.MakeString(markerFuncName),
+            Code = markerCode
+        });
+    }
+
+    if (Data.Functions?.ByName(markerFuncName) == null && Data.Functions is not null)
+    {
+        Data.Functions.Add(new UndertaleFunction
+        {
+            Name = Data.Strings.MakeString(markerFuncName)
+        });
+    }
+}
 
 string mobileControlsCreate = File.ReadAllText(Path.Join(dataPath, "gml_Object_obj_mobilecontrols_Create_0.gml"));
 StringBuilder builder = new StringBuilder(mobileControlsCreate);
