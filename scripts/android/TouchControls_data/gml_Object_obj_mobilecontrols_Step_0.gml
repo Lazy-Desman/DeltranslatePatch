@@ -137,7 +137,7 @@ if (device_mouse_x_to_gui(0) >= 241 && device_mouse_y_to_gui(0) >= 412.25 && dev
     analog_scale = 3.3
     analog_posx = -100
     analog_posy = 232.5
-    joystick_type = 1
+    joystick_type = 0
     controls_opacity = 0.5
 }
 

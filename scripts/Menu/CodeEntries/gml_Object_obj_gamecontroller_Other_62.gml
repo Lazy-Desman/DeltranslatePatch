@@ -1,4 +1,4 @@
-if (os_type != os_windows && os_type != os_android) {
+if (os_type != os_windows && os_type != os_android && os_type != os_macosx && os_type != os_linux) {
     exit;
 }
 
@@ -100,6 +100,11 @@ if (ds_map_find_value(async_load, "id") == lang_changes_call)
         translation_version_changes_datas = variable_struct_get_names(datas_mp);
         translation_external_update = should_external_update
     }
+}
+
+//TODO: make data updating work with macos and linux
+if (os_type != os_windows && os_type != os_android) {
+    exit;
 }
 
 var filenames = variable_struct_get_names(files_in_upload);

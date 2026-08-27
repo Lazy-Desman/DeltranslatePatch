@@ -24,7 +24,7 @@ else
     global.window_scale = wh / 480;
 }
 
-if (os_type == os_windows && !window_get_fullscreen())
+if ((os_type == os_windows || os_type == os_linux || os_type == os_macosx) && !window_get_fullscreen())
 {
     var _mult = 2;
     
