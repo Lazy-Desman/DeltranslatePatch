@@ -1,8 +1,9 @@
 instance_deactivate_all(true)
 instance_activate_object(obj_input)
 instance_activate_object(obj_gamecontroller)
-if (os_type == os_android && !instance_exists(obj_mobilecontrols))
-    instance_create(0, 0, obj_mobilecontrols)
+if (os_type == os_android)
+    if (!instance_exists(obj_mobilecontrols))
+        instance_create(0, 0, obj_mobilecontrols)
 else
 {
     instance_activate_object(obj_init_pc)
