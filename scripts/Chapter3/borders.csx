@@ -11,7 +11,7 @@ if (Data?.GeneralInfo?.DisplayName?.Content.ToLower() != "deltarune chapter 3")
     return;
 }
 
-string bordersPath = Path.Combine(Path.GetDirectoryName(ScriptPath), "../Borders/chapter3");
+string bordersPath = Path.Combine(Path.GetDirectoryName(ScriptPath), "../../borders/chapter3");
 
 Dictionary<string, UndertaleEmbeddedTexture> textures = new();
 if (!Directory.Exists(bordersPath))

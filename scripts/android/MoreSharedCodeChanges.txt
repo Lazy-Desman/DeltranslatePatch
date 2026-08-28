@@ -1,0 +1,54 @@
+=== gml_GlobalScript_scr_chapterswitch
+---
+                case os_windows:
+                    game_change("/../", "-game data.win" + parameters);
+                    break;
++++
+                case os_windows:
+                    game_change("/../", "-game data.win" + parameters);
+                    break;
+                case os_android:
+                    game_change_android("");
+                    break;
+%%%
+
+---
+                case os_windows:
+                    game_change("/../chapter" + chapstring + "_windows", "-game data.win" + parameters);
+                    break;
++++
+                case os_windows:
+                    game_change("/../chapter" + chapstring + "_windows", "-game data.win" + parameters);
+                    break;
+                case os_android:
+                    game_change_android("chapter" + chapstring + "_windows");
+%%%
+
+
+=== gml_GlobalScript_scr_load_audio
+---
+if (audio_group_is_loaded(audio_groups[i]))
++++
+if ((os_type == os_android && !audio_group_is_loaded(audio_groups[i])) || audio_group_is_loaded(audio_groups[i]))
+%%%
+
+
+=== gml_Object_obj_initializer2_Create_0
+---
+global.is_console = 
++++
+if (os_type == os_android)
+    global.savepath = init_external_dir();
+else
+    global.savepath = game_save_id;
+
+global.is_console = 
+%%%
+
+
+=== gml_Object_obj_initializer2_Step_0
+---
+if (audio_group_is_loaded(1))
++++
+if (os_type == os_android || audio_group_is_loaded(1))
+%%%
