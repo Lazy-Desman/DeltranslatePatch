@@ -48,7 +48,11 @@ Link to your social media (if needed).
 
 `monospace_fonts`
 Set true if you want dialogues looks like in original with monospaced symbols. Highly unrecommended for languages with w i d e characters.
-It also change limitations from 33 and 26 (for faces) symbols per line to 33\*8 = 264 and 26\*8 = 208 pixels per line, so more symbols should fit in one line.
+It also change limitations from 33 and 26 (for faces) symbols per line to 33\*8 = 264 and 26\*8 = 208 pixels per line, so more symbols should fit in one line. If you only want SOME of the fonts to be monospace, you can do so by defining an array like this:
+```
+"monospace_fonts": [ "8bit", "comicsans", "main", "mainbig", "small", "tinynoelle" ],
+```
+In this example, `fnt_dotumche` and `fnt_legend` will not be monospace.
 
 ![Monospace and non-monospace image](https://imgur.com/m7Pwi2c.png)
 
@@ -71,7 +75,7 @@ Sprites and sounds are also affected by this setting if you copy them with "sp_"
 `enable_translated_voices_switch`
 If true, adds button "Translated Voices: " in language config menu that allows players to switch between translated songs (if you have ones) and original ones.
 
-![](https://imgur.com/UIZGKpK.png)
+![Translated voices image](https://imgur.com/UIZGKpK.png)
 
 This setting includes following files (they all lie in en folder):
 
@@ -382,3 +386,8 @@ So, how it works. The game downloads `files_url` + `changes.json` file from serv
 ![Language update notification image](https://imgur.com/Yb7bKhx.gif)
 
 If user press `G`, files stated in greater versions are downloaded from `files_url` + `files_path`. New `changes.json` and `settings.json` are downloaded too.
+
+
+
+## Installer
+Further information about creating your own installer for the mod and your translation can be found here: [DeltaSetup](https://github.com/Lazy-Desman/DeltaSetup)

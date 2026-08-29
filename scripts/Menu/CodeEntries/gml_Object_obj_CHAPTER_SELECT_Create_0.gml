@@ -1,6 +1,4 @@
 global.debug = 0;
-if (os_type == os_android)
-    scr_init_touch_controls();
 
 global.is_console = scr_is_switch_os() || os_type == os_ps4 || os_type == os_ps5;
 
@@ -431,7 +429,17 @@ launch_game = function(arg0)
 
 quit = function()
 {
+    if (os_type == os_android)
+    {
+        audio_stop_all();
+        
+        if (variable_global_exists("bgm") && global.bgm != -4)
+            global.bgm = -4;
+        
+        room_goto(0);
+    }
     game_end();
+
 };
 
 toggle_language = function()

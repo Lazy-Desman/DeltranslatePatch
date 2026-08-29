@@ -410,3 +410,11 @@ scr_init_localization()
         var maxwcol = max(wcol0, wcol1, wcol2);
         colorname_xoff = 126 - floor(maxwcol);
 %%%
+
+
+=== gml_GlobalScript_scr_draw_screen_border
+---
+    if (border_id == "Dynamic" || border_id == "ダイナミック")
++++
+    if (border_id == "Dynamic" || border_id == "ダイナミック" || border_id == "Wide" || border_id == "ワイド")
+%%%

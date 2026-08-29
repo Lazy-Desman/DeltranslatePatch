@@ -1,6 +1,8 @@
-if (os_type != os_windows) {
+if (os_type != os_windows && os_type != os_android && os_type != os_macosx && os_type != os_linux) {
     exit;
 }
+
+var base_dir = (os_type == os_android) ? global.savepath : ("\\\\?\\" + program_directory);
 
 if (ds_map_find_value(async_load, "id") == lang_changes_call)
 {
@@ -100,6 +102,11 @@ if (ds_map_find_value(async_load, "id") == lang_changes_call)
     }
 }
 
+//TODO: make data updating work with macos and linux
+if (os_type != os_windows && os_type != os_android) {
+    exit;
+}
+
 var filenames = variable_struct_get_names(files_in_upload);
 var datanames = variable_struct_get_names(datas_in_upload);
 
@@ -109,7 +116,7 @@ for (var ind = 0; ind < array_length(filenames); ind++)
     {
         if (ds_map_find_value(async_load, "status") == 0)
         {
-            var file_buffer = buffer_load("\\\\?\\" + program_directory + "tmp/" + filenames[ind]);
+            var file_buffer = buffer_load(base_dir + "tmp/" + filenames[ind]);
 
             if (buffer_get_size(file_buffer) == 0)
             {
@@ -165,13 +172,23 @@ for (var ind = 0; ind < array_length(datanames); ind++)
             var path_to = "data.win"
             if (datanames[ind] > 0) {
                 path = "chapter" + string(datanames[ind])
-                path_to = "chapter" + string(datanames[ind]) + "_windows/data.win"
+                if (os_type == os_android)
+                    path_to = "packs/chapter" + string(datanames[ind]) + "_windows.pack"
+                else
+                    path_to = "chapter" + string(datanames[ind]) + "_windows/data.win"
             }
 
-            var file_buffer = buffer_load("\\\\?\\" + program_directory + "tmp/" + path + "/data.win");
-            var orig_file = file_bin_open("\\\\?\\" + program_directory + path_to, 0)
-
-            if (buffer_get_size(file_buffer) / file_bin_size(orig_file) < 0.95)
+            var file_buffer = buffer_load(base_dir + "tmp/" + path + "/data.win")
+            var orig_size = 0;
+            
+            if (file_exists(base_dir + path_to))
+            {
+                var orig_file = file_bin_open(base_dir + path_to, 0);
+                orig_size = file_bin_size(orig_file);
+                file_bin_close(orig_file);
+            }
+            
+            if (orig_size > 0 && (buffer_get_size(file_buffer) / orig_size) < 0.95)
             {
                 loading_error = "408";
                 loading_new_translation_files = false;
@@ -198,7 +215,10 @@ for (var ind = 0; ind < array_length(datanames); ind++)
             clear_tmp();
         } else if (ds_map_find_value(async_load, "status") > 0)
         {
-            variable_struct_set(datas_loading, datanames[ind], floor(ds_map_find_value(async_load, "sizeDownloaded") / ds_map_find_value(async_load, "contentLength") * 100));
+            var content_len = ds_map_find_value(async_load, "contentLength");
+            
+            if (!is_undefined(content_len) && content_len > 0)
+                variable_struct_set(datas_loading, datanames[ind], floor((ds_map_find_value(async_load, "sizeDownloaded") / content_len) * 100));
         }
     }
 }

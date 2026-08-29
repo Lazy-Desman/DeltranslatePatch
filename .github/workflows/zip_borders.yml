@@ -1,0 +1,98 @@
+name: Update borders in "latest" release
+
+on:
+  workflow_dispatch: # Manually
+  push:
+    branches: [main]
+    paths:
+      - 'borders/**'
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  update-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install 7-Zip
+        run: sudo apt-get update && sudo apt-get install -y p7zip-full
+          
+      - name: Create "borders.7z" ("fast" compression)
+        run: |
+          7z a -t7z -mx=1 borders.7z ./borders/*
+          
+      - name: Move "latest" tag to current commit
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git tag -f latest
+          git push -f origin latest
+          
+      - name: Get or create release for "latest" tag
+        id: get_release
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const tagName = "latest";
+            try {
+              const release = await github.rest.repos.getReleaseByTag({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                tag: tagName
+              });
+              core.setOutput('release_id', release.data.id);
+              core.setOutput('upload_url', release.data.upload_url);
+            } catch (error) {
+              if (error.status === 404) {
+                const release = await github.rest.repos.createRelease({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  tag_name: tagName,
+                  name: "Latest",
+                  draft: false,
+                  prerelease: false
+                });
+                core.setOutput('release_id', release.data.id);
+                core.setOutput('upload_url', release.data.upload_url);
+              } else {
+                throw error;
+              }
+            }
+            
+      - name: Delete old assets from release
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const releaseId = ${{ steps.get_release.outputs.release_id }};
+            const assets = await github.paginate(
+              github.rest.repos.listReleaseAssets,
+              {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                release_id: releaseId,
+                per_page: 100
+              }
+            );
+            const assetsToDelete = assets.filter(asset => 
+              asset.name.startsWith('borders.')
+            );
+            for (const asset of assetsToDelete) {
+              await github.rest.repos.deleteReleaseAsset({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                asset_id: asset.id
+              });
+            }
+          
+      - name: Upload "borders" archive
+        uses: shogo82148/actions-upload-release-asset@v1
+        with:
+          upload_url: ${{ steps.get_release.outputs.upload_url }}
+          asset_path: ./borders.7z
+          asset_name: borders.7z
