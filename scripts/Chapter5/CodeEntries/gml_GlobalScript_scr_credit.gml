@@ -30,7 +30,7 @@ function generate_credits()
                 stringsetloc("Fred Wood", "scr_credit_slash_scr_credit_gml_32_0"),
                 stringsetloc("Jean Canellas", "scr_credit_slash_scr_credit_gml_33_0"),
                 stringsetloc("AlexMdle", "scr_credit_slash_scr_credit_gml_34_0"),
-                stringsetloc("PureQuestion", "scr_credit_slash_scr_credit_gml_35_0"),
+                stringsetloc("PureQuestion", "scr_credit_slash_scr_credit_gml_35_0")
             ]
         )
     ];
@@ -79,7 +79,7 @@ function generate_credits()
         new scr_credit(
             [
                 stringsetloc("-Platforming VFX-", "scr_credit_slash_scr_credit_gml_82_0")
-            ], 
+            ],
             [
                 stringsetloc("Zu Ehtisham", "scr_credit_slash_scr_credit_gml_83_0")
             ]
@@ -139,7 +139,7 @@ function generate_credits()
         ),
         new scr_credit(
             [
-                stringsetloc("-Backgrounds-", "scr_credit_slash_scr_credit_gml_134_0")
+                stringsetloc("-Backgrounds-", "scr_credit_slash_scr_credit_gml_132_0")
             ],
             [
                 stringsetloc("Akane Iwakuma", "scr_credit_slash_scr_credit_gml_135_0")
@@ -190,7 +190,7 @@ function generate_credits()
                 stringsetloc("(Terakota & Shinobeetle)", "scr_credit_slash_scr_credit_gml_95_0"),
                 stringsetloc("Nelnal", "scr_credit_slash_scr_credit_gml_96_0"),
                 stringsetloc("(Netskie)", "scr_credit_slash_scr_credit_gml_97_0"),
-                stringsetloc("Hitoshi Ariga", "scr_credit_slash_scr_credit_gml_98_0")
+                stringsetloc("Hitoshi Ariga", "scr_credit_slash_scr_credit_gml_98_0_b")
             ]
         )
     ];
@@ -206,7 +206,7 @@ function generate_credits()
             ],
             [
                 stringsetloc("Moa", "scr_credit_slash_scr_credit_gml_117_0"),
-                stringsetloc("Yukanuntiusel", "scr_credit_slash_scr_credit_gml_118_0")
+                stringsetloc("Yukanuntiusel", "scr_credit_slash_scr_credit_gml_118_0_b")
             ]
         ),
         new scr_credit(
@@ -214,7 +214,7 @@ function generate_credits()
                 stringset(pink_credits)
             ],
             [
-                stringsetloc("Claire Belton", "scr_credit_slash_scr_credit_gml_119_0")
+                stringsetloc("Claire Belton", "scr_credit_slash_scr_credit_gml_119_0_b")
             ]
         ),
         new scr_credit(
@@ -225,7 +225,7 @@ function generate_credits()
                 [
                     stringsetloc("(Garden of Hopes & Dreams)", "scr_credit_slash_scr_credit_gml_130_0")
                 ],
-                stringsetloc("Carlos \"insaneintherain\" Eiene", "scr_credit_slash_scr_credit_gml_132_0")
+                stringsetloc("Carlos \"insaneintherain\" Eiene", "scr_credit_slash_scr_credit_gml_134_0")
             ]
         )
     ];
@@ -400,9 +400,9 @@ function generate_credits()
                 stringsetloc("Fontworks Inc.", "scr_credit_slash_scr_credit_gml_290_0"),
                 stringsetloc("Yutaka Sato (Happy Ruika)", "scr_credit_slash_scr_credit_gml_291_0"),
                 stringsetloc("All 8-4 & Fangamer Staff", "scr_credit_slash_scr_credit_gml_293_0"),
-                stringsetloc("Claire & Andrew", "scr_credit_slash_scr_credit_gml_294_0"),
-                stringsetloc("Brian Lee", "scr_credit_slash_scr_credit_gml_295_0"),
-                stringsetloc("YoYo Games", "scr_credit_slash_scr_credit_gml_296_0")
+                stringsetloc("Claire & Andrew", "scr_credit_slash_scr_credit_gml_294_0_b"),
+                stringsetloc("Brian Lee", "scr_credit_slash_scr_credit_gml_295_0_b"),
+                stringsetloc("YoYo Games", "scr_credit_slash_scr_credit_gml_296_0_b")
             ]
         )
     ];

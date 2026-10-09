@@ -8,6 +8,38 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
+#region check if borders were added (at the beginning in case we want to override it later if needed)
+var markerFuncName = "borders_added";
+var markerCodeName = "gml_GlobalScript_" + markerFuncName;
+var markerCode = Data.Code.ByName(markerCodeName);
+
+if (markerCode == null)
+{
+    CodeImportGroup importGroup = new CodeImportGroup(Data);
+    importGroup.QueueReplace(markerCodeName, "return false;");
+    importGroup.Import();
+
+    markerCode = Data.Code.ByName(markerCodeName);
+
+    if (Data.Scripts.ByName(markerFuncName) == null)
+    {
+        Data.Scripts.Add(new UndertaleScript
+        {
+            Name = Data.Strings.MakeString(markerFuncName),
+            Code = markerCode
+        });
+    }
+
+    if (Data.Functions?.ByName(markerFuncName) == null && Data.Functions is not null)
+    {
+        Data.Functions.Add(new UndertaleFunction
+        {
+            Name = Data.Strings.MakeString(markerFuncName)
+        });
+    }
+}
+#endregion
+
 #region Вспомогательные функции
 
 string gameFolder = Path.GetDirectoryName(FilePath) + Path.DirectorySeparatorChar;
@@ -456,7 +488,11 @@ if (File.Exists(scriptFolder + "CodeUpdates.json"))
 
 var codeChanges = new Dictionary<string, List<(string, string, bool)>>();
 if (File.Exists(scriptFolder + "CodeChanges.txt")) {
-    var changes = File.ReadAllLines(scriptFolder + "CodeChanges.txt");
+    string[] sharedChanges = [];
+    if (!ScriptPath.Contains("Menu") && File.Exists(scriptFolder + "../SharedCodeChanges.txt")) {
+        sharedChanges = File.ReadAllLines(scriptFolder + "../SharedCodeChanges.txt");
+    }
+    var changes = sharedChanges.Concat(File.ReadAllLines(scriptFolder + "CodeChanges.txt")).ToArray();
     var cur_code = "";
     var cur_from = "";
     var cur_to = "";
@@ -763,3 +799,4 @@ await Task.Run(() =>
 
 #endregion
 
+ScriptMessage("- Deltranslate patch successfully added!");

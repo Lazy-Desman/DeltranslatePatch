@@ -1,0 +1,91 @@
+=== gml_GlobalScript_scr_os_checks
+---
+    if (os_type == os_windows || os_type == os_macosx)
++++
+    if (os_type == os_windows || os_type == os_macosx || os_type == os_android)
+%%%
+
+
+=== gml_Object_obj_darkcontroller_Step_0
+---
+                if (global.is_console)
+                {
++++
+                if (global.is_console || borders_added())
+                {
+%%%
+
+---
+if (global.is_console && global.submenu == 36)
++++
+if ((global.is_console || borders_added()) && global.submenu == 36)
+%%%
+
+
+=== gml_Object_obj_gamecontroller_Step_1
+---
+if (os_type == os_windows || os_type == os_linux || os_type == os_macosx)
++++
+if (os_type == os_windows || os_type == os_linux || os_type == os_macosx || os_type == os_android)
+%%%
+
+
+=== gml_Object_obj_initializer2_Create_0
+---
+global.screen_border_id = 
++++
+global.screen_border_id = "None";
+if (global.is_console || borders_added())
+    global.screen_border_id = 
+%%%
+
+
+=== gml_Object_obj_time_Create_0
+---
+quit_timer = 0
++++
+global.disable_border = !global.is_console && !borders_added();
+quit_timer = 0
+%%%
+
+---
+if (global.is_console)
++++
+if (global.is_console || borders_added())
+%%%
+
+---
+    {
+        application_surface_enable(true);
+        application_surface_draw_enable(false);
+    }
++++
+    {
+        application_surface_enable(true);
+        application_surface_draw_enable(false);
+        global.screen_border_active = true;
+    }
+    
+    if (os_type == os_android)
+    {
+        if (game_get_speed(gamespeed_fps) > 30)
+            game_set_speed(30, gamespeed_fps);
+        
+        display_set_timing_method(0);
+        display_set_sleep_margin(10);
+    }
+%%%
+
+---
+scr_enable_screen_border(global.is_console);
++++
+//scr_enable_screen_border(global.is_console);
+%%%
+
+
+=== gml_Object_obj_time_Draw_64
+---
+if (quit_timer >= 1)
++++
+if (quit_timer >= 1 && !borders_added())
+%%%

@@ -48,3 +48,10 @@ var title = scr_get_lang_string("DELTARUNE", "gml_GlobalScript_scr_init_6");
     global.input_g[9] = 999;
     global.input_k[10] = ord("P");
 %%%
+
+=== gml_Object_obj_gamecontroller_Step_1
+---
+if (os_type == os_windows || os_type == os_linux || os_type == os_macosx)
++++
+if (os_type == os_windows || os_type == os_linux || os_type == os_macosx || os_type == os_android)
+%%%

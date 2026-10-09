@@ -69,7 +69,7 @@ if (MENU_NO == 1 || MENU_NO == 4 || MENU_NO == 6 || MENU_NO == 7)
                         global.button1 = global.input_g[5];
                         global.button2 = global.input_g[6];
                         
-                        if (global.is_console || os_type == os_android)
+                        if (global.is_console || borders_added())
                         {
                             global.screen_border_id = ini_read_string("BORDER", "TYPE", "Dynamic");
                             var _disable_border = global.screen_border_id == "None" || global.screen_border_id == "なし";
@@ -118,7 +118,7 @@ if (MENU_NO == 1 || MENU_NO == 4 || MENU_NO == 6 || MENU_NO == 7)
                         global.button1 = global.input_g[5];
                         global.button2 = global.input_g[6];
                         
-                        if (global.is_console || os_type == os_android)
+                        if (global.is_console || borders_added())
                         {
                             global.screen_border_id = ini_read_string("BORDER", "TYPE", "Dynamic");
                             var _disable_border = global.screen_border_id == "None" || global.screen_border_id == "なし";
@@ -526,7 +526,7 @@ if (MENU_NO == 0)
         }
     }
     
-    if (global.is_console || os_type == os_android)
+    if (global.is_console || borders_added())
     {
         if (MENUCOORD[0] == 7)
         {

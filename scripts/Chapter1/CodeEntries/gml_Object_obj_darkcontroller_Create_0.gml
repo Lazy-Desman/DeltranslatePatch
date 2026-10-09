@@ -101,14 +101,15 @@ hpcolor[1] = c_fuchsia;
 hpcolor[2] = c_lime;
 gamepad_controls = [gp_face1, gp_face2, gp_face3, gp_face4, gp_shoulderl, gp_shoulderlb, gp_shoulderr, gp_shoulderrb, gp_select, gp_start, gp_stickl, gp_stickr, gp_padu, gp_padd, gp_padl, gp_padr];
 border_text = scr_84_get_lang_string("obj_darkcontroller_slash_Create_0_gml_1_0", "Border")
-border_options = ["Dynamic", "Simple", "None"];
-var border_options_en = ["Dynamic", "Simple", "None"];
+border_options = ["Dynamic", "Simple", "None", "Wide"];
+var border_options_en = ["Dynamic", "Simple", "None", "Wide"];
 border_options_tr = [
     scr_84_get_lang_string("obj_darkcontroller_slash_Create_0_gml_2_0", "Dynamic"),
     scr_84_get_lang_string("obj_darkcontroller_slash_Create_0_gml_3_0", "Simple"),
     scr_84_get_lang_string("obj_darkcontroller_slash_Create_0_gml_4_0", "None"),
+    scr_84_get_lang_string("obj_darkcontroller_slash_Create_0_gml_5_0", "Wide")
 ];
-var border_options_ja = ["ダイナミック", "シンプル", "なし"];
+var border_options_ja = ["ダイナミック", "シンプル", "なし", "ワイド"];
 
 if (global.lang == "ja")
 {

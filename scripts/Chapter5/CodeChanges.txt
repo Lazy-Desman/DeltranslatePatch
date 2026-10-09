@@ -1411,12 +1411,20 @@ function scr_update_full_choice_scale()
 
 === gml_Object_obj_room_garden_video_Create_0
 ---
-    video_open("vid/" + video_file + ".mp4")
+video_open("vid/" + video_file + ".mp4")
 +++
-    if (scr_file_exists(get_lang_folder_path() + "chapter5/vid/" + video_file + ".mp4"))
-        video_open(get_lang_folder_path() + "chapter5/vid/" + video_file + ".mp4")
-    else 
-        video_open("vid/" + video_file + ".mp4")
+var _lang_video = "";
+if (os_type == os_android)
+    _lang_video = global.savepath + "lang/chapter5/vid/" + video_file + ".mp4";
+else
+    _lang_video = get_lang_folder_path() + "chapter5/vid/" + video_file + ".mp4";
+
+if (file_exists(_lang_video))
+    video_open(_lang_video);
+else if (os_type == os_android)
+    video_open(global.savepath + "chapter5_windows/vid/" + video_file + ".mp4");
+else 
+    video_open("vid/" + video_file + ".mp4")
 %%%
 
 
@@ -1564,4 +1572,28 @@ var ltr_copy = 1;
 +++
     global.translated_songs = !global.translated_songs
     scr_floweryvoiceclip_init()
+%%%
+
+
+=== gml_Object_obj_dw_garden_floradinnencounter_Create_0
+---
+if (global.console)
++++
+if (global.console || borders_added())
+%%%
+
+
+=== gml_Object_obj_dw_pink_encounter_Step_0
+---
+if (global.console)
++++
+if (global.console || borders_added())
+%%%
+
+
+=== gml_Object_obj_flowery_towery_pillars_Draw_0
+---
+if (global.console)
++++
+if (global.console || borders_added())
 %%%

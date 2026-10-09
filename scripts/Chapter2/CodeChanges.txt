@@ -407,6 +407,12 @@ scr_load_audio();
 scr_windowcaption();
 %%%
 
+---
+global.screen_border_id = ""
++++
+global.screen_border_id = "Dynamic"
+%%%
+
 
 
 === gml_Object_obj_initializer2_Other_72
@@ -529,6 +535,16 @@ version_text = global.version;
 prevemptyname = stringsetloc("[EMPTY]", "DEVICE_MENU_slash_Step_0_gml_105_0");
 %%%
 
+---
+if (global.is_console)
+{
+    global.chapter_return = -1;
+}
++++
+global.chapter_return = -1
+%%%
+
+
 
 === gml_Object_obj_gigaqueen_intro_fight_Create_0
 ---
@@ -537,3 +553,58 @@ xoffset[5] = 0
 xoffset[5] = sprite_get_number(sprite_index)
 %%%
 
+=== gml_Object_obj_border_controller_Step_0
+---
+if (border_id == "Dynamic" || border_id == "ダイナミック")
++++
+if (border_id == "Dynamic" || border_id == "ダイナミック" || border_id == "Wide" || border_id == "ワイド")
+%%%
+
+
+=== gml_Object_obj_battleLayerHighlight_Create_0
+---
+if (room == room_dw_mansion_east_2f_transformed_new)
++++
+if (os_type == os_android && room == room_dw_cyber_maze_virokun)
+    instance_destroy();
+if (room == room_dw_mansion_east_2f_transformed_new)
+%%%
+
+
+=== gml_Object_obj_musicalslide_Create_0
+---
+scr_slidebeatbullet(3, fpb * 0.25, 32)
++++
+scr_slidebeatbullet(3, fpb * 0.25, 32);
+wassoundTimeStep = 0;
+failsafe = 0
+%%%
+
+
+=== gml_Object_obj_musicalslide_Step_2
+---
+    wassoundTimeStep = soundTimeStep;
+    
+    if (snd_is_playing(global.currentsong[1])) {
+        soundTimeStep = audio_sound_get_track_position(global.currentsong[1]);
+    } else {
+        soundTimeStep += (1/30);
+    }
+    
+    if (snd_is_playing(global.currentsong[1]) && wassoundTimeStep == soundTimeStep)
+    {
+        failsafe++;
+        
+        if (failsafe >= 3)
+        {
+            soundTimeStep += (1/30);
+            audio_sound_set_track_position(global.currentsong[1], soundTimeStep);
+        }
+    }
++++
+    
+    if (snd_is_playing(global.currentsong[1]))
+        soundTimeStep = audio_sound_get_track_position(global.currentsong[1]);
+    else
+        soundTimeStep += bpf;
+%%%

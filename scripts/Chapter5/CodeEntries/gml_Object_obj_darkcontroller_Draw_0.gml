@@ -243,7 +243,7 @@ if (global.menuno == 5)
             }
         }
         
-        if (global.is_console || os_type == os_android)
+        if (global.is_console || borders_added())
         {
             var drawautorun = true;
             

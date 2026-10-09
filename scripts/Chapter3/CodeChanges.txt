@@ -1019,3 +1019,10 @@ version_text = "1.00";
 prevemptyname = stringsetloc("[EMPTY]", "DEVICE_MENU_slash_Step_0_gml_105_0");
 %%%
 
+
+=== gml_Object_obj_border_controller_Create_0
+---
+if (border_id == "Dynamic" || border_id == "ダイナミック")
++++
+if (border_id == "Dynamic" || border_id == "ダイナミック" || border_id == "Wide" || border_id == "ワイド")
+%%%
