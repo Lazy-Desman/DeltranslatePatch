@@ -1427,6 +1427,51 @@ else
     video_open("vid/" + video_file + ".mp4")
 %%%
 
+---
+if (global.is_console)
++++
+if (global.is_console || (window_get_fullscreen() && borders_added()))
+%%%
+
+
+
+=== gml_Object_obj_room_garden_video_Draw_0
+---
+if (global.is_console)
++++
+if (global.is_console || (window_get_fullscreen() && borders_added()))
+%%%
+
+
+
+=== gml_Object_obj_room_garden_video_Step_0
+---
+if (scr_debug())
++++
+_blackall.visible = !global.is_console && !(window_get_fullscreen() && borders_added());
+if (scr_debug())
+%%%
+
+---
+        if (global.is_console)
+        {
+            scr_lerpvar("_overlay_alpha", 0, 1, 120);
+        }
+        else
+        {
+            with (_blackall)
+            {
+                scr_lerpvar("image_alpha", 0, 1, 100);
+            }
+        }
++++
+        scr_lerpvar("_overlay_alpha", 0, 1, 120);
+        with (_blackall)
+        {
+            scr_lerpvar("image_alpha", 0, 1, 100);
+        }
+%%%
+
 
 
 === gml_Object_obj_heroparent_Draw_0
