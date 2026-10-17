@@ -1642,3 +1642,18 @@ if (global.console)
 +++
 if (global.console || borders_added())
 %%%
+
+
+
+=== gml_GlobalScript_scr_load
+---
+    if (global.is_console)
+    {
+        global.tempflag[95] = 1;
+    }
++++
+    if (global.is_console || borders_added())
+    {
+        global.tempflag[95] = 1;
+    }
+%%%
