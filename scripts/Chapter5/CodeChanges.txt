@@ -1605,6 +1605,13 @@ var ltr_copy = 1;
             ltr_copy++;
 %%%
 
+=== gml_Object_obj_date_controller_Step_0
+---
+if (global.is_console)
++++
+if (global.is_console || borders_added())
+%%%
+
 === gml_Object_obj_lang_settings_Step_0
 ---
     global.special_mode = !global.special_mode
@@ -1641,4 +1648,19 @@ if (global.console || borders_added())
 if (global.console)
 +++
 if (global.console || borders_added())
+%%%
+
+
+
+=== gml_GlobalScript_scr_load
+---
+    if (global.is_console)
+    {
+        global.tempflag[95] = 1;
+    }
++++
+    if (global.is_console || borders_added())
+    {
+        global.tempflag[95] = 1;
+    }
 %%%

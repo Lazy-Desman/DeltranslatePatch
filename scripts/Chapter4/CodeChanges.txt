@@ -1971,3 +1971,18 @@ if (border_id == "Dynamic" || border_id == "ダイナミック")
 +++
 if (border_id == "Dynamic" || border_id == "ダイナミック" || border_id == "Wide" || border_id == "ワイド")
 %%%
+
+
+
+=== gml_GlobalScript_scr_load
+---
+    if (global.is_console)
+    {
+        global.tempflag[95] = 1;
+    }
++++
+    if (global.is_console || borders_added())
+    {
+        global.tempflag[95] = 1;
+    }
+%%%
