@@ -1026,17 +1026,3 @@ if (border_id == "Dynamic" || border_id == "ダイナミック")
 +++
 if (border_id == "Dynamic" || border_id == "ダイナミック" || border_id == "Wide" || border_id == "ワイド")
 %%%
-
-
-
-=== gml_Object_obj_shutta_photo_controller_Draw_74
----
-display_get_gui_width
-+++
-window_get_width
-%%%
----
-display_get_gui_height
-+++
-window_get_height
-%%%
